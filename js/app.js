@@ -23,7 +23,7 @@
       return '<a href="'+prefix+l.href+'">'+l.label+'</a>';
     }).join('');
     var overlay = highfi ? '<div class="nav-overlay" data-nav-backdrop></div>' : '';
-    var drawerHead = highfi ? '<img class="nav-drawer-logo" src="'+prefix+'assets/img/logo/logo-black.svg" alt="W Premium Group"><button class="nav-close" data-nav-close aria-label="Fechar menu">&times;</button>' : '';
+    var drawerHead = highfi ? '<img class="nav-drawer-logo" src="'+prefix+'assets/img/logo/logo-black.svg" alt="W Premium Group"><button class="nav-close" data-nav-close aria-label="Fechar menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6 18 18M18 6 6 18"/></svg></button>' : '';
     var logoHTML = highfi
       ? '<a href="'+prefix+'index.html" class="nav-logo" aria-label="W Premium Group"><img class="nav-logo-img nav-logo-light" src="'+prefix+'assets/img/logo/logo-white.svg" alt="W Premium Group"><img class="nav-logo-img nav-logo-dark" src="'+prefix+'assets/img/logo/logo-black.svg" alt=""></a>'
       : '<a href="'+prefix+'index.html" class="nav-logo">W <span>Premium</span></a>';
