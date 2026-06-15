@@ -6,33 +6,37 @@
 <title>W Premium · Concierge Digital — Home</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap">
 <link rel="stylesheet" href="css/wireframe.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/highfi.css">
 </head>
-<body data-prefix="">
+<body data-prefix="" data-highfi>
 
 <div data-nav></div>
 
-<!-- ============== HERO ============== -->
-<section class="container">
-  <div class="hero hero-tall" data-comment-id="home.hero" data-comment-label="Home · Hero">
-    <div class="ph"></div>
-    <div class="hero-overlay-top">
-      <div class="eyebrow">Concierge Digital</div>
-      <h1 class="h1 mt-1" style="max-width:640px;">Descubra suas Salas.</h1>
-    </div>
-    <div class="hero-overlay">
-      <p class="lead" style="max-width:520px;">Repouso, trabalho e celebração. Onde você é sempre recebido.</p>
-      <div class="mt-3 flex gap-1">
-        <a href="salas.html" class="btn btn-secondary">Explorar Salas</a>
-        <button class="btn btn-ghost" data-open-verifier style="color:#fff;">Você é elegível? →</button>
-      </div>
-    </div>
+<!-- ============== HERO (full-viewport) ============== -->
+<section class="hero-fs" data-comment-id="home.hero" data-comment-label="Home · Hero">
+  <div class="hero-photo" data-hero-slideshow>
+    <div class="hero-slide is-active" style="background-image:url('assets/img/home/home-hero.jpg');"></div>
+    <div class="hero-slide" style="background-image:url('assets/img/home/home-hero-2.jpg');"></div>
+    <div class="hero-slide" style="background-image:url('assets/img/home/home-hero-3.jpg');"></div>
   </div>
+  <div class="hero-scrim"></div>
+  <div class="hero-content">
+    <img class="hero-mark" src="assets/img/logo/logo-vertical-white.svg" alt="W Premium Group">
+    <p class="kicker">Concierge Digital</p>
+    <span class="rule"></span>
+    <h1>Descubra suas salas</h1>
+    <p class="lead">Repouso, trabalho e celebração. Onde você é sempre recebido.</p>
+  </div>
+  <a class="hero-scroll" href="#descobrir" aria-label="Rolar para ver mais conteúdo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 9l7 7 7-7"/></svg>
+  </a>
 </section>
 
 <!-- ============== BUSCA POR AEROPORTO ============== -->
-<section class="section" data-comment-id="home.busca-aeroporto" data-comment-label="Home · Busca por aeroporto">
+<section class="section" id="descobrir" data-comment-id="home.busca-aeroporto" data-comment-label="Home · Busca por aeroporto">
   <div class="container">
     <div class="sec-header text-center" style="max-width:680px;margin:0 auto 32px;">
       <div class="eyebrow">Discovery · Entry Point</div>
@@ -72,7 +76,7 @@
 
     <div class="grid grid-4">
       <article class="card sala-card">
-        <div class="ph" style="aspect-ratio:4/3;"><span class="ph-tag">Premium</span></div>
+        <img class="sala-img" src="assets/img/salas/5th-avenue.jpg" alt="Sala 5th Avenue">
         <div class="card-body">
           <h3 class="sala-title">5th Avenue</h3>
           <p class="sala-meta">São Paulo · Terminal 3 · GRU</p>
@@ -82,7 +86,7 @@
       </article>
 
       <article class="card sala-card">
-        <div class="ph" style="aspect-ratio:4/3;"><span class="ph-tag">Premium</span></div>
+        <img class="sala-img" src="assets/img/salas/frevo.jpg" alt="Sala Frevo">
         <div class="card-body">
           <h3 class="sala-title">Frevo</h3>
           <p class="sala-meta">Recife · Internacional · REC</p>
@@ -92,7 +96,7 @@
       </article>
 
       <article class="card sala-card">
-        <div class="ph" style="aspect-ratio:4/3;"></div>
+        <img class="sala-img" src="assets/img/salas/green-park.jpg" alt="Sala Green Park">
         <div class="card-body">
           <h3 class="sala-title">Green Park</h3>
           <p class="sala-meta">São Paulo · Terminal 2 · GRU</p>
@@ -102,7 +106,7 @@
       </article>
 
       <article class="card sala-card">
-        <div class="ph" style="aspect-ratio:4/3;"></div>
+        <img class="sala-img" src="assets/img/salas/ocean-view.jpg" alt="Sala Ocean View">
         <div class="card-body">
           <h3 class="sala-title">Ocean View</h3>
           <p class="sala-meta">Recife · Desembarque · REC</p>
@@ -118,7 +122,7 @@
 <section class="section" data-comment-id="home.killer-feature" data-comment-label="Home · W Premium Verify · Verificador">
   <div class="container">
     <div class="grid center-mobile" style="grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
-      <div class="ph" style="aspect-ratio:5/4;"></div>
+      <img src="assets/img/home/home-verify.jpg" alt="W Premium Verify" style="display:block;width:100%;aspect-ratio:5/4;object-fit:cover;">
       <div>
         <div class="eyebrow">W Premium Verify</div>
         <h2 class="h2 mt-1">Você tem acesso?</h2>
@@ -183,7 +187,7 @@
     </div>
 
     <article class="article-feature">
-      <div class="ph"></div>
+      <img class="article-feature-img" src="assets/img/home/editorial-feature.jpg" alt="O Futuro do Repouso">
       <div>
         <div class="article-meta">Long-form · Tendências · Maio 2026</div>
         <h2>O Futuro do Repouso: Tecnologia e Humanidade em Salas Premium</h2>
@@ -193,9 +197,9 @@
     </article>
 
     <div class="grid grid-3 mt-5">
-      <article class="card article-card"><div class="ph"></div><div class="card-body"><div class="article-meta">Gastronomia · Abril 2026</div><h4>Gastronomia em voo: F&amp;B em salas</h4><a href="artigo.html" class="btn-link">Ler →</a></div></article>
-      <article class="card article-card"><div class="ph"></div><div class="card-body"><div class="article-meta">Destinos · Março 2026</div><h4>Recife em 24h entre conexões</h4><a href="artigo.html" class="btn-link">Ler →</a></div></article>
-      <article class="card article-card"><div class="ph"></div><div class="card-body"><div class="article-meta">Wellness · Fevereiro 2026</div><h4>Wellness Travel: descansar é trabalhar</h4><a href="artigo.html" class="btn-link">Ler →</a></div></article>
+      <article class="card article-card"><img class="article-img" src="assets/img/home/artigo-gastronomia.jpg" alt="Gastronomia em voo"><div class="card-body"><div class="article-meta">Gastronomia · Abril 2026</div><h4>Gastronomia em voo: F&amp;B em salas</h4><a href="artigo.html" class="btn-link">Ler →</a></div></article>
+      <article class="card article-card"><img class="article-img" src="assets/img/home/artigo-destinos.jpg" alt="Recife em 24h"><div class="card-body"><div class="article-meta">Destinos · Março 2026</div><h4>Recife em 24h entre conexões</h4><a href="artigo.html" class="btn-link">Ler →</a></div></article>
+      <article class="card article-card"><img class="article-img" src="assets/img/home/artigo-wellness.jpg" alt="Wellness Travel"><div class="card-body"><div class="article-meta">Wellness · Fevereiro 2026</div><h4>Wellness Travel: descansar é trabalhar</h4><a href="artigo.html" class="btn-link">Ler →</a></div></article>
     </div>
   </div>
 </section>
@@ -213,7 +217,7 @@
           <a href="reservas-grupo.html" class="btn btn-secondary">Reservas de Grupo</a>
         </div>
       </div>
-      <div class="ph" style="aspect-ratio:4/3;"></div>
+      <img class="b2b-img" src="assets/img/home/home-b2b.jpg" alt="Soluções B2B">
     </div>
   </div>
 </section>

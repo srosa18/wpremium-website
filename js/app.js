@@ -17,17 +17,22 @@
     {href:'contato.html',       label:'Contato'}
   ];
 
-  function navHTML(prefix){
+  function navHTML(prefix, highfi){
     prefix = prefix || '';
     var links = NAV_LINKS.map(function(l){
       return '<a href="'+prefix+l.href+'">'+l.label+'</a>';
     }).join('');
+    var overlay = highfi ? '<div class="nav-overlay" data-nav-backdrop></div>' : '';
+    var drawerHead = highfi ? '<img class="nav-drawer-logo" src="'+prefix+'assets/img/logo/logo-black.svg" alt="W Premium Group"><button class="nav-close" data-nav-close aria-label="Fechar menu">&times;</button>' : '';
+    var logoHTML = highfi
+      ? '<a href="'+prefix+'index.html" class="nav-logo" aria-label="W Premium Group"><img class="nav-logo-img nav-logo-light" src="'+prefix+'assets/img/logo/logo-white.svg" alt="W Premium Group"><img class="nav-logo-img nav-logo-dark" src="'+prefix+'assets/img/logo/logo-black.svg" alt=""></a>'
+      : '<a href="'+prefix+'index.html" class="nav-logo">W <span>Premium</span></a>';
     return ''+
       '<div class="wf-banner">Wireframe Mode · W Premium Concierge Digital <span>Fase 03 · Sitemap V1</span></div>'+
       '<header class="nav">'+
       '  <div class="container nav-inner">'+
-      '    <a href="'+prefix+'index.html" class="nav-logo">W <span>Premium</span></a>'+
-      '    <nav class="nav-links" aria-label="Principal">'+links+'</nav>'+
+      '    '+logoHTML+
+      '    <nav class="nav-links" aria-label="Principal">'+drawerHead+links+'</nav>'+
       '    <div class="nav-actions">'+
       '      <button class="lang-switch" data-lang-switch aria-label="Idioma">'+
       '        <span class="lang-current">PT</span><span class="lang-sep">·</span><span class="lang-other">EN</span><span class="lang-sep">·</span><span class="lang-other">ES</span>'+
@@ -39,17 +44,21 @@
       '      </button>'+
       '    </div>'+
       '  </div>'+
+      overlay+
       '</header>';
   }
 
-  function footerHTML(prefix){
+  function footerHTML(prefix, highfi){
     prefix = prefix || '';
+    var footerLogo = highfi
+      ? '<img class="footer-logo-img" src="'+prefix+'assets/img/logo/logo-black.svg" alt="W Premium Group">'
+      : '<div class="nav-logo">W <span>Premium</span></div>';
     return ''+
       '<footer class="footer" data-comment-id="global.footer" data-comment-label="Footer global">'+
       '  <div class="container">'+
       '    <div class="footer-grid">'+
       '      <div>'+
-      '        <div class="nav-logo">W <span>Premium</span></div>'+
+      '        '+footerLogo+
       '        <p class="small mt-2" style="max-width:280px;">Concierge digital para a maior rede premium em aeroportos brasileiros e argentinos.</p>'+
       '        <div class="footer-social mt-3">'+
       '          <a href="#" aria-label="Instagram">ig</a>'+
@@ -159,12 +168,13 @@
 
   function inject(){
     var prefix = document.body.getAttribute('data-prefix') || '';
+    var highfi = document.body.hasAttribute('data-highfi');
     var navMount = document.querySelector('[data-nav]');
     var footerMount = document.querySelector('[data-footer]');
     var modalMount = document.querySelector('[data-modal-mount]');
 
-    if(navMount && navMount.innerHTML.trim() === '') navMount.innerHTML = navHTML(prefix);
-    if(footerMount && footerMount.innerHTML.trim() === '') footerMount.innerHTML = footerHTML(prefix);
+    if(navMount && navMount.innerHTML.trim() === '') navMount.innerHTML = navHTML(prefix, highfi);
+    if(footerMount && footerMount.innerHTML.trim() === '') footerMount.innerHTML = footerHTML(prefix, highfi);
     if(modalMount && modalMount.innerHTML.trim() === '') modalMount.innerHTML = verifierModalHTML(prefix);
   }
 
@@ -185,18 +195,54 @@
   // =====================================================
 
   function bindHamburger(){
+    var drawer = document.body.hasAttribute('data-highfi');
+    function setNav(open){
+      document.body.classList.toggle('nav-open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
     document.addEventListener('click', function(e){
-      var btn = e.target.closest('[data-hamburger]');
-      if(!btn) return;
-      var links = document.querySelector('.nav-links');
-      if(!links) return;
-      var open = links.classList.toggle('is-open');
-      if(open){
-        links.style.cssText = 'display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:24px;gap:8px;z-index:60;';
-      } else {
-        links.style.cssText = '';
+      var ham = e.target.closest('[data-hamburger]');
+      if(ham){
+        e.preventDefault();
+        if(drawer){
+          setNav(!document.body.classList.contains('nav-open'));
+        } else {
+          var links = document.querySelector('.nav-links');
+          if(!links) return;
+          var open = links.classList.toggle('is-open');
+          links.style.cssText = open ? 'display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:24px;gap:8px;z-index:60;' : '';
+        }
+        return;
+      }
+      if(drawer && (e.target.closest('[data-nav-close]') || e.target.matches('[data-nav-backdrop]') || e.target.closest('.nav-links a'))){
+        setNav(false);
       }
     });
+    document.addEventListener('keydown', function(e){
+      if(drawer && e.key === 'Escape') setNav(false);
+    });
+  }
+
+  function bindHeroSlideshow(){
+    var box = document.querySelector('[data-hero-slideshow]');
+    if(!box) return;
+    var slides = box.querySelectorAll('.hero-slide');
+    if(slides.length < 2) return;
+    var i = 0;
+    setInterval(function(){
+      slides[i].classList.remove('is-active');
+      i = (i + 1) % slides.length;
+      slides[i].classList.add('is-active');
+    }, 5500);
+  }
+
+  function bindNavScroll(){
+    if(!document.body.hasAttribute('data-highfi')) return;
+    function onScroll(){
+      document.body.classList.toggle('nav-scrolled', window.scrollY > 40);
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
   }
 
   function bindAccordions(){
@@ -407,6 +453,8 @@
   document.addEventListener('DOMContentLoaded', function(){
     inject();
     markActiveNav();
+    bindHeroSlideshow();
+    bindNavScroll();
     bindHamburger();
     bindAccordions();
     bindChips();

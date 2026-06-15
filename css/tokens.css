@@ -1,0 +1,41 @@
+/* ============================================
+   W PREMIUM — DESIGN TOKENS (alta-fi)
+   Direção: Aman · serif editorial + Lemon Milk + ouro whisper.
+   Carregar ENTRE wireframe.css e highfi.css.
+
+   Display = Forum (cliente). Corpo = EB Garamond.
+   Troca futura (ex.: Lyon licenciada): só --font-head / --font-body
+   + o <link>/@font-face. Resto do site não muda.
+   ============================================ */
+
+/* ---------- FONTES DO CLIENTE (auto-hospedadas) ---------- */
+@font-face{font-family:'Lemon Milk';src:url('../assets/fonts/lemonmilk-light.otf') format('opentype');font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:'Lemon Milk';src:url('../assets/fonts/lemonmilk-regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Lemon Milk';src:url('../assets/fonts/lemonmilk-medium.otf') format('opentype');font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'Lemon Milk';src:url('../assets/fonts/lemonmilk-bold.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Fashion Fetish';src:url('../assets/fonts/fashionfetish-regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Fashion Fetish';src:url('../assets/fonts/fashionfetish-bold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Forum';src:url('../assets/fonts/forum-regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap;}
+
+:root{
+  /* ---------- TIPO ---------- */
+  --font-head:'Forum', Georgia, 'Times New Roman', serif;          /* display · títulos grandes (peso único 400) */
+  --font-body:'EB Garamond', Georgia, 'Times New Roman', serif;    /* corpo · títulos pequenos */
+  --font-label:'Lemon Milk', system-ui, -apple-system, 'Segoe UI', sans-serif; /* rótulos · wordmark · botões (caixa-alta) */
+  --font-accent:'Fashion Fetish', Georgia, serif;                  /* statement raro */
+
+  /* ---------- COR · paleta oficial (wp cores paleta.pdf) ---------- */
+  --c-bg:#FAFAF8;          /* fundo off-white               */
+  --c-surface:#F5F5F2;     /* seção alt / superfície         */
+  --c-surface-2:#E7E4DA;   /* superfície quente / divisória   */
+  --c-taupe:#D6D1C4;       /* taupe / borda forte            */
+  --c-ink:#212222;         /* tinta / texto / superfície escura */
+  --c-ink-2:#3A3A37;       /* texto secundário               */
+  --c-muted:#6B6A66;       /* texto terciário / rótulos       */
+  --c-hint:#8A8883;        /* hints / placeholders            */
+  --c-border:#E7E4DA;      /* borda hairline                  */
+  --c-border-strong:#D6D1C4;
+  --c-accent:#B29A55;      /* OURO B (UI) — whisper. Marca oficial: #C2A22F */
+  --c-accent-deep:#8A6F1E; /* ouro p/ TEXTO sobre fundo claro */
+  --c-dark:#212222;        /* superfície escura (newsletter/scrim) */
+}
