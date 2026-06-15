@@ -76,13 +76,14 @@ body.nav-scrolled .nav{background:var(--c-bg);border-bottom-color:var(--c-border
 
 /* logo SVG — branco sobre o hero, preto quando sólida */
 .nav-logo{display:flex;align-items:center;}
-.nav-logo-img{height:26px;width:auto;display:block;}
+.nav-logo-img{height:32px;width:auto;display:block;}
 .nav-logo-dark{display:none;}
 body.nav-scrolled .nav-logo-light{display:none;}
 body.nav-scrolled .nav-logo-dark{display:block;}
 
 /* ações: claras sobre o hero, tinta quando sólida */
-.nav-hamburger{display:inline-flex;color:#FAFAF8;border-color:rgba(255,255,255,.45);}
+.nav-hamburger{display:inline-flex;border:0;width:46px;height:46px;color:#FAFAF8;}
+.nav-hamburger svg{width:26px;height:26px;}
 .nav-actions .btn-ghost{display:none;}
 .nav-actions .btn-secondary{background:transparent;color:#FAFAF8;border-color:rgba(255,255,255,.55);}
 .nav-actions .lang-switch{border:0;background:transparent;padding:8px 6px;}
@@ -161,6 +162,10 @@ body.nav-open .nav-overlay{opacity:1;visibility:visible;}
 .footer-grid{margin-bottom:clamp(80px,9vw,132px);}                   /* respiro no meio empurra os termos p/ baixo */
 .footer-utility{padding-top:28px;}                                   /* termos colados na divisória, agrupados c/ o copyright */
 .footer-logo-img{height:30px;width:auto;display:block;margin-bottom:4px;}
+.footer-social{gap:18px;}
+.footer-social a{border:0;width:auto;height:auto;color:var(--c-muted);}
+.footer-social a svg{width:20px;height:20px;display:block;}
+.footer-social a:hover{color:var(--c-ink);}
 
 /* ---------- HERO · FULL-VIEWPORT ---------- */
 .hero-fs{
