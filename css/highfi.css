@@ -87,7 +87,7 @@ body.nav-scrolled .nav-logo-dark{display:block;}
 .nav-actions .btn-ghost{display:none;}
 .nav-actions .btn-secondary{background:transparent;color:#FAFAF8;border-color:rgba(255,255,255,.55);}
 .nav-actions .lang-switch{border:0;background:transparent;padding:8px 6px;font-weight:300;letter-spacing:.1em;}
-.nav-actions .lang-switch .lang-current,.nav-actions .btn-secondary{font-weight:300;}
+.nav-actions .lang-switch .lang-current,.nav-actions .btn-secondary{font-weight:500;}
 .nav-actions .btn-secondary{letter-spacing:.1em;}
 .nav-actions .lang-switch .lang-current{color:#fff;}
 .nav-actions .lang-switch .lang-sep,.nav-actions .lang-switch .lang-other{color:rgba(255,255,255,.6);}
@@ -149,7 +149,7 @@ body.nav-open .nav-overlay{opacity:1;visibility:visible;}
 .sala-card .card-body{padding:18px 0 0;}
 
 /* destaque editorial */
-.article-feature-img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;}
+.article-feature-img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:38% 40%;}
 
 /* cards de artigo — sem caixa, igual o grid de salas */
 .article-card{border:0;background:transparent;overflow:visible;}
