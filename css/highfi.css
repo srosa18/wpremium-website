@@ -186,7 +186,9 @@ body.nav-open .nav-overlay{opacity:1;visibility:visible;}
 .hero-fs .hero-slide.is-active{opacity:1;}
 .hero-fs .hero-scrim{
   position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(33,34,34,.44) 0%,rgba(33,34,34,.34) 45%,rgba(33,34,34,.60) 100%);
+  background:
+    radial-gradient(ellipse 72% 58% at 50% 42%, rgba(33,34,34,.20) 0%, rgba(33,34,34,0) 68%),
+    linear-gradient(180deg,rgba(33,34,34,.44) 0%,rgba(33,34,34,.34) 45%,rgba(33,34,34,.60) 100%);
 }
 .hero-fs .hero-content{
   position:absolute;inset:0;
