@@ -57,6 +57,9 @@
 /* leads / introduções → serif (corpo) */
 .lead,.lead-lg{font-family:var(--font-body);font-weight:400;}
 
+/* heading da faixa newsletter: line-height cravado (era 1.6, frouxo) */
+.newsletter h3{line-height:1.18;}
+
 /* rótulos · nav · botões · wordmark → Lemon Milk (caixa-alta) */
 .eyebrow,.nav-links a,.nav-logo,
 .btn,.btn-link,.badge,.chip,
