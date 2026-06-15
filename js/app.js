@@ -59,6 +59,7 @@
         '<a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>'+
         '<a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48" fill="currentColor" stroke="none"/></svg></a>'
       : '<a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="YouTube">yt</a>';
+    var footerLangs = highfi ? '' : '<span class="footer-langs"><a href="#" class="lang-pill active">PT</a> <a href="#" class="lang-pill">EN</a> <a href="#" class="lang-pill">ES</a></span>';
     return ''+
       '<footer class="footer" data-comment-id="global.footer" data-comment-label="Footer global">'+
       '  <div class="container">'+
@@ -118,11 +119,7 @@
       '    </div>'+
       '    <div class="footer-bottom">'+
       '      <span>© 2026 W Premium Group · Concierge Digital · Fase 03</span>'+
-      '      <span class="footer-langs">'+
-      '        <a href="#" class="lang-pill active">PT</a> '+
-      '        <a href="#" class="lang-pill">EN</a> '+
-      '        <a href="#" class="lang-pill">ES</a>'+
-      '      </span>'+
+      '      '+footerLangs+
       '    </div>'+
       '  </div>'+
       '</footer>';
@@ -229,12 +226,26 @@
     if(!box) return;
     var slides = box.querySelectorAll('.hero-slide');
     if(slides.length < 2) return;
+    var bars = document.querySelectorAll('.hero-progress .hero-bar-fill');
+    var DUR = 5500;
     var i = 0;
+    function render(idx){
+      for(var n=0;n<slides.length;n++){ slides[n].classList.toggle('is-active', n===idx); }
+      for(var b=0;b<bars.length;b++){
+        bars[b].style.transition = 'none';
+        bars[b].style.width = (b < idx ? '100%' : '0%');
+      }
+      if(bars[idx]){
+        void bars[idx].offsetWidth;
+        bars[idx].style.transition = 'width ' + DUR + 'ms linear';
+        bars[idx].style.width = '100%';
+      }
+    }
+    render(0);
     setInterval(function(){
-      slides[i].classList.remove('is-active');
       i = (i + 1) % slides.length;
-      slides[i].classList.add('is-active');
-    }, 5500);
+      render(i);
+    }, DUR);
   }
 
   function bindNavScroll(){

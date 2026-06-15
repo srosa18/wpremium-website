@@ -86,7 +86,9 @@ body.nav-scrolled .nav-logo-dark{display:block;}
 .nav-hamburger svg{width:26px;height:26px;}
 .nav-actions .btn-ghost{display:none;}
 .nav-actions .btn-secondary{background:transparent;color:#FAFAF8;border-color:rgba(255,255,255,.55);}
-.nav-actions .lang-switch{border:0;background:transparent;padding:8px 6px;}
+.nav-actions .lang-switch{border:0;background:transparent;padding:8px 6px;font-weight:300;letter-spacing:.1em;}
+.nav-actions .lang-switch .lang-current,.nav-actions .btn-secondary{font-weight:300;}
+.nav-actions .btn-secondary{letter-spacing:.1em;}
 .nav-actions .lang-switch .lang-current{color:#fff;}
 .nav-actions .lang-switch .lang-sep,.nav-actions .lang-switch .lang-other{color:rgba(255,255,255,.6);}
 body.nav-scrolled .nav-hamburger{color:var(--c-ink);border-color:var(--c-border-strong);}
@@ -143,7 +145,7 @@ body.nav-open .nav-overlay{opacity:1;visibility:visible;}
 
 /* ---------- SALAS EM DESTAQUE · grid editorial (sem caixa: foto + texto) ---------- */
 .sala-card{border:0;background:transparent;overflow:visible;}
-.sala-card .sala-img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;}
+.sala-card .sala-img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;}
 .sala-card .card-body{padding:18px 0 0;}
 
 /* destaque editorial */
@@ -198,6 +200,11 @@ body.nav-open .nav-overlay{opacity:1;visibility:visible;}
 @keyframes heroScrollBounce{0%,100%{transform:translateY(0);opacity:.8;}50%{transform:translateY(8px);opacity:.35;}}
 html{scroll-behavior:smooth;}
 #descobrir{scroll-margin-top:90px;}
+
+/* barrinhas de progresso (stories) do slideshow do hero */
+.hero-fs .hero-progress{position:absolute;top:16px;left:50%;transform:translateX(-50%);z-index:120;display:flex;gap:5px;width:min(340px,44vw);}
+.hero-fs .hero-bar{flex:1;height:2px;background:rgba(255,255,255,.28);overflow:hidden;}
+.hero-fs .hero-bar-fill{height:100%;width:0;background:#fff;}
 .hero-fs .kicker{
   font-family:var(--font-label);font-size:11px;letter-spacing:.26em;
   text-transform:uppercase;color:#FAFAF8;opacity:.92;margin:0 0 20px;
