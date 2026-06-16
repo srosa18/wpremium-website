@@ -159,6 +159,16 @@ body.nav-open .nav-overlay{opacity:1;visibility:visible;}
 .article-card .article-img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;}
 .article-card .card-body{padding:16px 0 0;}
 
+/* Serviços — hover: o miolo branco faz cross-fade pra transparente, sobra só a moldura */
+[data-comment-id="home.servicos"] .card{
+  transition:background-color .6s ease, border-color .6s ease;
+  will-change:background-color;
+}
+[data-comment-id="home.servicos"] .card:hover{
+  background-color:transparent;
+  border-color:var(--c-border-strong);
+}
+
 /* callout B2B */
 .b2b-img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;}
 
