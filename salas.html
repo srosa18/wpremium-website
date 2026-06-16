@@ -17,6 +17,8 @@
   .rule-label::before,.rule-label::after{content:"";flex:1;height:1px;background:var(--c-border-strong);}
   /* rebaixar o contraste: superfícies brancas -> #FAFAF8 */
   .card{background:#FAFAF8;border-color:#DDD9CC;}
+  /* cards de sala (com imagem): sem fundo/moldura — só imagem + texto */
+  .sala-card{background:transparent;border:0;}
   /* hover dos cards de aeroporto: miolo faz cross-fade pra transparente, sobra a moldura */
   [data-comment-id="salas.hub-aeroporto"] .card{transition:background-color .6s ease,border-color .6s ease;}
   [data-comment-id="salas.hub-aeroporto"] .card:hover{background-color:transparent;border-color:#D6D1C4;}
@@ -26,8 +28,8 @@
   .search-bar{background:#FAFAF8;}
   .search-bar input{background:transparent;}
   .chip{background:#FAFAF8;}
-  /* breadcrumb colado à nav (16px), respiro fica abaixo dele */
-  .crumb{padding:16px 0 0;}
+  /* breadcrumb no padrão das outras telas (32px abaixo da nav); respiro vai na margem do rule-label */
+  .crumb{padding:32px 0 0;}
 </style>
 </head>
 <body data-prefix="" data-highfi>
