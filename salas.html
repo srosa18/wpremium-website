@@ -18,7 +18,8 @@
   /* rebaixar o contraste: superfícies brancas -> #FAFAF8 */
   .card{background:#FAFAF8;border-color:#DDD9CC;}
   /* cards de sala (com imagem): sem fundo/moldura — só imagem + texto */
-  .sala-card{background:transparent;border:0;}
+  .sala-card{background:transparent;border:0;position:relative;}
+  .sala-card .sala-img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;}
   /* hover dos cards de aeroporto: miolo faz cross-fade pra transparente, sobra a moldura */
   [data-comment-id="salas.hub-aeroporto"] .card{transition:background-color .6s ease,border-color .6s ease;}
   [data-comment-id="salas.hub-aeroporto"] .card:hover{background-color:transparent;border-color:#D6D1C4;}
@@ -170,15 +171,15 @@
     </div>
 
     <div class="grid grid-3 mt-3">
-      <article class="card sala-card"><div class="ph" style="aspect-ratio:4/5;"><span class="ph-tag">Premium</span></div><div class="card-body"><h3 class="sala-title">5th Avenue</h3><p class="sala-meta">GRU · T3</p><a href="sala-5th-avenue.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph" style="aspect-ratio:4/5;"><span class="ph-tag">Premium</span></div><div class="card-body"><h3 class="sala-title">Frevo</h3><p class="sala-meta">REC · Internacional</p><a href="sala-frevo.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph" style="aspect-ratio:4/5;"></div><div class="card-body"><h3 class="sala-title">Green Park</h3><p class="sala-meta">GRU · T2</p><a href="sala-green-park.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph" style="aspect-ratio:4/5;"></div><div class="card-body"><h3 class="sala-title">Ocean View</h3><p class="sala-meta">REC · Desembarque</p><a href="sala-ocean-view.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph" style="aspect-ratio:4/5;"><span class="ph-tag">Premium</span></div><div class="card-body"><h3 class="sala-title">Gold Standard</h3><p class="sala-meta">GRU · T1</p><a href="sala-gold-standard.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph" style="aspect-ratio:4/5;"></div><div class="card-body"><h3 class="sala-title">Business Lounge</h3><p class="sala-meta">FOR</p><a href="sala-business-lounge.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph" style="aspect-ratio:4/5;"></div><div class="card-body"><h3 class="sala-title">Iracema</h3><p class="sala-meta">FOR · Internacional</p><a href="sala-iracema.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph" style="aspect-ratio:4/5;"></div><div class="card-body"><h3 class="sala-title">Copacabana</h3><p class="sala-meta">GIG · Internacional</p><a href="sala-copacabana.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph" style="aspect-ratio:4/5;"></div><div class="card-body"><h3 class="sala-title">Ipanema</h3><p class="sala-meta">GIG · Doméstico</p><a href="sala-ipanema.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/5th-avenue.jpg?v=4" alt="Sala 5th Avenue"><span class="ph-tag">Premium</span><div class="card-body"><h3 class="sala-title">5th Avenue</h3><p class="sala-meta">GRU · T3</p><a href="sala-5th-avenue.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/frevo.jpg?v=4" alt="Sala Frevo"><span class="ph-tag">Premium</span><div class="card-body"><h3 class="sala-title">Frevo</h3><p class="sala-meta">REC · Internacional</p><a href="sala-frevo.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/green-park.jpg?v=4" alt="Sala Green Park"><div class="card-body"><h3 class="sala-title">Green Park</h3><p class="sala-meta">GRU · T2</p><a href="sala-green-park.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/ocean-view.jpg?v=4" alt="Sala Ocean View"><div class="card-body"><h3 class="sala-title">Ocean View</h3><p class="sala-meta">REC · Desembarque</p><a href="sala-ocean-view.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/gold-standard.jpg?v=4" alt="Sala Gold Standard"><span class="ph-tag">Premium</span><div class="card-body"><h3 class="sala-title">Gold Standard</h3><p class="sala-meta">GRU · T1</p><a href="sala-gold-standard.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/business-lounge.jpg?v=4" alt="Sala Business Lounge"><div class="card-body"><h3 class="sala-title">Business Lounge</h3><p class="sala-meta">FOR</p><a href="sala-business-lounge.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/iracema.jpg?v=4" alt="Sala Iracema"><div class="card-body"><h3 class="sala-title">Iracema</h3><p class="sala-meta">FOR · Internacional</p><a href="sala-iracema.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/copacabana.jpg?v=4" alt="Sala Copacabana"><div class="card-body"><h3 class="sala-title">Copacabana</h3><p class="sala-meta">GIG · Internacional</p><a href="sala-copacabana.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/ipanema.jpg?v=4" alt="Sala Ipanema"><div class="card-body"><h3 class="sala-title">Ipanema</h3><p class="sala-meta">GIG · Doméstico</p><a href="sala-ipanema.html" class="btn-link">Explorar →</a></div></article>
     </div>
     <div class="text-center mt-5"><button class="btn btn-secondary">Carregar mais salas (+12)</button></div>
   </div>
