@@ -47,6 +47,11 @@
 .lead{text-wrap:balance;}
 .sec-header .h1,.sec-header .h2,.sec-header .h3{margin-bottom:18px;}  /* mais ar entre título e subtítulo */
 
+/* PADRÃO GLOBAL · cabeçalho de seção: label perto do título + título com respiro pro conteúdo */
+.eyebrow{margin-bottom:10px;}
+.eyebrow + h1,.eyebrow + h2{margin-top:0;}
+.eyebrow + h2{margin-bottom:20px;}
+
 /* títulos MENORES / cards → EB Garamond */
 .h3,.h4,.sala-title,.article-card h4,
 .article-body h2,.article-body h3,.newsletter h3,
