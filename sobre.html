@@ -8,44 +8,30 @@
 <link rel="stylesheet" href="css/wireframe.css?v=7">
 <link rel="stylesheet" href="css/tokens.css?v=7">
 <link rel="stylesheet" href="css/highfi.css?v=7">
-<style>
-  /* HERO travado na viewport: imagem + legenda cabem numa tela (horizontal), seta pulsando */
-  .hero-vp{position:relative;height:calc(100vh - var(--nav-h));height:calc(100svh - var(--nav-h));min-height:460px;}
-  .hero-vp-stack{display:flex;flex-direction:column;height:100%;padding-bottom:46px;}
-  .hero-vp-stack .crumb{flex:none;padding:16px 0 0;}
-  .hero-vp-frame{flex:1;min-height:0;margin-top:14px;display:flex;justify-content:center;}
-  .hero-vp-frame img{display:block;height:100%;width:auto;max-width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 50%;}
-  .hero-vp-cap{flex:none;padding-top:18px;}
-  .hero-vp-cap .h1{font-size:clamp(30px,3.2vw,42px);}
-  .hero-vp-cap .lead{font-size:15px;max-width:560px;}
-  .hero-vp-arrow{position:absolute;left:50%;bottom:14px;color:var(--c-muted);width:30px;height:30px;display:flex;align-items:center;justify-content:center;animation:heroVpBounce 2.2s ease-in-out infinite;}
-  .hero-vp-arrow svg{width:24px;height:24px;}
-  @keyframes heroVpBounce{0%,100%{transform:translate(-50%,0);opacity:.5}50%{transform:translate(-50%,7px);opacity:1}}
-</style>
 </head>
 <body data-prefix="" data-highfi>
 
 <div data-nav></div>
 
-<section class="hero-vp" data-comment-id="sobre.hero" data-comment-label="Sobre · Hero">
-  <div class="container hero-vp-stack">
-    <div class="crumb"><a href="index.html">Início</a> <span class="sep">/</span> <span style="color:var(--g900);">Sobre</span></div>
-    <div class="hero-vp-frame">
-      <img src="assets/img/sobre/hero.jpg?v=1" alt="Sobre o W Premium Group">
+<div class="container">
+  <div class="crumb"><a href="index.html">Início</a> <span class="sep">/</span> <span style="color:var(--g900);">Sobre</span></div>
+</div>
+
+<section class="section" data-comment-id="sobre.hero" data-comment-label="Sobre · Hero" style="padding-bottom:64px;">
+  <div class="container">
+    <div class="hero hero-short" style="aspect-ratio:16/9;height:auto;margin:0;">
+      <img src="assets/img/sobre/hero.jpg?v=1" alt="Sobre o W Premium Group" style="display:block;width:100%;height:100%;object-fit:cover;">
     </div>
-    <div class="hero-vp-cap">
+    <div style="margin-top:20px;">
       <div class="eyebrow">Desde 2015</div>
       <h1 class="h1">Sobre o W Premium Group</h1>
       <p class="lead mt-2" style="max-width:640px;">A maior rede de salas premium em aeroportos brasileiros. Mais de 500 mil viajantes anualmente confiam em nosso cuidado.</p>
     </div>
   </div>
-  <a class="hero-vp-arrow" href="#sobre-conteudo" aria-label="Rolar para ver mais conteúdo">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 9l7 7 7-7"/></svg>
-  </a>
 </section>
 
 <!-- SUB-HUBS L3 -->
-<section id="sobre-conteudo" data-comment-id="sobre.bloco-1" data-comment-label="Sobre · Bloco 1" class="section" style="padding-top:64px;">
+<section data-comment-id="sobre.bloco-1" data-comment-label="Sobre · Bloco 1" class="section" style="padding-top:64px;">
   <div class="container">
     <div class="grid grid-2">
       <a href="historia.html" class="card" style="text-decoration:none;color:inherit;background:transparent;border:0;">
