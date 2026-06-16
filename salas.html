@@ -12,19 +12,23 @@
   /* experimento · fundo marfim quente quase-branco, header branco */
   body{ background:#F4F1E8; }
   body.nav-scrolled .nav{ background:#FFFFFF; border-bottom-color:transparent; }
-  /* rótulo com fios laterais — detalhe gráfico p/ seções sem header */
-  .rule-label{display:flex;align-items:center;gap:24px;}
+  /* rótulo com fios laterais — full-bleed (ponta a ponta da viewport) */
+  .rule-label{display:flex;align-items:center;gap:24px;width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);}
   .rule-label::before,.rule-label::after{content:"";flex:1;height:1px;background:var(--c-border-strong);}
+  /* rebaixar o contraste: superfícies brancas -> #F5F5F2 */
+  .card{background:#F5F5F2;}
+  .search-bar{background:#F5F5F2;}
+  .search-bar input{background:transparent;}
 </style>
 </head>
 <body data-prefix="" data-highfi>
 
 <div data-nav></div>
 
-<div class="container">
+<div class="container" style="padding-top:48px;">
   <div class="crumb"><a href="index.html">Início</a> <span class="sep">/</span> <span style="color:var(--g900);">Salas</span></div>
 
-  <div class="eyebrow rule-label" style="margin:0 auto 26px;">Hub · Salas</div>
+  <div class="eyebrow rule-label" style="margin-bottom:26px;">Hub · Salas</div>
   <div class="sec-header text-center" style="max-width:680px;margin:0 auto 32px;">
     <h1 class="h1">21+ salas. 14 aeroportos.<br>Uma curadoria.</h1>
     <p>Comece pelo aeroporto. Cada cidade entra na sala junto com você.</p>
