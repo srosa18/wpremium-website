@@ -8,6 +8,14 @@
 <link rel="stylesheet" href="css/wireframe.css?v=6">
 <link rel="stylesheet" href="css/tokens.css?v=6">
 <link rel="stylesheet" href="css/highfi.css?v=6">
+<style>
+  /* FAQ · acordeon minimal (itens com fio inferior, sem caixa) */
+  [data-comment-id="como-acessar.faq"] .acc{border:0;border-bottom:1px solid var(--c-border-strong);border-radius:0;margin:0;background:transparent;}
+  [data-comment-id="como-acessar.faq"] .acc-trigger{padding:20px 0;font-size:16px;font-weight:500;color:var(--c-ink);transition:opacity .2s ease;}
+  [data-comment-id="como-acessar.faq"] .acc-trigger:hover{opacity:.6;}
+  [data-comment-id="como-acessar.faq"] .acc-trigger .sign{border:0;width:auto;height:auto;color:var(--c-hint);font-size:20px;font-weight:400;}
+  [data-comment-id="como-acessar.faq"] .acc-body{padding:0 0 22px;font-size:15px;color:var(--c-muted);}
+</style>
 </head>
 <body data-prefix="" data-highfi>
 
@@ -85,21 +93,24 @@
 <!-- FAQ -->
 <section data-comment-id="como-acessar.faq" data-comment-label="Como Acessar · FAQ" class="section">
   <div class="container">
-    <div class="eyebrow mb-1">Dúvidas frequentes</div>
-    <h2 class="h2 mb-3">Antes de embarcar.</h2>
-    <div style="max-width:760px;">
-      <div class="acc open">
-        <button class="acc-trigger">O Verificador funciona offline? <span class="sign">+</span></button>
-        <div class="acc-body">O Verificador opera contra um banco de BINs atualizado em tempo real. Online apenas. Em casos de instabilidade, mostramos um fallback com a lista geral de cartões aceitos.</div>
+    <div class="grid center-mobile" style="grid-template-columns:1.1fr 1fr;gap:48px;align-items:start;">
+      <div>
+        <div class="eyebrow mb-1">Dúvidas frequentes</div>
+        <h2 class="h2 mb-3">Antes de embarcar.</h2>
+        <div class="acc open">
+          <button class="acc-trigger">O Verificador funciona offline? <span class="sign">+</span></button>
+          <div class="acc-body">O Verificador opera contra um banco de BINs atualizado em tempo real. Online apenas. Em casos de instabilidade, mostramos um fallback com a lista geral de cartões aceitos.</div>
+        </div>
+        <div class="acc">
+          <button class="acc-trigger">Posso comprar um Day Pass na recepção da sala? <span class="sign">+</span></button>
+          <div class="acc-body">Sim. A recepção emite Day Pass na hora, mediante pagamento por cartão. Compra antecipada online garante a tarifa mínima.</div>
+        </div>
+        <div class="acc">
+          <button class="acc-trigger">Acompanhantes precisam do mesmo acesso? <span class="sign">+</span></button>
+          <div class="acc-body">Acompanhantes precisam de Day Pass próprio ou cartão elegível separado. Menores de 12 anos: meia entrada. Menores de 2 anos: sem custo.</div>
+        </div>
       </div>
-      <div class="acc">
-        <button class="acc-trigger">Posso comprar um Day Pass na recepção da sala? <span class="sign">+</span></button>
-        <div class="acc-body">Sim. A recepção emite Day Pass na hora, mediante pagamento por cartão. Compra antecipada online garante a tarifa mínima.</div>
-      </div>
-      <div class="acc">
-        <button class="acc-trigger">Acompanhantes precisam do mesmo acesso? <span class="sign">+</span></button>
-        <div class="acc-body">Acompanhantes precisam de Day Pass próprio ou cartão elegível separado. Menores de 12 anos: meia entrada. Menores de 2 anos: sem custo.</div>
-      </div>
+      <img src="assets/img/salas/5th-avenue.jpg" alt="Sala W Premium" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;">
     </div>
   </div>
 </section>
