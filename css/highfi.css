@@ -78,7 +78,7 @@
 .dash-menu a,.timeline .tl-year,.team-card .role{
   font-family:var(--font-label);
 }
-.eyebrow{letter-spacing:.22em;color:var(--c-muted);}
+.eyebrow{letter-spacing:.22em;color:#B29A55;}  /* dourado · assinatura dos rótulos de seção */
 .nav-logo{letter-spacing:.30em;font-weight:500;}
 .nav-logo span{font-weight:300;}
 
