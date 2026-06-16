@@ -278,6 +278,11 @@
 
   function bindNavScroll(){
     if(!document.body.hasAttribute('data-highfi')) return;
+    // páginas sem hero full-screen: nav sólida desde o topo (não fica branca invisível)
+    if(!document.body.hasAttribute('data-hero')){
+      document.body.classList.add('nav-scrolled');
+      return;
+    }
     function onScroll(){
       document.body.classList.toggle('nav-scrolled', window.scrollY > 40);
     }

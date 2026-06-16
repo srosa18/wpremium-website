@@ -77,6 +77,9 @@
 body.nav-scrolled .nav{background:var(--c-bg);border-bottom-color:var(--c-border);}
 .nav-inner{height:var(--nav-h);}
 
+/* páginas sem hero full-screen: nav sólida + offset pra não ficar sob a nav fixa */
+body[data-highfi]:not([data-hero]){padding-top:var(--nav-h);}
+
 /* logo SVG — branco sobre o hero, preto quando sólida */
 .nav-logo{display:flex;align-items:center;}
 .nav-logo-img{height:32px;width:auto;display:block;}
