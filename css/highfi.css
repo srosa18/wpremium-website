@@ -172,6 +172,18 @@ body.nav-open .nav-overlay{opacity:1;visibility:visible;}
 /* callout B2B */
 .b2b-img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;}
 
+/* B2B — carrossel: imagem nítida + peek translúcido do próximo + breadcrumb */
+.b2b-carousel{position:relative;}
+.b2b-viewport{overflow:hidden;}
+.b2b-track{display:flex;gap:14px;transition:transform .7s cubic-bezier(.4,0,.2,1);will-change:transform;}
+.b2b-slide{flex:0 0 86%;margin:0;opacity:.34;transition:opacity .7s ease;}
+.b2b-slide.is-active{opacity:1;}
+.b2b-slide img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;}
+.b2b-dots{display:flex;gap:10px;margin-top:18px;}
+.b2b-dot{width:26px;height:2px;padding:0;border:0;background:var(--c-border-strong);cursor:pointer;transition:background-color .4s ease,width .4s ease;}
+.b2b-dot:hover{background:var(--c-muted);}
+.b2b-dot.is-active{background:var(--c-ink);width:42px;}
+
 /* ---------- FOOTER · bloco no topo, legais agrupados embaixo ---------- */
 .footer{padding:56px 0 40px;margin-top:clamp(80px,8vw,128px);}        /* topo menor → bloco sobe */
 .footer-grid{margin-bottom:clamp(80px,9vw,132px);}                   /* respiro no meio empurra os termos p/ baixo */
