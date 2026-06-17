@@ -17,13 +17,15 @@
   <div class="crumb"><a href="index.html">Início</a> <span class="sep">/</span> <span style="color:var(--g900);">B2B</span></div>
 </div>
 
-<section class="container">
-  <div class="hero hero-short" data-comment-id="b2b.hero" data-comment-label="B2B · Hero">
-    <div class="ph"><span class="ph-tag">L2 · B2B</span></div>
-    <div class="hero-overlay">
-      <div class="eyebrow" style="color:rgba(255,255,255,.7);">Para empresas, agências e operadoras</div>
-      <h1 class="h1 mt-1">Premium em escala.</h1>
-      <p class="lead mt-2" style="color:rgba(255,255,255,.85);max-width:520px;">Reservas de grupo, parcerias com TMC's, programas customizados para times que viajam.</p>
+<section class="section" data-comment-id="b2b.hero" data-comment-label="B2B · Hero" style="padding-bottom:64px;">
+  <div class="container">
+    <div class="hero hero-short" style="aspect-ratio:16/9;height:auto;margin:0;">
+      <img src="assets/img/b2b/hero.jpg?v=2" alt="W Premium para empresas, agências e operadoras" style="display:block;width:100%;height:100%;object-fit:cover;">
+    </div>
+    <div style="margin-top:20px;">
+      <div class="eyebrow">Para empresas, agências e operadoras</div>
+      <h1 class="h1">Premium em escala.</h1>
+      <p class="lead mt-2" style="max-width:520px;">Reservas de grupo, parcerias com TMC's, programas customizados para times que viajam.</p>
     </div>
   </div>
 </section>
@@ -31,19 +33,17 @@
 <section data-comment-id="b2b.bloco-1" data-comment-label="B2B · Bloco 1" class="section">
   <div class="container">
     <div class="grid grid-2">
-      <a href="reservas-grupo.html" class="card" style="text-decoration:none;color:inherit;overflow:hidden;">
-        <div class="ph" style="aspect-ratio:16/9;"></div>
-        <div class="card-body" style="padding:32px;">
-          <div class="badge mb-2">L3</div>
+      <a href="reservas-grupo.html" class="card" style="text-decoration:none;color:inherit;background:transparent;border:0;">
+        <img src="assets/img/b2b/reservas-grupo.jpg?v=1" alt="Reservas de Grupo" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;">
+        <div class="card-body" style="padding:20px 0 0;">
           <h3 class="h2" style="font-size:24px;">Reservas de Grupo</h3>
           <p class="lead muted mt-2">Times executivos, comitivas, eventos corporativos. Reserva integral de áreas ou de salas inteiras, com cardápio e atendimento sob medida.</p>
           <span class="btn-link mt-3">Conhecer →</span>
         </div>
       </a>
-      <a href="parcerias-operadoras.html" class="card" style="text-decoration:none;color:inherit;overflow:hidden;">
-        <div class="ph" style="aspect-ratio:16/9;"></div>
-        <div class="card-body" style="padding:32px;">
-          <div class="badge mb-2">L3</div>
+      <a href="parcerias-operadoras.html" class="card" style="text-decoration:none;color:inherit;background:transparent;border:0;">
+        <img src="assets/img/b2b/parcerias.jpg?v=1" alt="Parcerias Operadoras" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;">
+        <div class="card-body" style="padding:20px 0 0;">
           <h3 class="h2" style="font-size:24px;">Parcerias Operadoras</h3>
           <p class="lead muted mt-2">TMC's, agências, programas corporativos. Integração via API, faturamento centralizado, gestão de cotas.</p>
           <span class="btn-link mt-3">Conhecer →</span>
@@ -79,12 +79,23 @@
   <div class="container">
     <div class="eyebrow mb-1">Clientes</div>
     <h2 class="h2 mb-3">Quem confia hoje.</h2>
-    <div class="press-row">
-      <div class="press-item"><strong>Itaú Asset</strong></div>
-      <div class="press-item"><strong>Vale Global</strong></div>
-      <div class="press-item"><strong>Ambev Trade</strong></div>
-      <div class="press-item"><strong>Suzano IR</strong></div>
-      <div class="press-item"><strong>+ 47 empresas</strong></div>
+    <style>
+      .logo-wall{display:grid;grid-template-columns:repeat(5,1fr);align-items:center;gap:0;
+        border-top:1px solid var(--c-border);border-bottom:1px solid var(--c-border);}
+      .logo-item{display:flex;align-items:center;justify-content:center;min-height:72px;padding:0 20px;
+        border-right:1px solid var(--c-border);}                 /* barra divisoria entre logos */
+      .logo-item:last-child{border-right:none;}
+      .logo-item img{max-height:30px;max-width:120px;width:auto;height:auto;object-fit:contain;} /* coloridos */
+      .logo-wall img[alt="Ambev"]{max-height:20px;}              /* Ambev menor (logo muito largo) */
+      .logo-more{font-family:var(--font-label);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--c-muted);text-align:center;}
+      @media(max-width:640px){ .logo-wall{grid-template-columns:repeat(2,1fr);} .logo-item{border-right:none;min-height:60px;} }
+    </style>
+    <div class="logo-wall">
+      <div class="logo-item"><img src="assets/img/b2b/logos/itau.svg?v=1" alt="Itaú Asset"></div>
+      <div class="logo-item"><img src="assets/img/b2b/logos/vale.svg?v=1" alt="Vale"></div>
+      <div class="logo-item"><img src="assets/img/b2b/logos/ambev.svg?v=1" alt="Ambev"></div>
+      <div class="logo-item"><img src="assets/img/b2b/logos/suzano.svg?v=1" alt="Suzano"></div>
+      <div class="logo-item logo-more">+ 47 empresas</div>
     </div>
   </div>
 </section>
