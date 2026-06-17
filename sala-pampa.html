@@ -24,26 +24,23 @@
 </div>
 
 <!-- BLOCO 01 · HERO CINEMATOGRÁFICO -->
-<section class="container">
-  <div class="hero" data-comment-id="sala-pampa.01-hero" data-comment-label="Pampa · 01 Hero">
-    <div class="ph"><span class="ph-tag">01 · Hero cinematográfico</span></div>
-    <div class="hero-overlay">
-      <div class="eyebrow" style="color:rgba(255,255,255,.7);">Trelew · Argentina</div>
-      <h1 class="h1 mt-1" style="max-width:520px;">Estepe patagônica em ritmo pausado.</h1>
+<section class="section" data-comment-id="sala-pampa.01-hero" data-comment-label="Pampa · 01 Hero" style="padding-bottom:64px;">
+  <div class="container">
+    <div class="ph" style="aspect-ratio:16/9;border-radius:var(--r-lg);"></div>
+    <div style="margin-top:20px;">
+      <div class="eyebrow">Trelew · Argentina</div>
+      <h1 class="h1">Estepe patagônica em ritmo pausado.</h1>
     </div>
   </div>
 </section>
 
 <!-- BLOCO 02 · MANCHETE + LEDE -->
-<section data-comment-id="sala-pampa.02-manchete" data-comment-label="Pampa · 02 Manchete + Lede" class="section">
+<section data-comment-id="sala-pampa.02-manchete" data-comment-label="Pampa · 02 Manchete + Lede" class="section" style="padding-top:32px;">
   <div class="container">
     <div style="max-width:840px;margin:0 auto;text-align:center;">
-      <div class="eyebrow mb-2">02 · Manchete + Lede</div>
-      <div class="flex gap-1" style="justify-content:center;align-items:baseline;flex-wrap:wrap;">
-        <h2 class="h-display">Pampa</h2>
-        <span class="muted" style="font-size:clamp(13px,1vw + 11px,18px);">· Terminal único · Saguão A</span>
-      </div>
-      <p class="lead-lg mt-3">Em Trelew, a Pampa é o pouso técnico antes da pinguinera de Punta Tombo. Chá galês, scones, e mate amargo na chegada. Quem passa por aqui não tem pressa — e a sala respeita isso.</p>
+      <div class="eyebrow rule-label" style="margin-bottom:20px;">Terminal único · Saguão A</div>
+      <h2 class="h-display">Pampa</h2>
+      <p class="lead-lg mt-3" style="font-size:18px;line-height:1.65;">Em Trelew, a Pampa é o pouso técnico antes da pinguinera de Punta Tombo. Chá galês, scones, e mate amargo na chegada. Quem passa por aqui não tem pressa — e a sala respeita isso.</p>
     </div>
   </div>
 </section>
@@ -51,14 +48,32 @@
 <!-- BLOCO 03 · GALERIA IMERSIVA -->
 <section data-comment-id="sala-pampa.03-galeria" data-comment-label="Pampa · 03 Galeria" class="section section-alt">
   <div class="container">
-    <div class="eyebrow mb-3">03 · Galeria imersiva</div>
-    <div data-gallery>
-      <div class="ph" style="aspect-ratio:21/9;border-radius:var(--r-lg);"></div>
-      <div class="gallery-thumbs mt-3">
-          <div class="ph gallery-thumb"></div><div class="ph gallery-thumb"></div><div class="ph gallery-thumb"></div><div class="ph gallery-thumb"></div><div class="ph gallery-thumb"></div>
+    <div class="eyebrow mb-3">Galeria</div>
+    <style>
+      .gallery-split{display:grid;grid-template-columns:1.5fr 1fr;grid-template-areas:"fixed carousel" ". dots";column-gap:28px;row-gap:0;align-items:stretch;}
+      .gallery-fixed{grid-area:fixed;margin:0;border-radius:var(--r-lg);overflow:hidden;}
+      .gallery-fixed img{display:block;width:100%;height:100%;object-fit:cover;}
+      .gallery-fixed .ph{width:100%;height:100%;}
+      .gallery-carousel .b2b-viewport{grid-area:carousel;border-radius:var(--r-lg);}
+      .gallery-carousel .gallery-split .b2b-dots{grid-area:dots;margin-top:20px;}
+      .gallery-carousel .b2b-dot.is-active::after{height:1.5px;background:var(--c-ink);}
+      @media(max-width:760px){ .gallery-split{grid-template-columns:1fr;grid-template-areas:"fixed" "carousel" "dots";} }
+    </style>
+    <div class="b2b-carousel gallery-carousel" data-b2b-carousel>
+      <div class="gallery-split">
+        <figure class="gallery-fixed"><div class="ph"></div></figure>
+        <div class="b2b-viewport">
+          <div class="b2b-track" data-b2b-track>
+            <figure class="b2b-slide is-active"><div class="ph" style="aspect-ratio:4/5;border-radius:var(--r-lg);"></div></figure>
+            <figure class="b2b-slide"><div class="ph" style="aspect-ratio:4/5;border-radius:var(--r-lg);"></div></figure>
+            <figure class="b2b-slide"><div class="ph" style="aspect-ratio:4/5;border-radius:var(--r-lg);"></div></figure>
+          </div>
         </div>
-      <div class="gallery-dots">
-        <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <div class="b2b-dots" data-b2b-dots>
+          <button type="button" class="b2b-dot is-active" data-b2b-dot="0" aria-label="Ver imagem 1"></button>
+          <button type="button" class="b2b-dot" data-b2b-dot="1" aria-label="Ver imagem 2"></button>
+          <button type="button" class="b2b-dot" data-b2b-dot="2" aria-label="Ver imagem 3"></button>
+        </div>
       </div>
     </div>
   </div>
@@ -67,7 +82,7 @@
 <!-- BLOCO 04 · AMENIDADES -->
 <section data-comment-id="sala-pampa.04-amenidades" data-comment-label="Pampa · 04 Amenidades" class="section">
   <div class="container">
-    <div class="eyebrow mb-1">04 · Experiência amenidades</div>
+    <div class="eyebrow mb-1">Amenidades</div>
     <h2 class="h2 mb-3" style="max-width:560px;">Ambientes, não checklist.</h2>
     <div class="grid grid-3">
       <div><div class="ph mb-2" style="aspect-ratio:4/5;"></div><h4 class="h4">Sala de leitura</h4><p class="small muted">Poltronas reclináveis, biblioteca curada, luz lateral.</p></div>
@@ -80,7 +95,7 @@
 <!-- BLOCO 05 · GASTRONOMIA -->
 <section data-comment-id="sala-pampa.05-gastronomia" data-comment-label="Pampa · 05 Gastronomia" class="section section-alt">
   <div class="container">
-    <div class="eyebrow mb-1">05 · Gastronomia assinada</div>
+    <div class="eyebrow mb-1">Gastronomia</div>
     <h2 class="h2 mb-3" style="max-width:560px;">Carta em parceria com a cidade.</h2>
     <div class="grid" style="grid-template-columns:1fr 1fr;align-items:center;gap:48px;">
       <div class="ph" style="aspect-ratio:5/4;"></div>
@@ -97,7 +112,7 @@
 <!-- BLOCO 06 · BEM-ESTAR -->
 <section data-comment-id="sala-pampa.06-bem-estar" data-comment-label="Pampa · 06 Bem-estar" class="section">
   <div class="container">
-    <div class="eyebrow mb-1">06 · Bem-estar &amp; descanso</div>
+    <div class="eyebrow mb-1">Bem-estar</div>
     <h2 class="h2 mb-3">Tempo entre voos como tratamento.</h2>
     <div class="grid grid-3">
       <div class="card card-body" style="padding:24px;"><div class="ph mb-3" style="aspect-ratio:16/10;"></div><h4 class="h4">Nap Pods</h4><p class="small muted mt-1">Cabines individuais com blackout e despertador suave.</p></div>
@@ -110,7 +125,7 @@
 <!-- BLOCO 07 · LOCALIZAÇÃO -->
 <section data-comment-id="sala-pampa.07-localizacao" data-comment-label="Pampa · 07 Localização" class="section section-alt">
   <div class="container">
-    <div class="eyebrow mb-1">07 · Localização no terminal</div>
+    <div class="eyebrow mb-1">Localização</div>
     <h2 class="h2 mb-3">Como chegar.</h2>
     <div class="grid" style="grid-template-columns:1.4fr 1fr;gap:32px;align-items:flex-start;">
       <div class="terminal-map">
@@ -139,7 +154,7 @@
 <!-- BLOCO 08 · INFO PRÁTICAS -->
 <section data-comment-id="sala-pampa.08-info" data-comment-label="Pampa · 08 Informações práticas" class="section">
   <div class="container">
-    <div class="eyebrow mb-1">08 · Informações práticas</div>
+    <div class="eyebrow mb-1">Informações</div>
     <h2 class="h2 mb-3">Dados essenciais.</h2>
     <div class="ficha">
       <div class="ficha-cell"><div class="label">Horário</div><div class="value">Conforme operação do terminal<br>Check-in: até decolagem</div></div>
@@ -153,7 +168,7 @@
 <!-- BLOCO 09 · ACESSO -->
 <section data-comment-id="sala-pampa.09-acesso" data-comment-label="Pampa · 09 Acesso &amp; tarifas" class="section section-alt">
   <div class="container">
-    <div class="eyebrow mb-1">09 · Acesso &amp; tarifas</div>
+    <div class="eyebrow mb-1">Acesso &amp; tarifas</div>
     <h2 class="h2 mb-2">Quatro caminhos para entrar.</h2>
     <p class="lead muted mb-4" style="max-width:680px;">Consulte o <button class="btn-link" data-open-verifier style="border:none;background:none;padding:0;cursor:pointer;text-decoration:underline;">Verificador de Acesso</button> em segundos.</p>
     <div class="grid grid-2">
@@ -191,7 +206,7 @@
 <!-- BLOCO 10 · IDENTIDADE LOCAL -->
 <section data-comment-id="sala-pampa.10-identidade" data-comment-label="Pampa · 10 Identidade local" class="section">
   <div class="container">
-    <div class="eyebrow mb-1">10 · Identidade local</div>
+    <div class="eyebrow mb-1">Identidade local</div>
     <h2 class="h2 mb-3" style="max-width:560px;">Trelew · Argentina entra na sala.</h2>
     <div class="grid" style="grid-template-columns:1fr 1.4fr;gap:48px;align-items:center;">
       <div class="ph" style="aspect-ratio:4/5;"></div>
@@ -207,7 +222,7 @@
 <!-- BLOCO 11 · PRESS -->
 <section data-comment-id="sala-pampa.11-press" data-comment-label="Pampa · 11 Press" class="section section-alt">
   <div class="container">
-    <div class="eyebrow mb-1">11 · Press &amp; reconhecimento</div>
+    <div class="eyebrow mb-1">Press</div>
     <h2 class="h2 mb-4">O que dizem.</h2>
     <div class="press-row">
       <div class="press-item">"Identidade onde se esperava genérico." <strong>Casa Vogue</strong></div>
@@ -222,7 +237,7 @@
 <!-- BLOCO 12 · OUTRAS SALAS -->
 <section data-comment-id="sala-pampa.12-outras-salas" data-comment-label="Pampa · 12 Outras salas" class="section">
   <div class="container">
-    <div class="eyebrow mb-1">12 · Outras salas do aeroporto</div>
+    <div class="eyebrow mb-1">Outras salas</div>
     <h2 class="h2 mb-3">Outras salas em REL.</h2>
     <div class="grid grid-3">
       <article class="card sala-card"><div class="ph" style="aspect-ratio:16/10;"></div><div class="card-body"><h3 class="sala-title">Patagônia</h3><p class="sala-meta">FTE · AR</p><a href="sala-patagonia.html" class="btn-link">Explorar →</a></div></article>
