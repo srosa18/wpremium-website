@@ -492,11 +492,29 @@
   }
 
   // =====================================================
+  // QA WIDGET (SR Studio) — comentários de revisão em todas as páginas.
+  // Carrega o qa.js uma vez; o painel fica em
+  // https://srosa18.github.io/qa-widget/admin.html?project=wpremium
+  // Em produção, preencha data-hide-on com o domínio final p/ ocultar.
+  // =====================================================
+  function loadQAWidget(){
+    if (document.querySelector('script[src*="qa-widget/qa.js"]')) return;
+    var s = document.createElement('script');
+    s.src = 'https://srosa18.github.io/qa-widget/qa.js';
+    s.setAttribute('data-supabase-url', 'https://itwaxivhuxtnatjuoebe.supabase.co');
+    s.setAttribute('data-supabase-key', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0d2F4aXZodXh0bmF0anVvZWJlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzNzI5NzMsImV4cCI6MjA5NDk0ODk3M30.mbjL6lV5Y05TaBBo3_BuGhK6AdIa6Bm6WDRcc2BC9-Q');
+    s.setAttribute('data-project', 'wpremium');
+    s.setAttribute('data-hide-on', '');
+    document.body.appendChild(s);
+  }
+
+  // =====================================================
   // INIT
   // =====================================================
 
   document.addEventListener('DOMContentLoaded', function(){
     inject();
+    loadQAWidget();
     markActiveNav();
     bindHeroSlideshow();
     bindB2BCarousel();
