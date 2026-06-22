@@ -12,6 +12,13 @@
 <body data-prefix="" data-highfi>
 
 <div data-nav></div>
+<style>
+  /* placeholders sem imagem mostram o aviso (icone de atencao + texto) */
+  .ph:not(.ph-missing){flex-direction:column;text-align:center;padding:16px;}
+  .ph:not(.ph-missing)::before{width:24px;height:24px;margin-bottom:10px;opacity:1;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B6A66' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z'/%3E%3Cpath d='M12 9v4'/%3E%3Cpath d='M12 17h.01'/%3E%3C/svg%3E") no-repeat center/contain;}
+  .ph:not(.ph-missing)::after{content:"Imagem não encontrada no Drive.";font-family:var(--font-label);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--c-muted);line-height:1.5;}
+  .ph.gallery-thumb:not(.ph-missing)::after{display:none;}
+</style>
 
 <div class="container">
   <div class="crumb">
@@ -26,7 +33,7 @@
 <!-- BLOCO 01 · HERO CINEMATOGRÁFICO -->
 <section class="section" data-comment-id="sala-skyline.01-hero" data-comment-label="Skyline · 01 Hero" style="padding-bottom:64px;">
   <div class="container">
-    <div class="ph" style="aspect-ratio:16/9;border-radius:var(--r-lg);"></div>
+    <img src="assets/img/salas/skyline/hero.jpg?v=1" alt="Sala Skyline · Porto Alegre" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--r-lg);">
     <div style="margin-top:20px;">
       <div class="eyebrow">Porto Alegre</div>
       <h1 class="h1">Onde o sul encontra horizonte.</h1>
@@ -61,12 +68,12 @@
     </style>
     <div class="b2b-carousel gallery-carousel" data-b2b-carousel>
       <div class="gallery-split">
-        <figure class="gallery-fixed"><div class="ph"></div></figure>
+        <figure class="gallery-fixed"><img src="assets/img/salas/skyline/galeria-fixa.jpg?v=1" alt="Skyline — ambiente principal"></figure>
         <div class="b2b-viewport">
           <div class="b2b-track" data-b2b-track>
-            <figure class="b2b-slide is-active"><div class="ph" style="aspect-ratio:4/5;border-radius:var(--r-lg);"></div></figure>
-            <figure class="b2b-slide"><div class="ph" style="aspect-ratio:4/5;border-radius:var(--r-lg);"></div></figure>
-            <figure class="b2b-slide"><div class="ph" style="aspect-ratio:4/5;border-radius:var(--r-lg);"></div></figure>
+            <figure class="b2b-slide is-active"><img src="assets/img/salas/skyline/galeria-01.jpg?v=1" alt="Skyline — detalhe 1"></figure>
+            <figure class="b2b-slide"><img src="assets/img/salas/skyline/galeria-02.jpg?v=1" alt="Skyline — detalhe 2"></figure>
+            <figure class="b2b-slide"><img src="assets/img/salas/skyline/galeria-03.jpg?v=1" alt="Skyline — detalhe 3"></figure>
           </div>
         </div>
         <div class="b2b-dots" data-b2b-dots>
@@ -242,7 +249,7 @@
     <div class="grid grid-3">
       <article class="card sala-card"><div class="ph" style="aspect-ratio:16/10;"></div><div class="card-body"><h3 class="sala-title">Pinhão</h3><p class="sala-meta">CWB</p><a href="sala-pinhao.html" class="btn-link">Explorar →</a></div></article>
       <article class="card sala-card"><div class="ph" style="aspect-ratio:16/10;"></div><div class="card-body"><h3 class="sala-title">Pampa</h3><p class="sala-meta">REL · AR</p><a href="sala-pampa.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph" style="aspect-ratio:16/10;"></div><div class="card-body"><h3 class="sala-title">Veja todas</h3><p class="sala-meta">21 salas da rede</p><a href="salas.html" class="btn-link">Ver salas →</a></div></article>
+      <article class="card sala-card"><img src="assets/img/salas/gold-standard.jpg?v=1" alt="Veja todas as salas" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;"><div class="card-body"><h3 class="sala-title">Veja todas</h3><p class="sala-meta">21 salas da rede</p><a href="salas.html" class="btn-link">Ver salas →</a></div></article>
     </div>
     <div class="text-center mt-5">
       <a href="aeroporto-poa.html" class="btn btn-secondary">Ver hub de POA</a>
