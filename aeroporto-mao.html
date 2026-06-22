@@ -27,13 +27,47 @@
     </div>
     <div class="ph" style="aspect-ratio:4/3;border-radius:var(--r-lg);"></div>
   </div>
+  <style>
+    /* big numbers (Forum) + count-up nos numericos; valores de texto menores (hibrido) */
+    .airport-meta{display:grid;grid-template-columns:repeat(4,1fr);align-items:stretch;gap:24px;margin-top:56px;}
+    .airport-meta > div{display:flex;flex-direction:column;justify-content:flex-end;text-align:center;font-family:var(--font-label);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--c-muted);line-height:1.4;}
+    .airport-meta strong{font-family:var(--font-head);font-weight:400;line-height:1;letter-spacing:0;color:var(--c-ink);margin-bottom:12px;font-size:clamp(44px,6vw,64px);}
+    .airport-meta strong.stat-text{font-size:clamp(22px,2.2vw,28px);}
+    .airport-meta .stat-unit{font-size:.5em;}
+    @media(max-width:640px){ .airport-meta{grid-template-columns:repeat(2,1fr);} }
+  </style>
   <div class="airport-meta">
-    <div><strong>1</strong>Sala</div>
-    <div><strong>24 horas</strong>Operação</div>
-    <div><strong>Terminal 1</strong>Localização</div>
-    <div><strong>~2 min</strong>Caminhada média</div>
+    <div><strong><span class="stat-count" data-to="1">1</span></strong>Sala</div>
+    <div><strong><span class="stat-count" data-to="24">24</span><span class="stat-unit"> horas</span></strong>Operação</div>
+    <div><strong class="stat-text">Terminal 1</strong>Localização</div>
+    <div><strong>~<span class="stat-count" data-to="2">2</span><span class="stat-unit"> min</span></strong>Caminhada média</div>
   </div>
 </section>
+
+<script>
+/* Count-up dos big numbers da faixa do aeroporto ao entrar na viewport */
+(function(){
+  var nums = document.querySelectorAll('.airport-meta .stat-count');
+  if(!nums.length) return;
+  if(!('IntersectionObserver' in window)) return;
+  nums.forEach(function(el){ el.textContent = el.dataset.dec ? (0).toFixed(+el.dataset.dec) : '0'; });
+  function animate(el){
+    var to = parseFloat(el.dataset.to), dec = el.dataset.dec ? +el.dataset.dec : 0, dur = 2400, start = null;
+    function ease(t){ return 1 - Math.pow(1 - t, 4); }
+    function step(ts){
+      if(start === null) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      el.textContent = (to * ease(p)).toFixed(dec);
+      if(p < 1) requestAnimationFrame(step); else el.textContent = to.toFixed(dec);
+    }
+    requestAnimationFrame(step);
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ animate(e.target); io.unobserve(e.target); } });
+  }, { threshold: 0.4 });
+  nums.forEach(function(el){ io.observe(el); });
+})();
+</script>
 
 <section data-comment-id="aeroporto-mao.bloco-1" data-comment-label="Aeroporto MAO · Sala em destaque" class="section">
   <div class="container">
