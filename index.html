@@ -7,9 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/wireframe.css?v=20">
-<link rel="stylesheet" href="css/tokens.css?v=20">
-<link rel="stylesheet" href="css/highfi.css?v=20">
+<link rel="stylesheet" href="css/wireframe.css?v=22">
+<link rel="stylesheet" href="css/tokens.css?v=22">
+<link rel="stylesheet" href="css/highfi.css?v=22">
 </head>
 <body data-prefix="" data-highfi data-hero>
 
@@ -51,7 +51,7 @@
 
     <div class="search-wrap" style="max-width:640px;margin:0 auto;">
       <div class="search-bar">
-        <input id="airport-search" type="text" placeholder="Digite IATA (GRU, REC, FOR…) ou cidade" autocomplete="off">
+        <input id="airport-search" type="text" placeholder="Digite IATA (GRU, REC, FOR…) ou cidade" autocomplete="off" aria-label="Digite IATA (GRU, REC, FOR…) ou cidade">
         <a href="salas.html" class="btn btn-primary">Buscar</a>
       </div>
       <div id="airport-suggest" class="suggest-box"></div>
@@ -247,7 +247,7 @@
       </div>
       <form data-form-demo data-form-msg="Obrigado. Você receberá a próxima edição.">
         <div class="input-group">
-          <input class="input" type="email" placeholder="seu@email.com" required>
+          <input class="input" type="email" placeholder="seu@email.com" required aria-label="seu@email.com">
           <button class="btn btn-primary" type="submit">Inscrever-se</button>
         </div>
         <p class="tiny mt-2" style="color:rgba(255,255,255,.5);">Respeitamos sua privacidade · LGPD compliant.</p>
@@ -258,6 +258,6 @@
 
 <div data-footer></div>
 <div data-modal-mount></div>
-<script src="js/app.js?v=20"></script>
+<script src="js/app.js?v=22"></script>
 </body>
 </html>

@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Verificador de Acesso · W Premium</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/wireframe.css?v=20">
-<link rel="stylesheet" href="css/tokens.css?v=20">
-<link rel="stylesheet" href="css/highfi.css?v=20">
+<link rel="stylesheet" href="css/wireframe.css?v=22">
+<link rel="stylesheet" href="css/tokens.css?v=22">
+<link rel="stylesheet" href="css/highfi.css?v=22">
 </head>
 <body data-prefix="" data-highfi>
 
@@ -36,10 +36,10 @@
     <form id="verif-form" class="card card-body mt-4" style="padding:32px;">
       <div class="field mb-3">
         <label>Número do cartão (BIN ou completo)</label>
-        <input class="input" inputmode="numeric" maxlength="19" placeholder="0000  0000  0000  0000" required>
+        <input class="input" inputmode="numeric" maxlength="19" placeholder="0000  0000  0000  0000" required aria-label="0000  0000  0000  0000">
       </div>
       <div class="grid grid-2 mb-3">
-        <div class="field"><label>Validade</label><input class="input" placeholder="MM/AA"></div>
+        <div class="field"><label>Validade</label><input class="input" placeholder="MM/AA" aria-label="MM/AA"></div>
         <div class="field"><label>Bandeira (opcional)</label>
           <select class="select"><option>Detectar automaticamente</option><option>Visa</option><option>Mastercard</option><option>American Express</option><option>Elo</option><option>Diners</option></select>
         </div>
@@ -120,6 +120,6 @@
 
 <div data-footer></div>
 <div data-modal-mount></div>
-<script src="js/app.js?v=20"></script>
+<script src="js/app.js?v=22"></script>
 </body>
 </html>

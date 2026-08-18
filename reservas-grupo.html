@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Reservas de Grupo · W Premium</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/wireframe.css?v=20">
-<link rel="stylesheet" href="css/tokens.css?v=20">
-<link rel="stylesheet" href="css/highfi.css?v=20">
+<link rel="stylesheet" href="css/wireframe.css?v=22">
+<link rel="stylesheet" href="css/tokens.css?v=22">
+<link rel="stylesheet" href="css/highfi.css?v=22">
 </head>
 <body data-prefix="" data-highfi>
 
@@ -101,8 +101,9 @@
           <div class="field"><label>Telefone / WhatsApp</label><input class="input" type="tel"></div>
         </div>
         <div class="grid grid-2 gap-2 mb-2">
-          <div class="field"><label>Sala preferida</label><select class="select"><option>5th Avenue · GRU</option><option>Guarulhos T1 · GRU</option><option>Frevo · REC</option><option>Porto Alegre · POA</option><option>Outra · informar abaixo</option></select></div>
-          <div class="field"><label>Nº de pessoas</label><input class="input" type="number" placeholder="ex: 25" required></div>
+          <div class="field"><label>Estado</label><select class="select" data-uf-filtro><option value="">Todos os estados</option><option value="AR">Argentina</option><option value="CE">Ceará</option><option value="GO">Goiás</option><option value="MT">Mato Grosso</option><option value="PR">Paraná</option><option value="PA">Pará</option><option value="PE">Pernambuco</option><option value="RS">Rio Grande do Sul</option><option value="SC">Santa Catarina</option><option value="SP">São Paulo</option><option value="TO">Tocantins</option></select></div>
+          <div class="field"><label>Sala preferida</label><select class="select" data-sala-lista><option value="">Selecione</option><option data-uf="PA">Belém · Doméstica · BEL</option><option data-uf="PA">Belém · Internacional · BEL</option><option data-uf="MT">Cuiabá · CGB</option><option data-uf="SP">Congonhas · CGH</option><option data-uf="PR">Curitiba · CWB</option><option data-uf="CE">Fortaleza Premium · FOR</option><option data-uf="CE">Fortaleza Arrival · FOR</option><option data-uf="CE">Iracema · FOR</option><option data-uf="CE">Beira-Mar · FOR</option><option data-uf="GO">Goiânia · GYN</option><option data-uf="SP">Guarulhos T1 · GRU</option><option data-uf="SP">The West · GRU</option><option data-uf="SP">5th Avenue · GRU</option><option data-uf="SP">The Pier · GRU</option><option data-uf="PR">Londrina · LDB</option><option data-uf="PR">Maringá · MGF</option><option data-uf="SC">Navegantes · NVT</option><option data-uf="TO">Palmas · PMW</option><option data-uf="RS">Porto Alegre · POA</option><option data-uf="RS">Porto Alegre · Internacional · POA</option><option data-uf="PE">Frevo · REC</option><option data-uf="PE">São João · REC</option><option data-uf="SP">Ribeirão Preto · RAO</option><option data-uf="AR">El Calafate · FTE</option><option data-uf="AR">Trelew · REL</option><option data-uf="AR">Ushuaia · USH</option></select></div>
+          <div class="field"><label>Nº de pessoas</label><input class="input" type="number" placeholder="ex: 25" required aria-label="ex: 25"></div>
         </div>
         <div class="field mb-3"><label>Data / período &amp; observações</label><textarea class="textarea" placeholder="Ex: 12 de junho, 14h–18h. Comitiva executiva pré-board meeting." rows="4"></textarea></div>
         <button class="btn btn-primary btn-block">Enviar briefing</button>
@@ -113,6 +114,27 @@
 
 <div data-footer></div>
 <div data-modal-mount></div>
-<script src="js/app.js?v=20"></script>
+
+<script>
+/* Reservas de grupo: mostra apenas as salas do estado escolhido (pedido do cliente).
+   Nem todo mundo sabe em que estado fica cada sala. */
+(function(){
+  var uf = document.querySelector('[data-uf-filtro]');
+  var salas = document.querySelector('[data-sala-lista]');
+  if(!uf || !salas) return;
+  var todas = [].slice.call(salas.options);
+  uf.addEventListener('change', function(){
+    var alvo = uf.value;
+    salas.innerHTML = '';
+    todas.forEach(function(op){
+      if(!alvo || !op.getAttribute('data-uf') || op.getAttribute('data-uf') === alvo){
+        salas.appendChild(op.cloneNode(true));
+      }
+    });
+    salas.selectedIndex = 0;
+  });
+})();
+</script>
+<script src="js/app.js?v=22"></script>
 </body>
 </html>
