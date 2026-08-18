@@ -85,11 +85,12 @@
       ? '<a href="'+prefix+'index.html" class="nav-logo" aria-label="W Premium Group"><img class="nav-logo-img nav-logo-light" src="'+prefix+'assets/img/logo/logo-white.svg" alt="W Premium Group"><img class="nav-logo-img nav-logo-dark" src="'+prefix+'assets/img/logo/logo-black.svg" alt=""></a>'
       : '<a href="'+prefix+'index.html" class="nav-logo">W <span>Premium</span></a>';
     return ''+
+      '<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>'+
       '<div class="wf-banner">Wireframe Mode · W Premium Concierge Digital <span>Fase 03 · Sitemap V1</span></div>'+
       '<header class="nav">'+
       '  <div class="container nav-inner">'+
       '    '+logoHTML+
-      '    <nav class="nav-links" aria-label="Principal">'+drawerHead+links+'</nav>'+
+      '    <nav class="nav-links" id="nav-principal" aria-label="Principal">'+drawerHead+links+'</nav>'+
       '    <div class="nav-actions">'+
       '      <button class="nav-search-btn" data-open-busca aria-label="Buscar">'+
       '        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>'+
@@ -99,7 +100,7 @@
       '      </button>'+
       '      <button class="btn btn-secondary btn-sm" data-open-verifier>Verificar Acesso</button>'+
       '      <a href="'+prefix+'login.html" class="btn btn-ghost btn-sm">Entrar</a>'+
-      '      <button class="nav-hamburger" aria-label="Menu" data-hamburger>'+
+      '      <button class="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-principal" data-hamburger>'+
       '        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="2" y1="4" x2="14" y2="4"/><line x1="2" y1="8" x2="14" y2="8"/><line x1="2" y1="12" x2="14" y2="12"/></svg>'+
       '      </button>'+
       '    </div>'+
@@ -225,7 +226,7 @@
 
   function buscaOverlayHTML(){
     return ''+
-      '<div class="busca-overlay" data-busca-overlay hidden>'+
+      '<div class="busca-overlay" data-busca-overlay hidden role="dialog" aria-modal="true" aria-label="Busca no site">'+
       '  <button class="busca-fechar" data-busca-fechar aria-label="Fechar busca">'+
       '    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6 6 18 18M18 6 6 18"/></svg>'+
       '  </button>'+
@@ -325,6 +326,8 @@
   function bindHamburger(){
     var drawer = document.body.hasAttribute('data-highfi');
     function setNav(open){
+      var hb = document.querySelector('[data-hamburger]');
+      if(hb) hb.setAttribute('aria-expanded', open ? 'true' : 'false');
       document.body.classList.toggle('nav-open', open);
       document.body.style.overflow = open ? 'hidden' : '';
     }
@@ -424,6 +427,29 @@
           if(e.animationName === 'b2bFill' && dot.classList.contains('is-active')) avancar();
         });
       });
+
+      // WCAG 2.2.2 · controle explicito de pausa.
+      // Hover e foco ja pausavam, mas em toque nao existe hover.
+      var dots_wrap = car.querySelector('.b2b-dots');
+      if(dots_wrap && !car.querySelector('.b2b-pausa')){
+        var linha = document.createElement('div');
+        linha.className = 'b2b-dots-linha';
+        dots_wrap.parentNode.insertBefore(linha, dots_wrap);
+        linha.appendChild(dots_wrap);
+        var bt = document.createElement('button');
+        bt.type = 'button';
+        bt.className = 'b2b-pausa';
+        bt.setAttribute('aria-label', 'Pausar rotação das imagens');
+        bt.innerHTML = '<svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>';
+        bt.addEventListener('click', function(){
+          var pausado = car.classList.toggle('esta-pausado');
+          bt.setAttribute('aria-label', pausado ? 'Retomar rotação das imagens' : 'Pausar rotação das imagens');
+          bt.innerHTML = pausado
+            ? '<svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M7 4l12 8-12 8z"/></svg>'
+            : '<svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>';
+        });
+        linha.appendChild(bt);
+      }
 
       var rt;
       window.addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(render, 120); });

@@ -452,3 +452,70 @@ body.busca-aberta{overflow:hidden;}
 .acc{max-width:820px;margin-left:auto;margin-right:auto;}
 .acc-trigger{padding:var(--space-5) 0;gap:var(--space-4);}
 .acc-body{padding-bottom:var(--space-5);max-width:70ch;}
+
+
+/* ============================================================
+   ACESSIBILIDADE · correcoes da auditoria de usabilidade
+   Medido no navegador, nao estimado. Cada item cita o criterio.
+   ============================================================ */
+
+/* --- WCAG 2.4.3 · menu fechado nao pode receber foco -------------
+   O drawer era escondido so com translateX: continuava visivel para
+   o teclado e para o leitor de tela (9 itens focaveis com menu fechado,
+   e "Fechar menu" era o 2o elemento da tabulacao). */
+.nav-links{visibility:hidden;}
+body.nav-open .nav-links{visibility:visible;}
+@media (min-width:981px){ .nav-links{visibility:visible;} }
+
+/* --- WCAG 1.4.3 · contraste de texto ----------------------------
+   Rotulo dourado a 10px media 2.63:1 (minimo 4.5). Usa o token que a
+   propria paleta ja criou para texto sobre fundo claro. */
+.eyebrow{color:var(--c-accent-deep);}
+.eyebrow.rule-label{color:var(--c-accent-deep);}
+/* metadado do card: #777777 media 4.28:1; --c-muted da 5.18:1 */
+:root{--c-meta-card:#6B6A66;}
+
+/* --- WCAG 2.5.8 · alvo de toque minimo 24x24 --------------------
+   39 links de acao mediam 21px de altura. */
+.btn-link{display:inline-flex;align-items:center;min-height:24px;}
+.b2b-dot{min-height:24px;}
+.nav-search-btn,.lang-switch{min-height:24px;min-width:24px;}
+
+/* --- WCAG 2.4.1 · pular para o conteudo -------------------------- */
+.skip-link{position:absolute;left:-9999px;top:0;z-index:300;background:var(--c-ink);color:#fff;
+  padding:var(--space-3) var(--space-5);font-family:var(--font-label);font-size:12px;
+  letter-spacing:.1em;text-transform:uppercase;text-decoration:none;}
+.skip-link:focus{left:var(--space-5);top:var(--space-3);}
+
+/* --- WCAG 2.4.7 · foco sempre visivel ---------------------------- */
+a:focus-visible,button:focus-visible,input:focus-visible,
+select:focus-visible,textarea:focus-visible{
+  outline:2px solid var(--c-accent-deep);outline-offset:3px;border-radius:2px;
+}
+
+/* --- WCAG 2.2.2 · controle de pausa do carrossel ----------------- */
+.b2b-pausa{border:0;background:transparent;cursor:pointer;color:var(--c-muted);
+  padding:var(--space-2);min-height:24px;min-width:24px;display:inline-flex;
+  align-items:center;justify-content:center;margin-left:var(--space-3);}
+.b2b-pausa:hover{color:var(--c-ink);}
+.b2b-carousel.esta-pausado .b2b-dot.is-active::after{animation-play-state:paused;}
+.b2b-dots-linha{display:flex;align-items:center;gap:var(--space-3);}
+.b2b-dots-linha .b2b-dots{flex:1;margin-top:0;}
+
+/* --- Nielsen #1 · link que ainda nao leva a lugar nenhum ---------
+   Deixa visivel que a funcionalidade esta pendente, em vez de fingir. */
+a[href="#"]{cursor:not-allowed;opacity:.55;}
+a[href="#"]::after{content:" (em breve)";font-size:.85em;letter-spacing:.04em;opacity:.8;}
+.nav a[href="#"]::after,.footer a[href="#"]::after,[aria-label] a[href="#"]::after{content:"";}
+
+/* --- WCAG 2.5.8 · alvos do rodape e icones sociais ---------------
+   links do rodape mediam 16px e os icones sociais 20x20. */
+.footer a,.footer li a{display:inline-flex;align-items:center;min-height:24px;}
+.footer .social a,.social a{min-width:24px;min-height:24px;display:inline-flex;
+  align-items:center;justify-content:center;}
+.crumb a{display:inline-flex;align-items:center;min-height:24px;}
+
+/* ultimos alvos: icones sociais (largura 20) e checkbox de consentimento */
+a[aria-label="Instagram"],a[aria-label="LinkedIn"]{min-width:24px;min-height:24px;
+  display:inline-flex;align-items:center;justify-content:center;}
+input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}
