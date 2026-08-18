@@ -280,7 +280,9 @@
         return '<a class="busca-item" href="' + prefix + i.url + '">'+
                '<span class="busca-item-nome">' + i.nome + '</span>'+
                '<span class="busca-item-meta">' + i.meta + '</span></a>';
-      }).join('');
+      }).join('') +
+      '<a class="busca-todos" href="' + prefix + 'busca-global.html?q=' +
+      encodeURIComponent(q) + '">Ver todos os resultados para "' + q + '"</a>';
     }
 
     document.addEventListener('click', function(e){

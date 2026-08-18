@@ -519,3 +519,9 @@ a[href="#"]::after{content:" (em breve)";font-size:.85em;letter-spacing:.04em;op
 a[aria-label="Instagram"],a[aria-label="LinkedIn"]{min-width:24px;min-height:24px;
   display:inline-flex;align-items:center;justify-content:center;}
 input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}
+
+/* busca: atalho para a pagina de resultados completa */
+.busca-todos{display:block;margin-top:var(--space-5);padding:var(--space-4) 0;
+  font-family:var(--font-label);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--c-accent-deep);text-decoration:none;border-top:1px solid var(--c-border);}
+.busca-todos:hover{color:var(--c-ink);}
