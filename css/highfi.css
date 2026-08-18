@@ -112,6 +112,9 @@ body.nav-scrolled .nav-actions .btn-secondary{color:var(--c-ink);border-color:va
 body.nav-scrolled .nav-actions .lang-switch .lang-current{color:var(--c-ink);}
 body.nav-scrolled .nav-actions .lang-switch .lang-sep,
 body.nav-scrolled .nav-actions .lang-switch .lang-other{color:var(--c-muted);}
+/* lupa: clara sobre o hero, escura com a nav solida (mesmo comportamento do resto) */
+.nav-actions .nav-search-btn{color:#FAFAF8;transition:color .35s ease,opacity .25s ease;}
+body.nav-scrolled .nav-actions .nav-search-btn{color:var(--c-ink);}
 body.nav-open .nav-actions{opacity:0;pointer-events:none;transition:opacity .2s ease;}
 
 /* painel do menu — desliza da esquerda */
@@ -328,7 +331,7 @@ html{scroll-behavior:smooth;}
 /* ============================================================
    BUSCA GLOBAL · lupa na nav + overlay (referencia: Aman)
    ============================================================ */
-.nav-search-btn{border:0;background:transparent;padding:8px 6px;cursor:pointer;color:inherit;display:inline-flex;align-items:center;}
+.nav-search-btn{border:0;background:transparent;padding:8px 6px;cursor:pointer;display:inline-flex;align-items:center;}
 .nav-search-btn svg{width:18px;height:18px;}
 .nav-search-btn:hover{opacity:.65;}
 body.busca-aberta{overflow:hidden;}
