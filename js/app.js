@@ -247,31 +247,56 @@
   }
 
   function bindB2BCarousel(){
-    var car = document.querySelector('[data-b2b-carousel]');
-    if(!car) return;
-    var track = car.querySelector('[data-b2b-track]');
-    var vp = car.querySelector('.b2b-viewport');
-    var slides = [].slice.call(car.querySelectorAll('.b2b-slide'));
-    var dots = [].slice.call(car.querySelectorAll('.b2b-dot'));
-    if(!track || !vp || slides.length < 2) return;
-    var idx = 0;
-    function render(){
-      var desired = slides[idx].offsetLeft;
-      var maxScroll = Math.max(0, track.scrollWidth - vp.clientWidth);
-      var tx = Math.min(desired, maxScroll);
-      track.style.transform = 'translateX(' + (-tx) + 'px)';
-      for(var i=0;i<slides.length;i++){ slides[i].classList.toggle('is-active', i===idx); }
-      for(var d=0;d<dots.length;d++){ dots[d].classList.toggle('is-active', d===idx); }
-    }
-    dots.forEach(function(dot){
-      dot.addEventListener('click', function(){
-        idx = parseInt(dot.getAttribute('data-b2b-dot'), 10) || 0;
-        render();
+    var cars = [].slice.call(document.querySelectorAll('[data-b2b-carousel]'));
+    if(!cars.length) return;
+
+    cars.forEach(function(car){
+      var track  = car.querySelector('[data-b2b-track]');
+      var vp     = car.querySelector('.b2b-viewport');
+      var slides = [].slice.call(car.querySelectorAll('.b2b-slide'));
+      var dots   = [].slice.call(car.querySelectorAll('.b2b-dot'));
+      if(!track || !vp || slides.length < 2) return;
+
+      var idx = 0;
+
+      function render(){
+        var desired   = slides[idx].offsetLeft;
+        var maxScroll = Math.max(0, track.scrollWidth - vp.clientWidth);
+        var tx        = Math.min(desired, maxScroll);
+        track.style.transform = 'translateX(' + (-tx) + 'px)';
+
+        for(var i=0;i<slides.length;i++){ slides[i].classList.toggle('is-active', i===idx); }
+
+        for(var d=0;d<dots.length;d++){
+          dots[d].classList.remove('is-active');
+          dots[d].classList.toggle('is-seen', d < idx);
+          if(d !== idx) dots[d].removeAttribute('aria-current');
+        }
+        if(dots[idx]){
+          void dots[idx].offsetWidth;              // reinicia a animacao de preenchimento
+          dots[idx].classList.add('is-active');
+          dots[idx].setAttribute('aria-current', 'true');
+        }
+      }
+
+      function avancar(){ idx = (idx + 1) % slides.length; render(); }
+
+      dots.forEach(function(dot){
+        dot.addEventListener('click', function(){
+          idx = parseInt(dot.getAttribute('data-b2b-dot'), 10) || 0;
+          render();
+        });
+        // o avanco acompanha o fim do preenchimento: pausar a animacao
+        // (hover/foco, via CSS) pausa o carrossel sem sair de sincronia
+        dot.addEventListener('animationend', function(e){
+          if(e.animationName === 'b2bFill' && dot.classList.contains('is-active')) avancar();
+        });
       });
+
+      var rt;
+      window.addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(render, 120); });
+      render();
     });
-    var rt;
-    window.addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(render, 120); });
-    render();
   }
 
   function bindNavScroll(){

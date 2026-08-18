@@ -192,11 +192,23 @@ body.nav-open .nav-overlay{opacity:1;visibility:visible;}
 .b2b-slide{flex:0 0 86%;margin:0;opacity:.34;transition:opacity .7s ease;}
 .b2b-slide.is-active{opacity:1;}
 .b2b-slide img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;}
-.b2b-dots{display:flex;gap:0;margin-top:24px;width:100%;}
+/* paginacao estilo Stories: barras separadas, a ativa preenche sozinha */
+.b2b-dots{display:flex;gap:6px;margin-top:24px;width:100%;}
 .b2b-dot{flex:1;height:14px;padding:0;border:0;background:transparent;position:relative;cursor:pointer;}
-.b2b-dot::after{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(33,34,34,.15);transition:background-color .55s ease;}
-.b2b-dot:hover::after{background:rgba(33,34,34,.38);}
-.b2b-dot.is-active::after{background:rgba(33,34,34,.72);}
+/* trilho */
+.b2b-dot::before{content:'';position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);height:2px;border-radius:2px;background:rgba(33,34,34,.15);transition:background-color .3s ease;}
+.b2b-dot:hover::before{background:rgba(33,34,34,.3);}
+/* preenchimento */
+.b2b-dot::after{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);height:2px;width:0;border-radius:2px;background:rgba(33,34,34,.75);}
+.b2b-dot.is-seen::after{width:100%;}
+.b2b-dot.is-active::after{animation:b2bFill var(--b2b-dur,5s) linear forwards;}
+.b2b-carousel:hover .b2b-dot.is-active::after,
+.b2b-carousel:focus-within .b2b-dot.is-active::after{animation-play-state:paused;}
+@keyframes b2bFill{from{width:0;} to{width:100%;}}
+/* sem autoplay para quem pediu menos movimento */
+@media(prefers-reduced-motion:reduce){
+  .b2b-dot.is-active::after{animation:none;width:100%;}
+}
 
 /* ---------- FOOTER · bloco no topo, legais agrupados embaixo ---------- */
 .footer{padding:56px 0 40px;margin-top:clamp(80px,8vw,128px);}        /* topo menor → bloco sobe */
