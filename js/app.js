@@ -216,6 +216,7 @@
       '      <a href="'+prefix+'como-acessar.html" class="btn-link">Ver página completa de Como Acessar →</a>'+
       '    </div>'+
       '  </div>'+
+      '  </div>'+
       '</div>';
   }
 
@@ -227,13 +228,15 @@
   function buscaOverlayHTML(){
     return ''+
       '<div class="busca-overlay" data-busca-overlay hidden role="dialog" aria-modal="true" aria-label="Busca no site">'+
-      '  <button class="busca-fechar" data-busca-fechar aria-label="Fechar busca">'+
+      '  <div class="busca-painel">'+
+      '    <button class="busca-fechar" data-busca-fechar aria-label="Fechar busca">'+
       '    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6 6 18 18M18 6 6 18"/></svg>'+
-      '  </button>'+
-      '  <div class="busca-caixa">'+
+      '    </button>'+
+      '    <div class="busca-caixa">'+
       '    <label class="busca-label" for="busca-input">Buscar</label>'+
       '    <input id="busca-input" class="busca-input" type="text" autocomplete="off" placeholder="Cidade, sala ou código IATA">'+
       '    <div class="busca-resultados" data-busca-resultados></div>'+
+      '    </div>'+
       '  </div>'+
       '</div>';
   }

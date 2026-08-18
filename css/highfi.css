@@ -340,7 +340,7 @@ html{scroll-behavior:smooth;}
 .nav-search-btn:hover{opacity:.65;}
 body.busca-aberta{overflow:hidden;}
 
-.busca-overlay{position:fixed;inset:0;z-index:200;background:var(--c-bg);display:flex;align-items:flex-start;justify-content:center;padding:14vh 24px 24px;animation:buscaEntra .28s ease;}
+.busca-overlay{position:fixed;inset:0;z-index:200;display:block;background:rgba(33,34,34,.22);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);animation:buscaEntra .22s ease;}
 .busca-overlay[hidden]{display:none;}
 @keyframes buscaEntra{from{opacity:0;} to{opacity:1;}}
 
@@ -525,3 +525,21 @@ input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}
   font-family:var(--font-label);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
   color:var(--c-accent-deep);text-decoration:none;border-top:1px solid var(--c-border);}
 .busca-todos:hover{color:var(--c-ink);}
+
+
+/* busca: painel no topo, restante da pagina desfocado atras */
+.busca-painel{position:relative;background:var(--c-bg);border-bottom:1px solid var(--c-border);
+  padding:var(--space-8) var(--gutter) var(--space-6);animation:buscaDesce .28s cubic-bezier(.2,.7,.3,1);
+  box-shadow:0 18px 48px rgba(33,34,34,.10);}
+@keyframes buscaDesce{from{transform:translateY(-14px);opacity:.4;} to{transform:translateY(0);opacity:1;}}
+.busca-caixa{max-width:680px;margin:0 auto;}
+.busca-fechar{position:absolute;top:var(--space-5);right:var(--gutter);}
+/* resultados rolam dentro do painel, sem esticar a tela */
+.busca-resultados{max-height:38vh;overflow-y:auto;}
+/* o campo grande nao usa caixa de foco: o fio inferior engrossa */
+.busca-input:focus,.busca-input:focus-visible{outline:none;border-bottom-width:2px;
+  border-bottom-color:var(--c-ink);}
+@media (max-width:640px){
+  .busca-painel{padding:var(--space-8) var(--gutter) var(--space-6);}
+  .busca-resultados{max-height:52vh;}
+}
