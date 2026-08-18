@@ -47,4 +47,16 @@
   --c-accent:#B29A55;      /* OURO B (UI) — whisper. Marca oficial: #C2A22F */
   --c-accent-deep:#8A6F1E; /* ouro p/ TEXTO sobre fundo claro */
   --c-dark:#212222;        /* superfície escura (newsletter/scrim) */
+
+  /* ---------- ESPAÇAMENTO · escala 8pt (meio-passo de 4) ---------- */
+  --space-1:4px;    --space-2:8px;    --space-3:12px;   --space-4:16px;
+  --space-5:24px;   --space-6:32px;   --space-7:40px;   --space-8:48px;
+  --space-9:64px;   --space-10:80px;  --space-11:96px;  --space-12:128px;
+
+  /* ritmo vertical das dobras (fluido, sempre na escala) */
+  --rhythm-section:clamp(64px, 7.5vw, 128px);
+  --rhythm-tight:clamp(48px, 6vw, 96px);
+
+  /* margem lateral · muda por dispositivo (ver breakpoints em highfi.css) */
+  --gutter:40px;
 }
