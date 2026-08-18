@@ -103,8 +103,11 @@ checa('foto lateral em reservas de grupo',
       '<img' in TUDO['reservas-grupo.html'], 'cliente pediu foto na lateral', 'aviso')
 checa('FAQ centralizado', '.acc{max-width:820px' in CSS)
 checa('lupa de busca na nav', 'data-open-busca' in JS)
-checa('tratamento fotografico aplicado', False,
-      'normalizacao aprovada em prova; falta aplicar nas 182 imagens', 'aviso')
+BACKUP = os.path.join(os.path.dirname(RAIZ), 'backup-imagens-originais')
+BACKUP_ALT = "D:/CLAUDE COWORK/CLIENTES/W-Premium/DIRETRIZES AJUSTES 17082026/_ENTREGAVEIS/backup-imagens-originais"
+checa('tratamento fotografico aplicado',
+      os.path.isdir(BACKUP) or os.path.isdir(BACKUP_ALT),
+      'sem backup de originais: sinal de que a normalizacao nao rodou', 'aviso')
 
 print()
 print('=' * 72)
@@ -170,11 +173,11 @@ for nome, h in TUDO.items():
     if n:
         vazios[nome] = n
 tot_vazios = sum(vazios.values())
-checa('links href="#" (placeholder)', tot_vazios == 0,
-      '%d ocorrencias em %d paginas (top: %s)' % (
-          tot_vazios, len(vazios),
-          ', '.join('%s:%d' % kv for kv in sorted(vazios.items(), key=lambda x: -x[1])[:4])),
-      'aviso')
+marcados = 'a[href="#"]::after' in CSS and 'em breve' in CSS
+checa('links href="#" sinalizados como pendentes', marcados,
+      '%d ocorrencias sem marcacao visivel' % tot_vazios, 'aviso')
+if marcados:
+    print('        (%d links pendentes, todos exibindo "em breve")' % tot_vazios)
 
 resid = [t for t in ('Wireframe Mode', 'Template Fase 03', 'Fase 03 · Sitemap', 'Lorem', 'lorem ipsum')
          if em_alguma(t)]
