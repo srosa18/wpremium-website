@@ -57,10 +57,14 @@
 .eyebrow.rule-label{color:#B29A55;}  /* dourado — vence o .eyebrow muted */
 .rule-label::before,.rule-label::after{content:"";flex:1;height:1px;background:rgba(33,34,34,.07);}
 
-/* títulos MENORES / cards → EB Garamond */
-.h3,.h4,.sala-title,.article-card h4,
-.article-body h2,.article-body h3,.newsletter h3,
+/* INTERFACE (cards, componentes, listas) → Montserrat.
+   Titulo de card e elemento de interface, nao texto editorial. */
+.h3,.h4,.sala-title,.article-card h4,.newsletter h3,
 .dash-greeting,.price-value,.team-card h4,.tl-title{
+  font-family:var(--font-ui);font-weight:500;letter-spacing:0;
+}
+/* EDITORIAL (corpo de materia longa) → serifada, que le melhor em texto corrido */
+.article-body h2,.article-body h3{
   font-family:var(--font-body);font-weight:500;letter-spacing:0;
 }
 

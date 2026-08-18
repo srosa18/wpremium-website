@@ -107,6 +107,32 @@ def main():
     if not orfas:
         print("   nenhuma pagina orfa")
 
+
+    # ---------- 4. identidade do hub de aeroporto ----------
+    print("\n" + "=" * 68)
+    print("4 · HUBS DE AEROPORTO · o IATA do cabecalho bate com o arquivo?")
+    print("=" * 68)
+    RE_IATA = re.compile(r'<div class="airport-iata">([A-Z]{3})</div>')
+    RE_HERO = re.compile(r'<img src="assets/img/aeroporto-([a-z]{3})/')
+    hubs = sorted(glob.glob(os.path.join(RAIZ, 'aeroporto-*.html')))
+    divergentes = 0
+    for ph in hubs:
+        nome = os.path.basename(ph)
+        esperado = nome.replace('aeroporto-', '').replace('.html', '').upper()
+        html = io.open(ph, encoding='utf-8', errors='replace').read()
+        m = RE_IATA.search(html)
+        mh = RE_HERO.search(html)
+        erro = []
+        if m and m.group(1) != esperado:
+            erro.append('cabecalho mostra %s' % m.group(1))
+        if mh and mh.group(1).upper() != esperado:
+            erro.append('hero e de %s' % mh.group(1).upper())
+        if erro:
+            divergentes += 1
+            problemas.append('hub %s: %s' % (nome, '; '.join(erro)))
+            print('   XX %-26s esperado %s -> %s' % (nome, esperado, '; '.join(erro)))
+    if not divergentes:
+        print('   os %d hubs batem com o proprio IATA e hero' % len(hubs))
     print("\n" + "=" * 68)
     if not problemas:
         print("RESULTADO: OK. Sem links quebrados, cards conferem, sem orfas.")
