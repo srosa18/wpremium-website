@@ -285,10 +285,10 @@ html{scroll-behavior:smooth;}
 /* nome da sala · 24-28px, bold, preto */
 .sala-card .sala-title{
   font-size:var(--sala-nome);
-  font-weight:700;
+  font-weight:500;
   color:var(--c-ink);
-  line-height:1.15;
-  letter-spacing:-.01em;
+  line-height:1.25;
+  letter-spacing:.005em;
   margin:0 0 8px;
 }
 /* tagline · 14-16px, cinza-escuro */

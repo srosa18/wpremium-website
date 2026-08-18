@@ -55,8 +55,7 @@
       : '<div class="nav-logo">W <span>Premium</span></div>';
     var social = highfi
       ? '<a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>'+
-        '<a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>'+
-        
+        '<a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>'
       : '<a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="LinkedIn">in</a>';
     var footerLangs = highfi ? '' : '<span class="footer-langs"><a href="#" class="lang-pill active">PT</a> <a href="#" class="lang-pill">EN</a> <a href="#" class="lang-pill">ES</a></span>';
     return ''+
@@ -499,30 +498,11 @@
   }
 
   // =====================================================
-  // QA WIDGET (SR Studio) — comentários de revisão em todas as páginas.
-  // Carrega o qa.js uma vez; o painel fica em
-  // https://srosa18.github.io/qa-widget/admin.html?project=wpremium
-  // Em produção, preencha data-hide-on com o domínio final p/ ocultar.
-  // =====================================================
-  function loadQAWidget(){
-    if (document.querySelector('script[src*="qa-widget/qa.js"]')) return;
-    var s = document.createElement('script');
-    s.src = 'https://srosa18.github.io/qa-widget/qa.js';
-    s.setAttribute('data-supabase-url', 'https://itwaxivhuxtnatjuoebe.supabase.co');
-    s.setAttribute('data-supabase-key', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml0d2F4aXZodXh0bmF0anVvZWJlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzNzI5NzMsImV4cCI6MjA5NDk0ODk3M30.mbjL6lV5Y05TaBBo3_BuGhK6AdIa6Bm6WDRcc2BC9-Q');
-    s.setAttribute('data-project', 'wpremium');
-    s.setAttribute('data-multi', '1'); // banco único multi-cliente (filtra por projeto)
-    s.setAttribute('data-hide-on', '');
-    document.body.appendChild(s);
-  }
-
-  // =====================================================
   // INIT
   // =====================================================
 
   document.addEventListener('DOMContentLoaded', function(){
     inject();
-    loadQAWidget();
     markActiveNav();
     bindHeroSlideshow();
     bindB2BCarousel();

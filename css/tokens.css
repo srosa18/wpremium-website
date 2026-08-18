@@ -26,7 +26,7 @@
   --font-ui:'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;   /* UI · cards de sala (Brandbook) */
 
   /* escala tipografica dos cards de sala (spec do cliente, 17/08/2026) */
-  --sala-nome:clamp(24px, 2vw, 28px);   /* nome da sala · bold */
+  --sala-nome:clamp(19px, 1.6vw, 22px); /* nome da sala · medium */
   --sala-tagline:15px;                  /* tagline · 14 a 16px */
   --sala-texto:14px;                    /* descricao */
   --sala-meta:12px;                     /* metadados: horario, capacidade */
