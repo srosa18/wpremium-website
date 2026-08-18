@@ -4,17 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Iracema · FOR · W Premium</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/wireframe.css?v=7">
-<link rel="stylesheet" href="css/tokens.css?v=7">
-<link rel="stylesheet" href="css/highfi.css?v=7">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/wireframe.css?v=9">
+<link rel="stylesheet" href="css/tokens.css?v=9">
+<link rel="stylesheet" href="css/highfi.css?v=9">
 </head>
 <body data-prefix="" data-highfi>
 
 <div data-nav></div>
+<style>
+  /* PAGINA SEM IMAGENS: todo placeholder mostra o aviso (icone de atencao + texto) */
+  .ph:not(.ph-missing){flex-direction:column;text-align:center;padding:16px;}
+  .ph:not(.ph-missing)::before{width:24px;height:24px;margin-bottom:10px;opacity:1;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B6A66' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z'/%3E%3Cpath d='M12 9v4'/%3E%3Cpath d='M12 17h.01'/%3E%3C/svg%3E") no-repeat center/contain;}
+  .ph:not(.ph-missing)::after{content:"Imagem não encontrada no Drive.";font-family:var(--font-label);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--c-muted);line-height:1.5;}
+  .ph.gallery-thumb:not(.ph-missing)::after{display:none;}
+</style>
 
 <div class="container">
-  <div class="crumb">
+    <div class="crumb">
     <a href="index.html">Início</a> <span class="sep">/</span>
     <a href="salas.html">Salas</a> <span class="sep">/</span>
     <a href="aeroporto-for.html">Fortaleza</a> <span class="sep">/</span>
@@ -26,10 +33,10 @@
 <!-- BLOCO 01 · HERO CINEMATOGRÁFICO -->
 <section class="section" data-comment-id="sala-iracema.01-hero" data-comment-label="Iracema · 01 Hero" style="padding-bottom:64px;">
   <div class="container">
-    <div class="ph" style="aspect-ratio:16/9;border-radius:var(--r-lg);"></div>
+    <img src="assets/img/salas/iracema/foto-1.jpg?v=1" alt="Sala Iracema" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--r-lg);">
     <div style="margin-top:20px;">
       <div class="eyebrow">Fortaleza</div>
-      <h1 class="h1">A literatura de José de Alencar nas paredes.</h1>
+      <h1 class="h1">Sua sala em Fortaleza.</h1>
     </div>
   </div>
 </section>
@@ -38,9 +45,9 @@
 <section data-comment-id="sala-iracema.02-manchete" data-comment-label="Iracema · 02 Manchete + Lede" class="section" style="padding-top:32px;">
   <div class="container">
     <div style="max-width:840px;margin:0 auto;text-align:center;">
-      <div class="eyebrow rule-label" style="margin-bottom:20px;">Internacional · Mezanino</div>
+      <div class="eyebrow rule-label" style="margin-bottom:20px;">FOR · Internacional</div>
       <h2 class="h-display">Iracema</h2>
-      <p class="lead-lg mt-3" style="font-size:18px;line-height:1.65;">A sala internacional do Pinto Martins é uma homenagem viva ao romance de Alencar. Painéis com trechos do livro, biblioteca com edições raras, e a luz do Ceará entrando pelo janelão até as últimas decolagens do dia.</p>
+      <p class="lead-lg mt-3" style="font-size:18px;line-height:1.65;">Em frente ao portão 2. São 107,64m² e 40 assentos. Funcionamento: Apenas durante o voo internacional.</p>
     </div>
   </div>
 </section>
@@ -61,12 +68,12 @@
     </style>
     <div class="b2b-carousel gallery-carousel" data-b2b-carousel>
       <div class="gallery-split">
-        <figure class="gallery-fixed"><div class="ph"></div></figure>
+        <figure class="gallery-fixed"><img src="assets/img/salas/iracema/foto-2.jpg?v=1" alt="Iracema — ambiente"></figure>
         <div class="b2b-viewport">
           <div class="b2b-track" data-b2b-track>
-            <figure class="b2b-slide is-active"><div class="ph" style="aspect-ratio:4/5;border-radius:var(--r-lg);"></div></figure>
-            <figure class="b2b-slide"><div class="ph" style="aspect-ratio:4/5;border-radius:var(--r-lg);"></div></figure>
-            <figure class="b2b-slide"><div class="ph" style="aspect-ratio:4/5;border-radius:var(--r-lg);"></div></figure>
+            <figure class="b2b-slide is-active"><img src="assets/img/salas/iracema/foto-1.jpg?v=1" alt="Iracema — detalhe 1"></figure>
+            <figure class="b2b-slide"><img src="assets/img/salas/iracema/foto-2.jpg?v=1" alt="Iracema — detalhe 2"></figure>
+            <figure class="b2b-slide"><img src="assets/img/salas/iracema/foto-3.jpg?v=1" alt="Iracema — detalhe 3"></figure>
           </div>
         </div>
         <div class="b2b-dots" data-b2b-dots>
@@ -85,9 +92,9 @@
     <div class="eyebrow mb-1">Amenidades</div>
     <h2 class="h2 mb-3" style="max-width:560px;">Ambientes, não checklist.</h2>
     <div class="grid grid-3">
-      <div><div class="ph mb-2" style="aspect-ratio:4/5;"></div><h4 class="h4">Sala de leitura</h4><p class="small muted">Poltronas reclináveis, biblioteca curada, luz lateral.</p></div>
-      <div><div class="ph mb-2" style="aspect-ratio:4/5;"></div><h4 class="h4">Estações de trabalho</h4><p class="small muted">Mesas privativas, Wi-Fi dedicado, tomadas universais.</p></div>
-      <div><div class="ph mb-2" style="aspect-ratio:4/5;"></div><h4 class="h4">Chuveiros premium</h4><p class="small muted">Cabines com towel service e amenities autorais.</p></div>
+      <div><div class="ph mb-2" style="aspect-ratio:4/5;"></div><h4 class="h4">Conforto</h4><p class="small muted">Duchas privativas.</p></div>
+      <div><div class="ph mb-2" style="aspect-ratio:4/5;"></div><h4 class="h4">Requinte</h4><p class="small muted">Design exclusivo e regional.</p></div>
+      <div><div class="ph mb-2" style="aspect-ratio:4/5;"></div><h4 class="h4">Bem-estar</h4><p class="small muted">Snacks de qualidade à vontade.</p></div>
     </div>
   </div>
 </section>
@@ -98,11 +105,11 @@
     <div class="eyebrow mb-1">Gastronomia</div>
     <h2 class="h2 mb-3" style="max-width:560px;">Carta em parceria com a cidade.</h2>
     <div class="grid" style="grid-template-columns:1fr 1fr;align-items:center;gap:48px;">
-      <div class="ph" style="aspect-ratio:5/4;"></div>
+      <div class="ph ph-missing" style="aspect-ratio:5/4;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Conteúdo a confirmar com o cliente.</span></div>
       <div>
-        <p class="small muted">Designed by Chef Alessandro Bellini · Cumbuca Bistrô</p>
+        <p class="small muted">Curadoria gastronômica</p>
         <h3 class="h3 mt-1">Cardápio de Estação</h3>
-        <p class="body mt-2" style="font-size:15px;">Curadoria que reverencia a gastronomia local. Ingredientes de origem rastreada, técnica contemporânea, sem pretensão.</p>
+        <p class="body mt-2" style="font-size:15px;">Cardápio autoral servido na sala. Composição e chef responsável a confirmar com o cliente.</p>
         <a href="#" class="btn-link mt-3">Ver cardápio completo →</a>
       </div>
     </div>
@@ -115,9 +122,9 @@
     <div class="eyebrow mb-1">Bem-estar</div>
     <h2 class="h2 mb-3">Tempo entre voos como tratamento.</h2>
     <div class="grid grid-3">
-      <div class="card card-body" style="padding:24px;"><div class="ph mb-3" style="aspect-ratio:16/10;"></div><h4 class="h4">Nap Pods</h4><p class="small muted mt-1">Cabines individuais com blackout e despertador suave.</p></div>
-      <div class="card card-body" style="padding:24px;"><div class="ph mb-3" style="aspect-ratio:16/10;"></div><h4 class="h4">Ducha Premium</h4><p class="small muted mt-1">Towel service, amenities autorais, kit dental.</p></div>
-      <div class="card card-body" style="padding:24px;"><div class="ph mb-3" style="aspect-ratio:16/10;"></div><h4 class="h4">Wellness Corner</h4><p class="small muted mt-1">Espaço de alongamento · chá da casa antes do embarque.</p></div>
+      <div class="card card-body" style="padding:24px;"><div class="ph mb-3" style="aspect-ratio:16/10;"></div><h4 class="h4">Acessibilidade</h4><p class="small muted mt-1">Wi-Fi em alta velocidade e ilimitado.</p></div>
+      <div class="card card-body" style="padding:24px;"><div class="ph mb-3" style="aspect-ratio:16/10;"></div><h4 class="h4">Tomada</h4><p class="small muted mt-1">Tranquilidade para usar seus aparelhos eletrônicos.</p></div>
+      <div class="card card-body" style="padding:24px;"><div class="ph mb-3" style="aspect-ratio:16/10;"></div><h4 class="h4">Sofisticação</h4><p class="small muted mt-1">Variedade de drinks e bebidas.</p></div>
     </div>
   </div>
 </section>
@@ -129,7 +136,7 @@
     <h2 class="h2 mb-3">Como chegar.</h2>
     <div class="grid" style="grid-template-columns:1.4fr 1fr;gap:32px;align-items:flex-start;">
       <div class="terminal-map">
-        <div class="small muted mb-2">Mapa esquemático · Internacional · Mezanino</div>
+        <div class="small muted mb-2">Mapa esquemático · Aeroporto Internacional Pinto Martins</div>
         <div class="terminal-map-row">
           <div class="gate-strip">Check-in</div>
           <div class="gate-strip">Raio-x</div>
@@ -143,9 +150,8 @@
         </div>
       </div>
       <div>
-        <p style="font-size:15px;line-height:1.7;color:var(--g800);">A sala fica em <strong>Internacional · Mezanino</strong>.</p>
-        <p style="font-size:15px;line-height:1.7;color:var(--g800);">Caminhada até o portão mais distante: 2–4 minutos. Aviso de embarque automático no Concierge Digital.</p>
-        <a href="#" class="btn-link mt-2">Abrir no Google Maps →</a>
+        <p style="font-size:15px;line-height:1.7;color:var(--g800);">Em frente ao portão 2.</p>
+        <p style="font-size:15px;line-height:1.7;color:var(--g800);">Aeroporto Internacional Pinto Martins · Fortaleza</p>
       </div>
     </div>
   </div>
@@ -157,10 +163,10 @@
     <div class="eyebrow mb-1">Informações</div>
     <h2 class="h2 mb-3">Dados essenciais.</h2>
     <div class="ficha">
-      <div class="ficha-cell"><div class="label">Horário</div><div class="value">Conforme operação do terminal<br>Check-in: até decolagem</div></div>
-      <div class="ficha-cell"><div class="label">Capacidade</div><div class="value">Permanência 3h<br>Renovável uma vez</div></div>
-      <div class="ficha-cell"><div class="label">Localização</div><div class="value">Internacional · Mezanino<br>Caminhada 2–4 min</div></div>
-      <div class="ficha-cell"><div class="label">Idiomas</div><div class="value">Português · Inglês<br>Espanhol parcial</div></div>
+      <div class="ficha-cell"><div class="label">Horário</div><div class="value">Apenas durante o voo internacional</div></div>
+      <div class="ficha-cell"><div class="label">Capacidade</div><div class="value">40 assentos</div></div>
+      <div class="ficha-cell"><div class="label">Tamanho da sala</div><div class="value">107,64m²</div></div>
+      <div class="ficha-cell"><div class="label">Localização</div><div class="value">Em frente ao portão 2</div></div>
     </div>
   </div>
 </section>
@@ -169,35 +175,25 @@
 <section data-comment-id="sala-iracema.09-acesso" data-comment-label="Iracema · 09 Acesso &amp; tarifas" class="section section-alt">
   <div class="container">
     <div class="eyebrow mb-1">Acesso &amp; tarifas</div>
-    <h2 class="h2 mb-2">Quatro caminhos para entrar.</h2>
+    <h2 class="h2 mb-2">Como entrar.</h2>
     <p class="lead muted mb-4" style="max-width:680px;">Consulte o <button class="btn-link" data-open-verifier style="border:none;background:none;padding:0;cursor:pointer;text-decoration:underline;">Verificador de Acesso</button> em segundos.</p>
     <div class="grid grid-2">
       <div class="card card-body" style="padding:24px;">
-        <div class="badge mb-2">Cartões</div>
-        <ul style="list-style:none;padding:0;margin:8px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px;color:var(--g800);">
-          <li>· Amex Platinum+</li><li>· Visa Infinite</li>
-          <li>· Mastercard Black</li><li>· Bradesco Infinite</li>
-          <li>· Itaú Personnalité</li><li>· Santander Private</li>
-        </ul>
+        <div class="badge mb-2">Programas parceiros</div>
+        <p class="small mt-2" style="font-size:13px;line-height:1.7;color:var(--g800);">Visa Airport Companion, Dragonpass e Mileon Air.</p>
       </div>
       <div class="card card-body" style="padding:24px;">
-        <div class="badge mb-2">Programas</div>
-        <div class="flex gap-1 mt-2" style="flex-wrap:wrap;">
-          <span class="chip">DragonPass</span><span class="chip">Dreamfolks</span><span class="chip">HERO</span><span class="chip">Esfera</span>
-        </div>
+        <div class="badge mb-2">Parcerias diretas</div>
+        <p class="small mt-2" style="font-size:13px;line-height:1.7;color:var(--g800);">C6 Carbon Black, Sisprime Black, Amex, Sicredi.</p>
       </div>
       <div class="card card-body" style="padding:24px;">
-        <div class="badge mb-2">Companhia aérea</div>
-        <ul style="list-style:none;padding:0;margin-top:12px;font-size:13px;line-height:1.9;">
-          <li><strong>LATAM</strong> · Premium Business</li>
-          <li><strong>Azul</strong> · Premium Sky</li>
-          <li><strong>Gol</strong> · Premium</li>
-        </ul>
+        <div class="badge mb-2">Outros acessos</div>
+        <p class="small mt-2" style="font-size:13px;line-height:1.9;color:var(--g800);"><strong>Seguradoras:</strong> HERO, Coris, MTA, Esfera, Harmônica, Assist Card. COMPANHIA AÉREA: Ibéria e Air France.<br><strong>Outros:</strong> Blue Fly, Kaspersky, CVC. Não aceita Lounge Key e Priority Pass.</p>
       </div>
       <div class="card card-body" style="padding:24px;background:var(--g900);color:#fff;border-color:var(--g900);">
-        <div class="badge mb-2" style="background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.2);">W Day Pass</div>
-        <h3 class="h3" style="color:#fff;">R$ 240<small style="display:block;font-size:11px;font-weight:400;color:rgba(255,255,255,.6);margin-top:4px;">24 horas</small></h3>
-        <a href="formas-de-acesso.html" class="btn btn-primary mt-3" style="background:#fff;color:var(--g900);">Adquirir Day Pass</a>
+        <div class="badge mb-2" style="background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.2);">W Pass</div>
+        <h3 class="h3" style="color:#fff;">R$320,00</h3>
+        <a href="formas-de-acesso.html" class="btn btn-primary mt-3" style="background:#fff;color:var(--g900);">Adquirir W Pass</a>
       </div>
     </div>
   </div>
@@ -209,11 +205,10 @@
     <div class="eyebrow mb-1">Identidade local</div>
     <h2 class="h2 mb-3" style="max-width:560px;">Fortaleza entra na sala.</h2>
     <div class="grid" style="grid-template-columns:1fr 1.4fr;gap:48px;align-items:center;">
-      <div class="ph" style="aspect-ratio:4/5;"></div>
+      <div class="ph ph-missing" style="aspect-ratio:4/5;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Conteúdo a confirmar com o cliente.</span></div>
       <div>
-        <p style="font-size:17px;line-height:1.7;color:var(--g800);">A Iracema da literatura, não a do clichê turístico. Bandeja de café cearense e doces típicos.</p>
-        <p style="font-size:17px;line-height:1.7;color:var(--g800);margin-top:16px;">A trilha sonora, a curadoria fotográfica, o cardápio — tudo conversa com a cidade. Não há cenografia: há contexto.</p>
-        <a href="editorial.html" class="btn-link mt-3">Leia sobre a curadoria de Iracema →</a>
+        <p style="font-size:17px;line-height:1.7;color:var(--g800);">Design exclusivo e regional: a sala reflete a identidade de Fortaleza.</p>
+        <p style="font-size:17px;line-height:1.7;color:var(--g800);margin-top:16px;">Texto editorial da curadoria a confirmar com o cliente.</p>
       </div>
     </div>
   </div>
@@ -224,13 +219,8 @@
   <div class="container">
     <div class="eyebrow mb-1">Press</div>
     <h2 class="h2 mb-4">O que dizem.</h2>
-    <div class="press-row">
-      <div class="press-item">"Identidade onde se esperava genérico." <strong>Casa Vogue</strong></div>
-      <div class="press-item">"Vale o voo de conexão." <strong>Bon Vivant</strong></div>
-      <div class="press-item">"Curadoria editorial séria." <strong>Wallpaper*</strong></div>
-      <div class="press-item">"A cidade entra no aeroporto." <strong>Piauí</strong></div>
-      <div class="press-item">"Hospitalidade que não cansa." <strong>Monocle</strong></div>
-    </div>
+    <div class="ph ph-missing" style="min-height:180px;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Conteúdo a confirmar com o cliente.</span></div>
+    <p class="small muted mt-2">Clipping a ser fornecido pela assessoria de imprensa.</p>
   </div>
 </section>
 
@@ -240,9 +230,9 @@
     <div class="eyebrow mb-1">Outras salas</div>
     <h2 class="h2 mb-3">Outras salas em FOR.</h2>
     <div class="grid grid-3">
-      <article class="card sala-card"><div class="ph" style="aspect-ratio:16/10;"></div><div class="card-body"><h3 class="sala-title">Business Lounge</h3><p class="sala-meta">FOR</p><a href="sala-business-lounge.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph" style="aspect-ratio:16/10;"></div><div class="card-body"><h3 class="sala-title">Frevo</h3><p class="sala-meta">REC</p><a href="sala-frevo.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph" style="aspect-ratio:16/10;"></div><div class="card-body"><h3 class="sala-title">Veja todas</h3><p class="sala-meta">21 salas da rede</p><a href="salas.html" class="btn-link">Ver salas →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/fortaleza-premium.jpg?v=9" alt="Sala Fortaleza Premium" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;"><div class="card-body"><h3 class="sala-title">Fortaleza Premium</h3><p class="sala-meta">FOR</p><a href="sala-fortaleza-premium.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/fortaleza-arrival.jpg?v=9" alt="Sala Fortaleza Arrival" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;"><div class="card-body"><h3 class="sala-title">Fortaleza Arrival</h3><p class="sala-meta">FOR</p><a href="sala-fortaleza-arrival.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><div class="ph" style="aspect-ratio:16/10;"></div><div class="card-body"><h3 class="sala-title">Veja todas</h3><p class="sala-meta">Rede completa</p><a href="salas.html" class="btn-link">Ver salas →</a></div></article>
     </div>
     <div class="text-center mt-5">
       <a href="aeroporto-for.html" class="btn btn-secondary">Ver hub de FOR</a>
@@ -252,6 +242,6 @@
 
 <div data-footer></div>
 <div data-modal-mount></div>
-<script src="js/app.js?v=7"></script>
+<script src="js/app.js?v=9"></script>
 </body>
 </html>

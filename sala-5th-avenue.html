@@ -3,74 +3,77 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>5th Avenue · GRU T3 · W Premium</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/wireframe.css?v=7">
-<link rel="stylesheet" href="css/tokens.css?v=7">
-<link rel="stylesheet" href="css/highfi.css?v=7">
+<title>5th Avenue · GRU · W Premium</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/wireframe.css?v=9">
+<link rel="stylesheet" href="css/tokens.css?v=9">
+<link rel="stylesheet" href="css/highfi.css?v=9">
 </head>
 <body data-prefix="" data-highfi>
 
 <div data-nav></div>
+<style>
+  /* PAGINA SEM IMAGENS: todo placeholder mostra o aviso (icone de atencao + texto) */
+  .ph:not(.ph-missing){flex-direction:column;text-align:center;padding:16px;}
+  .ph:not(.ph-missing)::before{width:24px;height:24px;margin-bottom:10px;opacity:1;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B6A66' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z'/%3E%3Cpath d='M12 9v4'/%3E%3Cpath d='M12 17h.01'/%3E%3C/svg%3E") no-repeat center/contain;}
+  .ph:not(.ph-missing)::after{content:"Imagem não encontrada no Drive.";font-family:var(--font-label);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--c-muted);line-height:1.5;}
+  .ph.gallery-thumb:not(.ph-missing)::after{display:none;}
+</style>
 
 <div class="container">
-  <div class="crumb">
+    <div class="crumb">
     <a href="index.html">Início</a> <span class="sep">/</span>
     <a href="salas.html">Salas</a> <span class="sep">/</span>
-    <a href="aeroporto-gru.html">Guarulhos · GRU</a> <span class="sep">/</span>
+    <a href="aeroporto-gru.html">Guarulhos · São Paulo</a> <span class="sep">/</span>
     <span style="color:var(--g900);">5th Avenue</span>
     <span class="crumb-url">/pt/salas/gru/5th-avenue</span>
   </div>
 </div>
 
-<!-- ===== BLOCO 01 · HERO CINEMATOGRÁFICO ===== -->
-<section class="section" data-comment-id="sala.5th.01-hero" data-comment-label="5th Avenue · 01 Hero" style="padding-bottom:64px;">
+<!-- BLOCO 01 · HERO CINEMATOGRÁFICO -->
+<section class="section" data-comment-id="sala-5th-avenue.01-hero" data-comment-label="5th Avenue · 01 Hero" style="padding-bottom:64px;">
   <div class="container">
-    <div class="hero hero-short" style="aspect-ratio:16/9;height:auto;margin:0;">
-      <img src="assets/img/salas/5th-avenue/hero.jpg?v=1" alt="Sala 5th Avenue · Guarulhos · GRU · Terminal 3" style="display:block;width:100%;height:100%;object-fit:cover;">
-    </div>
+    <img src="assets/img/salas/5th-avenue/foto-1.jpg?v=1" alt="Sala 5th Avenue" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--r-lg);">
     <div style="margin-top:20px;">
-      <div class="eyebrow">Guarulhos · GRU · Terminal 3</div>
-      <h1 class="h1" style="max-width:560px;">O limiar entre dois mundos.</h1>
+      <div class="eyebrow">Guarulhos · São Paulo</div>
+      <h1 class="h1">Aberta 24 horas em Guarulhos.</h1>
     </div>
   </div>
 </section>
 
-<!-- ===== BLOCO 02 · MANCHETE + LEDE ===== -->
-<section data-comment-id="sala.5th.02-manchete" data-comment-label="5th Avenue · 02 Manchete + Lede" class="section" style="padding-top:48px;">
+<!-- BLOCO 02 · MANCHETE + LEDE -->
+<section data-comment-id="sala-5th-avenue.02-manchete" data-comment-label="5th Avenue · 02 Manchete + Lede" class="section" style="padding-top:32px;">
   <div class="container">
     <div style="max-width:840px;margin:0 auto;text-align:center;">
-      <div class="eyebrow rule-label" style="margin-bottom:20px;">Terminal 3 · GRU</div>
+      <div class="eyebrow rule-label" style="margin-bottom:20px;">GRU · Internacional</div>
       <h2 class="h-display">5th Avenue</h2>
-      <p class="lead-lg mt-3" style="font-size:18px;line-height:1.65;">
-        Refúgio editorial entre o gate internacional e o silêncio. Arquitetura minimalista, luz nordestina, e uma carta de cafés que conversa com a gastronomia contemporânea da capital.
-      </p>
+      <p class="lead-lg mt-3" style="font-size:18px;line-height:1.65;">Dentro da área restrita, logo após a. São 222M² e 88 assentos. Funcionamento: 24h.</p>
     </div>
   </div>
 </section>
 
-<!-- ===== BLOCO 03 · GALERIA IMERSIVA ===== -->
-<section data-comment-id="sala.5th.03-galeria" data-comment-label="5th Avenue · 03 Galeria" class="section section-alt">
+<!-- BLOCO 03 · GALERIA IMERSIVA -->
+<section data-comment-id="sala-5th-avenue.03-galeria" data-comment-label="5th Avenue · 03 Galeria" class="section section-alt">
   <div class="container">
     <div class="eyebrow mb-3">Galeria</div>
     <style>
-      /* Galeria: imagem fixa a esquerda + carrossel (peek + dots) girando a direita */
       .gallery-split{display:grid;grid-template-columns:1.5fr 1fr;grid-template-areas:"fixed carousel" ". dots";column-gap:28px;row-gap:0;align-items:stretch;}
       .gallery-fixed{grid-area:fixed;margin:0;border-radius:var(--r-lg);overflow:hidden;}
       .gallery-fixed img{display:block;width:100%;height:100%;object-fit:cover;}
+      .gallery-fixed .ph{width:100%;height:100%;}
       .gallery-carousel .b2b-viewport{grid-area:carousel;border-radius:var(--r-lg);}
       .gallery-carousel .gallery-split .b2b-dots{grid-area:dots;margin-top:20px;}
-      .gallery-carousel .b2b-dot.is-active::after{height:1.5px;background:var(--c-ink);}  /* linha selecionada mais grossa e escura */
+      .gallery-carousel .b2b-dot.is-active::after{height:1.5px;background:var(--c-ink);}
       @media(max-width:760px){ .gallery-split{grid-template-columns:1fr;grid-template-areas:"fixed" "carousel" "dots";} }
     </style>
     <div class="b2b-carousel gallery-carousel" data-b2b-carousel>
       <div class="gallery-split">
-        <figure class="gallery-fixed"><img src="assets/img/salas/5th-avenue/fixa.jpg?v=1" alt="5th Avenue — ambiente principal"></figure>
+        <figure class="gallery-fixed"><img src="assets/img/salas/5th-avenue/foto-2.jpg?v=1" alt="5th Avenue — ambiente"></figure>
         <div class="b2b-viewport">
           <div class="b2b-track" data-b2b-track>
-            <figure class="b2b-slide is-active"><img src="assets/img/salas/5th-avenue/01.jpg?v=1" alt="5th Avenue — detalhe 1"></figure>
-            <figure class="b2b-slide"><img src="assets/img/salas/5th-avenue/02.jpg?v=1" alt="5th Avenue — detalhe 2"></figure>
-            <figure class="b2b-slide"><img src="assets/img/salas/5th-avenue/03.jpg?v=1" alt="5th Avenue — detalhe 3"></figure>
+            <figure class="b2b-slide is-active"><img src="assets/img/salas/5th-avenue/foto-1.jpg?v=1" alt="5th Avenue — detalhe 1"></figure>
+            <figure class="b2b-slide"><img src="assets/img/salas/5th-avenue/foto-2.jpg?v=1" alt="5th Avenue — detalhe 2"></figure>
+            <figure class="b2b-slide"><img src="assets/img/salas/5th-avenue/foto-3.jpg?v=1" alt="5th Avenue — detalhe 3"></figure>
           </div>
         </div>
         <div class="b2b-dots" data-b2b-dots>
@@ -83,260 +86,151 @@
   </div>
 </section>
 
-<!-- ===== BLOCO 04 · EXPERIÊNCIA AMENIDADES (curadoria visual, não checklist) ===== -->
-<section data-comment-id="sala.5th.04-amenidades" data-comment-label="5th Avenue · 04 Amenidades" class="section">
+<!-- BLOCO 04 · AMENIDADES -->
+<section data-comment-id="sala-5th-avenue.04-amenidades" data-comment-label="5th Avenue · 04 Amenidades" class="section">
   <div class="container">
     <div class="eyebrow mb-1">Amenidades</div>
-    <h2 class="h2 mb-3" style="max-width:560px;">Cada ambiente é uma decisão editorial.</h2>
-    <p class="lead muted mb-4" style="max-width:680px;">Não listamos amenidades — apresentamos os ambientes que as abrigam. A galeria visual substitui o checklist.</p>
-
+    <h2 class="h2 mb-3" style="max-width:560px;">Ambientes, não checklist.</h2>
     <div class="grid grid-3">
-      <div>
-        <img src="assets/img/salas/5th-avenue/sala-de-leitura.jpg?v=1" alt="Sala de Leitura" class="mb-2" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-lg);">
-        <h4 class="h4">Sala de Leitura</h4>
-        <p class="small muted">Poltronas reclináveis aquecidas, controle individual de luz, biblioteca curada de revistas internacionais.</p>
-      </div>
-      <div>
-        <img src="assets/img/salas/5th-avenue/estacoes.jpg?v=1" alt="Estações de Trabalho" class="mb-2" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-lg);">
-        <h4 class="h4">Estações de Trabalho</h4>
-        <p class="small muted">Mesas privativas com Wi-Fi corporativo dedicado, tomadas universais, monitor opcional sob requisição.</p>
-      </div>
-      <div>
-        <div class="ph ph-missing mb-2" style="aspect-ratio:4/5;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div>
-        <h4 class="h4">Spa &amp; Chuveiros</h4>
-        <p class="small muted">Cabines premium com towel service, amenities autorais, ducha de chuveiro de chuva.</p>
-      </div>
+      <div><div class="ph mb-2" style="aspect-ratio:4/5;"></div><h4 class="h4">Conforto</h4><p class="small muted">Duchas privativas.</p></div>
+      <div><div class="ph mb-2" style="aspect-ratio:4/5;"></div><h4 class="h4">Requinte</h4><p class="small muted">Design exclusivo e regional.</p></div>
+      <div><div class="ph mb-2" style="aspect-ratio:4/5;"></div><h4 class="h4">Bem-estar</h4><p class="small muted">Snacks de qualidade à vontade.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ===== BLOCO 05 · GASTRONOMIA ASSINADA ===== -->
-<section data-comment-id="sala.5th.05-gastronomia" data-comment-label="5th Avenue · 05 Gastronomia" class="section section-alt">
+<!-- BLOCO 05 · GASTRONOMIA -->
+<section data-comment-id="sala-5th-avenue.05-gastronomia" data-comment-label="5th Avenue · 05 Gastronomia" class="section section-alt">
   <div class="container">
     <div class="eyebrow mb-1">Gastronomia</div>
-    <h2 class="h2 mb-3" style="max-width:560px;">Carta autoral em parceria com a cidade.</h2>
+    <h2 class="h2 mb-3" style="max-width:560px;">Carta em parceria com a cidade.</h2>
     <div class="grid" style="grid-template-columns:1fr 1fr;align-items:center;gap:48px;">
-      <img src="assets/img/salas/5th-avenue/gastronomia.jpg?v=1" alt="Gastronomia · 5th Avenue" style="display:block;width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:var(--r-lg);">
+      <div class="ph ph-missing" style="aspect-ratio:5/4;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Conteúdo a confirmar com o cliente.</span></div>
       <div>
-        <p class="small muted">Designed by Chef Rodrigo Costa · Restaurante Maní</p>
+        <p class="small muted">Curadoria gastronômica</p>
         <h3 class="h3 mt-1">Cardápio de Estação</h3>
-        <p class="body mt-2" style="color:var(--g700);font-size:15px;">Grãos de origem selecionada, pães da padaria do Bixiga, frutas sazonais do CEAGESP. A carta muda com a estação — e com o que está bom no mercado.</p>
-
-        <ul style="list-style:none;padding:0;margin:24px 0;border-top:1px solid var(--border);">
-          <li class="flex justify-between" style="padding:16px 0;border-bottom:1px solid var(--border);"><span>05:00 – 11:00</span><span class="muted">Café Editorial</span></li>
-          <li class="flex justify-between" style="padding:16px 0;border-bottom:1px solid var(--border);"><span>11:30 – 16:00</span><span class="muted">Almoço Curado</span></li>
-          <li class="flex justify-between" style="padding:16px 0;border-bottom:1px solid var(--border);"><span>17:00 – 22:00</span><span class="muted">Bar &amp; Coquetelaria</span></li>
-          <li class="flex justify-between" style="padding:16px 0;"><span>22:00 – 05:00</span><span class="muted">Late Service</span></li>
-        </ul>
-
-        <a href="#" class="btn-link">Ver Cardápio Completo →</a>
+        <p class="body mt-2" style="font-size:15px;">Cardápio autoral servido na sala. Composição e chef responsável a confirmar com o cliente.</p>
+        <a href="#" class="btn-link mt-3">Ver cardápio completo →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== BLOCO 06 · BEM-ESTAR & DESCANSO ===== -->
-<section data-comment-id="sala.5th.06-bem-estar" data-comment-label="5th Avenue · 06 Bem-estar" class="section">
+<!-- BLOCO 06 · BEM-ESTAR -->
+<section data-comment-id="sala-5th-avenue.06-bem-estar" data-comment-label="5th Avenue · 06 Bem-estar" class="section">
   <div class="container">
     <div class="eyebrow mb-1">Bem-estar</div>
-    <h2 class="h2 mb-3">O tempo entre voos pode ser um tratamento.</h2>
+    <h2 class="h2 mb-3">Tempo entre voos como tratamento.</h2>
     <div class="grid grid-3">
-      <div class="card card-body" style="padding:24px;">
-        <div class="ph ph-missing mb-3" style="aspect-ratio:16/10;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div>
-        <h4 class="h4">Nap Rooms</h4>
-        <p class="small muted mt-1">8 suítes privativas com camas Beautyrest, blackout total e despertador silencioso. Reserva em janelas de 90 minutos.</p>
-      </div>
-      <div class="card card-body" style="padding:24px;">
-        <div class="ph ph-missing mb-3" style="aspect-ratio:16/10;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div>
-        <h4 class="h4">Ducha Premium</h4>
-        <p class="small muted mt-1">Cabines com aquecimento por piso, amenities Aēsop, toalhas em algodão egípcio, kit de barbear sob requisição.</p>
-      </div>
-      <div class="card card-body" style="padding:24px;">
-        <div class="ph ph-missing mb-3" style="aspect-ratio:16/10;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div>
-        <h4 class="h4">Wellness Corner</h4>
-        <p class="small muted mt-1">Pequeno spa com massagem expressa por agendamento (15 ou 30 min) e chá da casa antes do embarque.</p>
-      </div>
+      <div class="card card-body" style="padding:24px;"><div class="ph mb-3" style="aspect-ratio:16/10;"></div><h4 class="h4">Acessibilidade</h4><p class="small muted mt-1">Wi-Fi em alta velocidade e ilimitado.</p></div>
+      <div class="card card-body" style="padding:24px;"><div class="ph mb-3" style="aspect-ratio:16/10;"></div><h4 class="h4">Tomada</h4><p class="small muted mt-1">Tranquilidade para usar seus aparelhos eletrônicos.</p></div>
+      <div class="card card-body" style="padding:24px;"><div class="ph mb-3" style="aspect-ratio:16/10;"></div><h4 class="h4">Praticidade</h4><p class="small muted mt-1">Sala de reunião em ambiente privativo.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ===== BLOCO 07 · LOCALIZAÇÃO NO TERMINAL ===== -->
-<section data-comment-id="sala.5th.07-localizacao" data-comment-label="5th Avenue · 07 Localização" class="section section-alt">
+<!-- BLOCO 07 · LOCALIZAÇÃO -->
+<section data-comment-id="sala-5th-avenue.07-localizacao" data-comment-label="5th Avenue · 07 Localização" class="section section-alt">
   <div class="container">
     <div class="eyebrow mb-1">Localização</div>
     <h2 class="h2 mb-3">Como chegar.</h2>
-
     <div class="grid" style="grid-template-columns:1.4fr 1fr;gap:32px;align-items:flex-start;">
       <div class="terminal-map">
-        <div class="small muted mb-2">Mapa esquemático · Terminal 3 · Pier Internacional</div>
+        <div class="small muted mb-2">Mapa esquemático · Aeroporto Internacional de São Paulo/Guarulhos</div>
         <div class="terminal-map-row">
-          <div class="gate-strip">323 · 324 · 325</div>
-          <div class="gate-strip">326</div>
+          <div class="gate-strip">Check-in</div>
+          <div class="gate-strip">Raio-x</div>
           <div class="you-are-here">5th Avenue<br>↓</div>
-          <div class="gate-strip">328 · 329</div>
-          <div class="gate-strip">330 · 331 · 332</div>
-        </div>
-        <div class="terminal-map-row">
-          <div class="gate-strip" style="font-size:9px;min-height:40px;">Corredor sul · Restauração</div>
+          <div class="gate-strip">Embarque</div>
+          <div class="gate-strip">Pier</div>
         </div>
         <div class="terminal-map-legend">
-          <span><i></i> Gates</span>
-          <span><i class="is-room"></i> Você está aqui</span>
-          <span>Elevador A · piso 2</span>
+          <span><i class="is-room"></i> 5th Avenue</span>
+          <span><i></i> Áreas comuns</span>
         </div>
       </div>
       <div>
-        <p style="font-size:15px;line-height:1.7;color:var(--g800);">A sala fica no <strong>piso 2 do Pier Internacional</strong>, entre os portões 327 e 328, acessível por elevador dedicado a partir do hall de embarque.</p>
-        <p style="font-size:15px;line-height:1.7;color:var(--g800);">Caminho até o portão mais distante: <strong>4 minutos</strong>. Avisamos pelo Concierge digital 20 minutos antes do embarque.</p>
-        <a href="#" class="btn-link mt-2">Abrir no Google Maps →</a>
+        <p style="font-size:15px;line-height:1.7;color:var(--g800);">Dentro da área restrita, logo após a.</p>
+        <p style="font-size:15px;line-height:1.7;color:var(--g800);">Aeroporto Internacional de São Paulo/Guarulhos · Guarulhos · São Paulo</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== BLOCO 08 · INFORMAÇÕES PRÁTICAS ===== -->
-<section data-comment-id="sala.5th.08-info" data-comment-label="5th Avenue · 08 Informações práticas" class="section">
+<!-- BLOCO 08 · INFO PRÁTICAS -->
+<section data-comment-id="sala-5th-avenue.08-info" data-comment-label="5th Avenue · 08 Informações práticas" class="section">
   <div class="container">
     <div class="eyebrow mb-1">Informações</div>
     <h2 class="h2 mb-3">Dados essenciais.</h2>
     <div class="ficha">
-      <div class="ficha-cell"><div class="label">Horário</div><div class="value">24 horas<br>Check-in: 4h antes<br>Check-out: até decolagem</div></div>
-      <div class="ficha-cell"><div class="label">Capacidade</div><div class="value">180 hóspedes<br>Permanência 3h (renovável)<br>Reserva para grupos</div></div>
-      <div class="ficha-cell"><div class="label">Portões próximos</div><div class="value">327 · 328<br>Caminhada: 1–4 min<br>Aviso de embarque automático</div></div>
-      <div class="ficha-cell"><div class="label">Idiomas</div><div class="value">Português · Inglês 24h<br>Espanhol por agendamento<br>Equipe bilíngue completa</div></div>
+      <div class="ficha-cell"><div class="label">Horário</div><div class="value">24h</div></div>
+      <div class="ficha-cell"><div class="label">Capacidade</div><div class="value">88 assentos</div></div>
+      <div class="ficha-cell"><div class="label">Tamanho da sala</div><div class="value">222M²</div></div>
+      <div class="ficha-cell"><div class="label">Localização</div><div class="value">Dentro da área restrita, logo após a</div></div>
     </div>
   </div>
 </section>
 
-<!-- ===== BLOCO 09 · ACESSO & TARIFAS ===== -->
-<section data-comment-id="sala.5th.09-acesso" data-comment-label="5th Avenue · 09 Acesso & tarifas" class="section section-alt">
+<!-- BLOCO 09 · ACESSO -->
+<section data-comment-id="sala-5th-avenue.09-acesso" data-comment-label="5th Avenue · 09 Acesso &amp; tarifas" class="section section-alt">
   <div class="container">
     <div class="eyebrow mb-1">Acesso &amp; tarifas</div>
-    <h2 class="h2 mb-2">Quatro caminhos para entrar.</h2>
-    <p class="lead muted mb-4" style="max-width:680px;">Cartões aceitos · programas parceiros · companhia aérea · Day Pass avulso. Consulte o <button class="btn-link" data-open-verifier style="border:none;background:none;padding:0;cursor:pointer;text-decoration:underline;">Verificador de Acesso</button> em segundos.</p>
-
+    <h2 class="h2 mb-2">Como entrar.</h2>
+    <p class="lead muted mb-4" style="max-width:680px;">Consulte o <button class="btn-link" data-open-verifier style="border:none;background:none;padding:0;cursor:pointer;text-decoration:underline;">Verificador de Acesso</button> em segundos.</p>
     <div class="grid grid-2">
-      <div class="card card-body" style="padding:24px;">
-        <div class="badge mb-2">Cartões aceitos</div>
-        <ul style="list-style:none;padding:0;margin:8px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px;color:var(--g800);">
-          <li>· Amex Platinum+</li><li>· Visa Infinite</li>
-          <li>· Mastercard Black</li><li>· Bradesco Infinite</li>
-          <li>· Itaú Personnalité</li><li>· Santander Private</li>
-        </ul>
-        <div class="note note-warn mt-3">⚠ LoungeKey e Priority Pass <strong>não aceitos</strong>.</div>
-      </div>
-      <div class="card card-body" style="padding:24px;">
-        <div class="badge mb-2">Programas</div>
-        <div class="flex gap-1 mt-2" style="flex-wrap:wrap;">
-          <span class="chip">DragonPass</span><span class="chip">Dreamfolks</span><span class="chip">Mileon Air</span><span class="chip">HERO</span><span class="chip">Coris</span><span class="chip">MTA</span><span class="chip">ITA</span><span class="chip">Esfera</span>
-        </div>
-      </div>
-      <div class="card card-body" style="padding:24px;">
-        <div class="badge mb-2">Companhia aérea</div>
-        <ul style="list-style:none;padding:0;margin:8px 0 0;font-size:13px;line-height:1.9;">
-          <li><strong>TAP</strong> — Business</li>
-          <li><strong>Air France</strong> — La Première</li>
-          <li><strong>KLM</strong> — Business Class</li>
-          <li><strong>LATAM</strong> — Premium Business</li>
-        </ul>
-      </div>
       <div class="card card-body" style="padding:24px;background:var(--g900);color:#fff;border-color:var(--g900);">
-        <div class="badge mb-2" style="background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.2);">W Day Pass · avulso</div>
-        <h3 class="h3" style="color:#fff;">R$ 240<small style="display:block;font-size:11px;font-weight:400;color:rgba(255,255,255,.6);margin-top:4px;">24 horas · sala Premium</small></h3>
-        <div class="mt-3 flex gap-1">
-          <a href="formas-de-acesso.html" class="btn btn-primary" style="background:#fff;color:var(--g900);">Adquirir Day Pass</a>
-          <button class="btn btn-ghost" data-open-verifier style="color:#fff;border:1px solid rgba(255,255,255,.3);">Verificar</button>
-        </div>
+        <div class="badge mb-2" style="background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.2);">Acesso</div>
+        <h3 class="h3" style="color:#fff;">Sala exclusiva</h3>
+        <p class="small mt-2" style="color:rgba(255,255,255,.7);">Esta sala não opera com W Pass. Consulte as condições de acesso.</p>
+        <a href="formas-de-acesso.html" class="btn btn-primary mt-3" style="background:#fff;color:var(--g900);">Ver formas de acesso</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== BLOCO 10 · IDENTIDADE LOCAL ===== -->
-<section data-comment-id="sala.5th.10-identidade" data-comment-label="5th Avenue · 10 Identidade local" class="section">
+<!-- BLOCO 10 · IDENTIDADE LOCAL -->
+<section data-comment-id="sala-5th-avenue.10-identidade" data-comment-label="5th Avenue · 10 Identidade local" class="section">
   <div class="container">
     <div class="eyebrow mb-1">Identidade local</div>
-    <h2 class="h2 mb-3" style="max-width:560px;">São Paulo entra na sala.</h2>
-
+    <h2 class="h2 mb-3" style="max-width:560px;">Guarulhos entra na sala.</h2>
     <div class="grid" style="grid-template-columns:1fr 1.4fr;gap:48px;align-items:center;">
-      <img src="assets/img/salas/5th-avenue/identidade.jpg?v=2" alt="São Paulo entra na sala" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-lg);">
+      <div class="ph ph-missing" style="aspect-ratio:4/5;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Conteúdo a confirmar com o cliente.</span></div>
       <div>
-        <p style="font-size:17px;line-height:1.7;color:var(--g800);">
-          A curadoria do 5th Avenue dialoga com São Paulo de quem chega para ficar. Painéis fotográficos de Bob Wolfenson nos corredores, biblioteca com edições raras do Estadão e da Folha, e uma carta de cafés que reverencia a torra paulistana — Coffee Lab, Octavio Café, Suplicy.
-        </p>
-        <p style="font-size:17px;line-height:1.7;color:var(--g800);margin-top:16px;">
-          A trilha sonora muda com a hora do dia: bossa instrumental pela manhã, jazz brasileiro à tarde, MPB contemporânea à noite.
-        </p>
-        <a href="editorial.html" class="btn-link mt-3">Leia o artigo sobre a curadoria →</a>
+        <p style="font-size:17px;line-height:1.7;color:var(--g800);">Design exclusivo e regional: a sala reflete a identidade de Guarulhos.</p>
+        <p style="font-size:17px;line-height:1.7;color:var(--g800);margin-top:16px;">Texto editorial da curadoria a confirmar com o cliente.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== BLOCO 11 · PRESS & RECONHECIMENTO ===== -->
-<section data-comment-id="sala.5th.11-press" data-comment-label="5th Avenue · 11 Press" class="section section-alt">
+<!-- BLOCO 11 · PRESS -->
+<section data-comment-id="sala-5th-avenue.11-press" data-comment-label="5th Avenue · 11 Press" class="section section-alt">
   <div class="container">
     <div class="eyebrow mb-1">Press</div>
     <h2 class="h2 mb-4">O que dizem.</h2>
-
-    <div class="press-row">
-      <div class="press-item">"Uma das três melhores salas premium do Brasil." <strong>Veja</strong></div>
-      <div class="press-item">"Curadoria editorial de nível Aman." <strong>Wallpaper*</strong></div>
-      <div class="press-item">"O novo padrão de hospitalidade aeroportuária." <strong>Travel + Leisure</strong></div>
-      <div class="press-item">"Estranho ler 'lounge' depois de visitar." <strong>Piauí</strong></div>
-      <div class="press-item">"O Brasil entrou no mapa global." <strong>Monocle</strong></div>
-    </div>
-
-    <div class="grid grid-4 mt-4">
-      <div class="card card-body text-center"><div class="eyebrow">2024</div><h4 class="h4 mt-1">Best Lounge LATAM</h4><p class="small muted">Skytrax Awards</p></div>
-      <div class="card card-body text-center"><div class="eyebrow">2024</div><h4 class="h4 mt-1">Design Excellence</h4><p class="small muted">Casa Vogue</p></div>
-      <div class="card card-body text-center"><div class="eyebrow">2025</div><h4 class="h4 mt-1">Hospitality Innovation</h4><p class="small muted">Prêmio Caio</p></div>
-      <div class="card card-body text-center"><div class="eyebrow">2025</div><h4 class="h4 mt-1">F&amp;B Premium</h4><p class="small muted">Veja Comer &amp; Beber</p></div>
-    </div>
+    <div class="ph ph-missing" style="min-height:180px;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Conteúdo a confirmar com o cliente.</span></div>
+    <p class="small muted mt-2">Clipping a ser fornecido pela assessoria de imprensa.</p>
   </div>
 </section>
 
-<!-- ===== BLOCO 12 · OUTRAS SALAS DO AEROPORTO ===== -->
-<section data-comment-id="sala.5th.12-outras-salas" data-comment-label="5th Avenue · 12 Outras salas" class="section">
+<!-- BLOCO 12 · OUTRAS SALAS -->
+<section data-comment-id="sala-5th-avenue.12-outras-salas" data-comment-label="5th Avenue · 12 Outras salas" class="section">
   <div class="container">
     <div class="eyebrow mb-1">Outras salas</div>
-    <h2 class="h2 mb-3">Outras salas em Guarulhos.</h2>
+    <h2 class="h2 mb-3">Outras salas em GRU.</h2>
     <div class="grid grid-3">
-      <style>.ph-missing::before{display:none;}.img-missing{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;font-family:var(--font-label);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--c-muted);padding:0 20px;line-height:1.5;}.img-missing-ico{display:block;margin:0 auto 10px;width:24px;height:24px;}</style>
-      <article class="card sala-card">
-        <div class="ph ph-missing" style="aspect-ratio:16/10;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div>
-        <div class="card-body">
-          <h3 class="sala-title">Green Park</h3>
-          <p class="sala-meta">Terminal 2 · Doméstico</p>
-          <a href="sala-5th-avenue.html" class="btn-link">Explorar →</a>
-        </div>
-      </article>
-      <article class="card sala-card">
-        <div class="ph ph-missing" style="aspect-ratio:16/10;position:relative;"><span class="ph-tag">Premium</span><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div>
-        <div class="card-body">
-          <h3 class="sala-title">Gold Standard</h3>
-          <p class="sala-meta">Terminal 1 · Doméstico</p>
-          <a href="sala-5th-avenue.html" class="btn-link">Explorar →</a>
-        </div>
-      </article>
-      <article class="card sala-card">
-        <img src="assets/img/salas/5th-avenue/the-pier.jpg?v=1" alt="Sala The Pier" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;">
-        <div class="card-body">
-          <h3 class="sala-title">The Pier</h3>
-          <p class="sala-meta">Terminal 3 · Internacional</p>
-          <a href="sala-5th-avenue.html" class="btn-link">Explorar →</a>
-        </div>
-      </article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/gru-t1.jpg?v=9" alt="Sala Guarulhos T1" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;"><div class="card-body"><h3 class="sala-title">Guarulhos T1</h3><p class="sala-meta">GRU</p><a href="sala-gru-t1.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/the-west.jpg?v=9" alt="Sala The West" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;"><div class="card-body"><h3 class="sala-title">The West</h3><p class="sala-meta">GRU</p><a href="sala-the-west.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><div class="ph" style="aspect-ratio:16/10;"></div><div class="card-body"><h3 class="sala-title">Veja todas</h3><p class="sala-meta">Rede completa</p><a href="salas.html" class="btn-link">Ver salas →</a></div></article>
     </div>
-
     <div class="text-center mt-5">
-      <a href="aeroporto-gru.html" class="btn btn-secondary">Ver Hub do Aeroporto GRU</a>
+      <a href="aeroporto-gru.html" class="btn btn-secondary">Ver hub de GRU</a>
     </div>
   </div>
 </section>
 
 <div data-footer></div>
 <div data-modal-mount></div>
-<script src="js/app.js?v=7"></script>
+<script src="js/app.js?v=9"></script>
 </body>
 </html>

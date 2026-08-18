@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Salas · W Premium</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/wireframe.css?v=7">
-<link rel="stylesheet" href="css/tokens.css?v=7">
-<link rel="stylesheet" href="css/highfi.css?v=7">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/wireframe.css?v=9">
+<link rel="stylesheet" href="css/tokens.css?v=9">
+<link rel="stylesheet" href="css/highfi.css?v=9">
 <style>
   /* experimento · fundo #F5F5F2 (--c-surface), header branco */
   body{ background:#F5F5F2; }
@@ -39,8 +39,8 @@
 
   <div class="eyebrow rule-label" style="margin-top:48px;margin-bottom:26px;">Hub · Salas</div>
   <div class="sec-header text-center" style="max-width:680px;margin:0 auto 32px;">
-    <h1 class="h1">21+ salas. 14 aeroportos.<br>Uma curadoria.</h1>
-    <p>Comece pelo aeroporto. Cada cidade entra na sala junto com você.</p>
+    <h1 class="h1">25 salas. 14 aeroportos.<br>Uma curadoria.</h1>
+    <p>25 operações VIP em 14 aeroportos brasileiros, 5 operações em construção e 3 salas em aeroportos da Argentina. Comece pela cidade ou pelo código IATA.</p>
   </div>
 
   <!-- SEARCH -->
@@ -55,11 +55,17 @@
   <!-- FILTROS -->
   <div class="flex gap-1 mb-4 items-center" data-chip-group style="flex-wrap:wrap;justify-content:center;">
     <button class="chip active">Todos os aeroportos</button>
-    <button class="chip">Premium</button>
+    <button class="chip">Premium Lounge</button>
+    <button class="chip">Lounge</button>
+    <button class="chip">Café Lounge</button>
+    <button class="chip">Arrival Lounge</button>
     <button class="chip">Internacional</button>
-    <button class="chip">Doméstico</button>
+    <button class="chip">Doméstica</button>
     <button class="chip">24h</button>
+    <button class="chip">Com ducha</button>
     <button class="chip">Com nap rooms</button>
+    <button class="chip">Com brinquedoteca</button>
+    <button class="chip">Wonder Club</button>
   </div>
 </div>
 
@@ -68,88 +74,106 @@
   <div class="container">
     <div class="eyebrow mb-3">Aeroportos</div>
     <div class="grid grid-4">
-      <a href="aeroporto-gru.html" class="card card-body" style="text-decoration:none;color:inherit;">
-        <div class="airport-iata" style="font-size:48px;">GRU</div>
-        <div class="small muted mt-1">Guarulhos · São Paulo</div>
-        <div class="small mt-2"><strong>3 salas</strong> · The Pier · 5th Avenue · Green Park</div>
+      <a href="aeroporto-bel.html" class="card card-body" style="text-decoration:none;color:inherit;">
+        <div class="airport-iata" style="font-size:48px;">BEL</div>
+        <div class="small muted mt-1">Belém</div>
+        <div class="small mt-2"><strong>2 salas</strong> · Belém · Doméstica · Belém · Internacional</div>
         <span class="btn-link mt-3">Ver hub →</span>
       </a>
-      <a href="aeroporto-rec.html" class="card card-body" style="text-decoration:none;color:inherit;">
-        <div class="airport-iata" style="font-size:48px;">REC</div>
-        <div class="small muted mt-1">Recife</div>
-        <div class="small mt-2"><strong>2 salas</strong> · Frevo · Ocean View</div>
-        <span class="btn-link mt-3">Ver hub →</span>
-      </a>
-      <a href="aeroporto-for.html" class="card card-body" style="text-decoration:none;color:inherit;">
-        <div class="airport-iata" style="font-size:48px;">FOR</div>
-        <div class="small muted mt-1">Fortaleza</div>
-        <div class="small mt-2"><strong>2 salas</strong> · Business Lounge · Iracema</div>
-        <span class="btn-link mt-3">Ver hub →</span>
-      </a>
-      <a href="aeroporto-gig.html" class="card card-body" style="text-decoration:none;color:inherit;">
-        <div class="airport-iata" style="font-size:48px;">GIG</div>
-        <div class="small muted mt-1">Galeão · Rio de Janeiro</div>
-        <div class="small mt-2"><strong>2 salas</strong> · Copacabana · Ipanema</div>
+      <a href="aeroporto-cgb.html" class="card card-body" style="text-decoration:none;color:inherit;">
+        <div class="airport-iata" style="font-size:48px;">CGB</div>
+        <div class="small muted mt-1">Cuiabá</div>
+        <div class="small mt-2"><strong>1 sala</strong> · Cuiabá</div>
         <span class="btn-link mt-3">Ver hub →</span>
       </a>
       <a href="aeroporto-cgh.html" class="card card-body" style="text-decoration:none;color:inherit;">
         <div class="airport-iata" style="font-size:48px;">CGH</div>
         <div class="small muted mt-1">Congonhas · São Paulo</div>
-        <div class="small mt-2"><strong>1 sala</strong> · Paulista</div>
-        <span class="btn-link mt-3">Ver hub →</span>
-      </a>
-      <a href="aeroporto-bsb.html" class="card card-body" style="text-decoration:none;color:inherit;">
-        <div class="airport-iata" style="font-size:48px;">BSB</div>
-        <div class="small muted mt-1">Brasília</div>
-        <div class="small mt-2"><strong>1 sala</strong> · Cerrado</div>
-        <span class="btn-link mt-3">Ver hub →</span>
-      </a>
-      <a href="aeroporto-poa.html" class="card card-body" style="text-decoration:none;color:inherit;">
-        <div class="airport-iata" style="font-size:48px;">POA</div>
-        <div class="small muted mt-1">Porto Alegre</div>
-        <div class="small mt-2"><strong>1 sala</strong> · Skyline</div>
-        <span class="btn-link mt-3">Ver hub →</span>
-      </a>
-      <a href="aeroporto-ssa.html" class="card card-body" style="text-decoration:none;color:inherit;">
-        <div class="airport-iata" style="font-size:48px;">SSA</div>
-        <div class="small muted mt-1">Salvador</div>
-        <div class="small mt-2"><strong>1 sala</strong> · Pelourinho</div>
-        <span class="btn-link mt-3">Ver hub →</span>
-      </a>
-      <a href="aeroporto-fte.html" class="card card-body" style="text-decoration:none;color:inherit;">
-        <div class="airport-iata" style="font-size:48px;">FTE</div>
-        <div class="small muted mt-1">El Calafate · AR</div>
-        <div class="small mt-2"><strong>1 sala</strong> · Patagônia</div>
-        <span class="btn-link mt-3">Ver hub →</span>
-      </a>
-      <a href="aeroporto-ush.html" class="card card-body" style="text-decoration:none;color:inherit;">
-        <div class="airport-iata" style="font-size:48px;">USH</div>
-        <div class="small muted mt-1">Ushuaia · AR</div>
-        <div class="small mt-2"><strong>1 sala</strong> · Beagle</div>
-        <span class="btn-link mt-3">Ver hub →</span>
-      </a>
-      <a href="aeroporto-rel.html" class="card card-body" style="text-decoration:none;color:inherit;">
-        <div class="airport-iata" style="font-size:48px;">REL</div>
-        <div class="small muted mt-1">Trelew · AR</div>
-        <div class="small mt-2"><strong>1 sala</strong> · Pampa</div>
+        <div class="small mt-2"><strong>1 sala</strong> · Congonhas</div>
         <span class="btn-link mt-3">Ver hub →</span>
       </a>
       <a href="aeroporto-cwb.html" class="card card-body" style="text-decoration:none;color:inherit;">
         <div class="airport-iata" style="font-size:48px;">CWB</div>
         <div class="small muted mt-1">Curitiba</div>
-        <div class="small mt-2"><strong>1 sala</strong> · Pinhão</div>
+        <div class="small mt-2"><strong>1 sala</strong> · Curitiba</div>
         <span class="btn-link mt-3">Ver hub →</span>
       </a>
-      <a href="aeroporto-cnf.html" class="card card-body" style="text-decoration:none;color:inherit;">
-        <div class="airport-iata" style="font-size:48px;">CNF</div>
-        <div class="small muted mt-1">Confins · Belo Horizonte</div>
-        <div class="small mt-2"><strong>1 sala</strong> · Minas</div>
+      <a href="aeroporto-for.html" class="card card-body" style="text-decoration:none;color:inherit;">
+        <div class="airport-iata" style="font-size:48px;">FOR</div>
+        <div class="small muted mt-1">Fortaleza</div>
+        <div class="small mt-2"><strong>4 salas</strong> · Fortaleza Premium · Fortaleza Arrival · Iracema · Beira-Mar</div>
         <span class="btn-link mt-3">Ver hub →</span>
       </a>
-      <a href="aeroporto-mao.html" class="card card-body" style="text-decoration:none;color:inherit;">
-        <div class="airport-iata" style="font-size:48px;">MAO</div>
-        <div class="small muted mt-1">Manaus</div>
-        <div class="small mt-2"><strong>1 sala</strong> · Amazonas</div>
+      <a href="aeroporto-fte.html" class="card card-body" style="text-decoration:none;color:inherit;">
+        <div class="airport-iata" style="font-size:48px;">FTE</div>
+        <div class="small muted mt-1">El Calafate · Argentina</div>
+        <div class="small mt-2"><strong>1 sala</strong> · El Calafate</div>
+        <span class="btn-link mt-3">Ver hub →</span>
+      </a>
+      <a href="aeroporto-gru.html" class="card card-body" style="text-decoration:none;color:inherit;">
+        <div class="airport-iata" style="font-size:48px;">GRU</div>
+        <div class="small muted mt-1">Guarulhos · São Paulo</div>
+        <div class="small mt-2"><strong>4 salas</strong> · Guarulhos T1 · The West · 5th Avenue · The Pier</div>
+        <span class="btn-link mt-3">Ver hub →</span>
+      </a>
+      <a href="aeroporto-gyn.html" class="card card-body" style="text-decoration:none;color:inherit;">
+        <div class="airport-iata" style="font-size:48px;">GYN</div>
+        <div class="small muted mt-1">Goiânia</div>
+        <div class="small mt-2"><strong>1 sala</strong> · Goiânia</div>
+        <span class="btn-link mt-3">Ver hub →</span>
+      </a>
+      <a href="aeroporto-ldb.html" class="card card-body" style="text-decoration:none;color:inherit;">
+        <div class="airport-iata" style="font-size:48px;">LDB</div>
+        <div class="small muted mt-1">Londrina</div>
+        <div class="small mt-2"><strong>1 sala</strong> · Londrina</div>
+        <span class="btn-link mt-3">Ver hub →</span>
+      </a>
+      <a href="aeroporto-mgf.html" class="card card-body" style="text-decoration:none;color:inherit;">
+        <div class="airport-iata" style="font-size:48px;">MGF</div>
+        <div class="small muted mt-1">Maringá</div>
+        <div class="small mt-2"><strong>1 sala</strong> · Maringá</div>
+        <span class="btn-link mt-3">Ver hub →</span>
+      </a>
+      <a href="aeroporto-nvt.html" class="card card-body" style="text-decoration:none;color:inherit;">
+        <div class="airport-iata" style="font-size:48px;">NVT</div>
+        <div class="small muted mt-1">Navegantes</div>
+        <div class="small mt-2"><strong>1 sala</strong> · Navegantes</div>
+        <span class="btn-link mt-3">Ver hub →</span>
+      </a>
+      <a href="aeroporto-pmw.html" class="card card-body" style="text-decoration:none;color:inherit;">
+        <div class="airport-iata" style="font-size:48px;">PMW</div>
+        <div class="small muted mt-1">Palmas</div>
+        <div class="small mt-2"><strong>1 sala</strong> · Palmas</div>
+        <span class="btn-link mt-3">Ver hub →</span>
+      </a>
+      <a href="aeroporto-poa.html" class="card card-body" style="text-decoration:none;color:inherit;">
+        <div class="airport-iata" style="font-size:48px;">POA</div>
+        <div class="small muted mt-1">Porto Alegre</div>
+        <div class="small mt-2"><strong>2 salas</strong> · Porto Alegre · Porto Alegre · Internacional</div>
+        <span class="btn-link mt-3">Ver hub →</span>
+      </a>
+      <a href="aeroporto-rao.html" class="card card-body" style="text-decoration:none;color:inherit;">
+        <div class="airport-iata" style="font-size:48px;">RAO</div>
+        <div class="small muted mt-1">Ribeirão Preto</div>
+        <div class="small mt-2"><strong>1 sala</strong> · Ribeirão Preto</div>
+        <span class="btn-link mt-3">Ver hub →</span>
+      </a>
+      <a href="aeroporto-rec.html" class="card card-body" style="text-decoration:none;color:inherit;">
+        <div class="airport-iata" style="font-size:48px;">REC</div>
+        <div class="small muted mt-1">Recife</div>
+        <div class="small mt-2"><strong>2 salas</strong> · Frevo · São João</div>
+        <span class="btn-link mt-3">Ver hub →</span>
+      </a>
+      <a href="aeroporto-rel.html" class="card card-body" style="text-decoration:none;color:inherit;">
+        <div class="airport-iata" style="font-size:48px;">REL</div>
+        <div class="small muted mt-1">Trelew · Argentina</div>
+        <div class="small mt-2"><strong>1 sala</strong> · Trelew</div>
+        <span class="btn-link mt-3">Ver hub →</span>
+      </a>
+      <a href="aeroporto-ush.html" class="card card-body" style="text-decoration:none;color:inherit;">
+        <div class="airport-iata" style="font-size:48px;">USH</div>
+        <div class="small muted mt-1">Ushuaia · Argentina</div>
+        <div class="small mt-2"><strong>1 sala</strong> · Ushuaia</div>
         <span class="btn-link mt-3">Ver hub →</span>
       </a>
     </div>
@@ -169,22 +193,38 @@
 
     <style>.ph-missing::before{display:none;}.img-missing{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;font-family:var(--font-label);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--c-muted);padding:0 20px;line-height:1.5;}.img-missing-ico{display:block;margin:0 auto 10px;width:24px;height:24px;}</style>
     <div class="grid grid-3 mt-3">
-      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/5th-avenue.jpg?v=7" alt="Sala 5th Avenue"><span class="ph-tag">Premium</span><div class="card-body"><h3 class="sala-title">5th Avenue</h3><p class="sala-meta">GRU · T3</p><a href="sala-5th-avenue.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/frevo.jpg?v=7" alt="Sala Frevo"><span class="ph-tag">Premium</span><div class="card-body"><h3 class="sala-title">Frevo</h3><p class="sala-meta">REC · Internacional</p><a href="sala-frevo.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph ph-missing" style="aspect-ratio:4/5;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div><div class="card-body"><h3 class="sala-title">Green Park</h3><p class="sala-meta">GRU · T2</p><a href="sala-green-park.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph ph-missing" style="aspect-ratio:4/5;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div><div class="card-body"><h3 class="sala-title">Ocean View</h3><p class="sala-meta">REC · Desembarque</p><a href="sala-ocean-view.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph ph-missing" style="aspect-ratio:4/5;position:relative;"><span class="ph-tag">Premium</span><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div><div class="card-body"><h3 class="sala-title">Gold Standard</h3><p class="sala-meta">GRU · T1</p><a href="sala-gold-standard.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/business-lounge.jpg?v=7" alt="Sala Business Lounge"><div class="card-body"><h3 class="sala-title">Business Lounge</h3><p class="sala-meta">FOR</p><a href="sala-business-lounge.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/iracema.jpg?v=7" alt="Sala Iracema"><div class="card-body"><h3 class="sala-title">Iracema</h3><p class="sala-meta">FOR · Internacional</p><a href="sala-iracema.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph ph-missing" style="aspect-ratio:4/5;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div><div class="card-body"><h3 class="sala-title">Copacabana</h3><p class="sala-meta">GIG · Internacional</p><a href="sala-copacabana.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph ph-missing" style="aspect-ratio:4/5;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div><div class="card-body"><h3 class="sala-title">Ipanema</h3><p class="sala-meta">GIG · Doméstico</p><a href="sala-ipanema.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/belem-domestica.jpg?v=9" alt="Sala Belém · Doméstica"><div class="card-body"><h3 class="sala-title">Belém · Doméstica</h3><p class="sala-meta">BEL · Doméstica</p><a href="sala-belem-domestica.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/belem-internacional.jpg?v=9" alt="Sala Belém · Internacional"><div class="card-body"><h3 class="sala-title">Belém · Internacional</h3><p class="sala-meta">BEL · Internacional</p><a href="sala-belem-internacional.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/cuiaba.jpg?v=9" alt="Sala Cuiabá"><div class="card-body"><h3 class="sala-title">Cuiabá</h3><p class="sala-meta">CGB · Doméstica</p><a href="sala-cuiaba.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/congonhas.jpg?v=9" alt="Sala Congonhas"><div class="card-body"><h3 class="sala-title">Congonhas</h3><p class="sala-meta">CGH · Doméstica</p><a href="sala-congonhas.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/curitiba.jpg?v=9" alt="Sala Curitiba"><div class="card-body"><h3 class="sala-title">Curitiba</h3><p class="sala-meta">CWB · Doméstica</p><a href="sala-curitiba.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/fortaleza-premium.jpg?v=9" alt="Sala Fortaleza Premium"><div class="card-body"><h3 class="sala-title">Fortaleza Premium</h3><p class="sala-meta">FOR · Doméstica</p><a href="sala-fortaleza-premium.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/fortaleza-arrival.jpg?v=9" alt="Sala Fortaleza Arrival"><div class="card-body"><h3 class="sala-title">Fortaleza Arrival</h3><p class="sala-meta">FOR · Internacional</p><a href="sala-fortaleza-arrival.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/iracema.jpg?v=9" alt="Sala Iracema"><div class="card-body"><h3 class="sala-title">Iracema</h3><p class="sala-meta">FOR · Internacional</p><a href="sala-iracema.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/fortaleza-beira-mar.jpg?v=9" alt="Sala Beira-Mar"><div class="card-body"><h3 class="sala-title">Beira-Mar</h3><p class="sala-meta">FOR · Internacional</p><a href="sala-fortaleza-beira-mar.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/goiania.jpg?v=9" alt="Sala Goiânia"><div class="card-body"><h3 class="sala-title">Goiânia</h3><p class="sala-meta">GYN · Doméstica</p><a href="sala-goiania.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/gru-t1.jpg?v=9" alt="Sala Guarulhos T1"><div class="card-body"><h3 class="sala-title">Guarulhos T1</h3><p class="sala-meta">GRU · Doméstica</p><a href="sala-gru-t1.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/the-west.jpg?v=9" alt="Sala The West"><div class="card-body"><h3 class="sala-title">The West</h3><p class="sala-meta">GRU · Doméstica</p><a href="sala-the-west.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/5th-avenue.jpg?v=9" alt="Sala 5th Avenue"><div class="card-body"><h3 class="sala-title">5th Avenue</h3><p class="sala-meta">GRU · Internacional</p><a href="sala-5th-avenue.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/the-pier.jpg?v=9" alt="Sala The Pier"><div class="card-body"><h3 class="sala-title">The Pier</h3><p class="sala-meta">GRU · Internacional</p><a href="sala-the-pier.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/londrina.jpg?v=9" alt="Sala Londrina"><div class="card-body"><h3 class="sala-title">Londrina</h3><p class="sala-meta">LDB · Doméstica</p><a href="sala-londrina.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/maringa.jpg?v=9" alt="Sala Maringá"><div class="card-body"><h3 class="sala-title">Maringá</h3><p class="sala-meta">MGF · Doméstica</p><a href="sala-maringa.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/navegantes.jpg?v=9" alt="Sala Navegantes"><div class="card-body"><h3 class="sala-title">Navegantes</h3><p class="sala-meta">NVT · Doméstica</p><a href="sala-navegantes.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/palmas.jpg?v=9" alt="Sala Palmas"><div class="card-body"><h3 class="sala-title">Palmas</h3><p class="sala-meta">PMW · Doméstica</p><a href="sala-palmas.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/porto-alegre.jpg?v=9" alt="Sala Porto Alegre"><div class="card-body"><h3 class="sala-title">Porto Alegre</h3><p class="sala-meta">POA · Doméstica</p><a href="sala-porto-alegre.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/porto-alegre-internacional.jpg?v=9" alt="Sala Porto Alegre · Internacional"><div class="card-body"><h3 class="sala-title">Porto Alegre · Internacional</h3><p class="sala-meta">POA · Internacional</p><a href="sala-porto-alegre-internacional.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/frevo.jpg?v=9" alt="Sala Frevo"><div class="card-body"><h3 class="sala-title">Frevo</h3><p class="sala-meta">REC · Internacional</p><a href="sala-frevo.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/recife-sao-joao.jpg?v=9" alt="Sala São João"><div class="card-body"><h3 class="sala-title">São João</h3><p class="sala-meta">REC · Doméstica</p><a href="sala-recife-sao-joao.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/ribeirao-preto.jpg?v=9" alt="Sala Ribeirão Preto"><div class="card-body"><h3 class="sala-title">Ribeirão Preto</h3><p class="sala-meta">RAO · Doméstica</p><a href="sala-ribeirao-preto.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/el-calafate.jpg?v=9" alt="Sala El Calafate"><div class="card-body"><h3 class="sala-title">El Calafate</h3><p class="sala-meta">FTE · Doméstica</p><a href="sala-el-calafate.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/trelew.jpg?v=9" alt="Sala Trelew"><div class="card-body"><h3 class="sala-title">Trelew</h3><p class="sala-meta">REL · Doméstica</p><a href="sala-trelew.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/ushuaia.jpg?v=9" alt="Sala Ushuaia"><div class="card-body"><h3 class="sala-title">Ushuaia</h3><p class="sala-meta">USH · Doméstica</p><a href="sala-ushuaia.html" class="btn-link">Explorar →</a></div></article>
     </div>
-    <div class="text-center mt-5"><button class="btn btn-secondary">Carregar mais salas (+12)</button></div>
   </div>
 </section>
 
 <div data-footer></div>
 <div data-modal-mount></div>
-<script src="js/app.js?v=7"></script>
+<script src="js/app.js?v=9"></script>
 </body>
 </html>

@@ -267,3 +267,47 @@ html{scroll-behavior:smooth;}
   .hero-fs h1{font-size:clamp(32px,8.5vw,42px);white-space:normal;}
   .hero-fs .lead{font-size:15px;white-space:normal;}
 }
+
+
+/* ============================================================
+   TIPOGRAFIA DOS CARDS DE SALA · Montserrat (Brandbook)
+   Padronizacao pedida pelo cliente em 17/08/2026.
+   HIBRIDO: Forum e EB Garamond seguem nos titulos editoriais;
+   Montserrat entra na anatomia do card de sala (nome, tagline,
+   descricao, metadados) para dar consistencia entre paginas.
+   ============================================================ */
+.sala-card .sala-title,
+.sala-card .sala-meta,
+.sala-card .sala-line,
+.sala-card .card-body p{
+  font-family:var(--font-ui);
+}
+/* nome da sala · 24-28px, bold, preto */
+.sala-card .sala-title{
+  font-size:var(--sala-nome);
+  font-weight:700;
+  color:var(--c-ink);
+  line-height:1.15;
+  letter-spacing:-.01em;
+  margin:0 0 8px;
+}
+/* tagline · 14-16px, cinza-escuro */
+.sala-card .sala-line{
+  font-size:var(--sala-tagline);
+  color:var(--c-ink-2);
+  line-height:1.5;
+  margin:0 0 16px;
+}
+/* metadados (aeroporto, terminal, horario, capacidade) · 12px */
+.sala-card .sala-meta{
+  font-size:var(--sala-meta);
+  color:var(--c-meta-card);
+  letter-spacing:.06em;
+  margin:0 0 10px;
+}
+/* descricao dentro do card · 14px */
+.sala-card .card-body p:not(.sala-meta):not(.sala-line){
+  font-size:var(--sala-texto);
+  color:var(--c-texto-card);
+  line-height:1.55;
+}

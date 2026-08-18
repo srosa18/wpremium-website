@@ -8,7 +8,7 @@
 
   var NAV_LINKS = [
     {href:'salas.html',         label:'Salas'},
-    {href:'airport-rooms.html', label:'Airport Rooms'},
+    {href:'airport-rooms.html', label:'W Airport Rooms'},
     {href:'servicos.html',      label:'Serviços'},
     {href:'como-acessar.html',  label:'Como Acessar'},
     {href:'editorial.html',     label:'Editorial'},
@@ -56,9 +56,8 @@
     var social = highfi
       ? '<a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>'+
         '<a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>'+
-        '<a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>'+
-        '<a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48" fill="currentColor" stroke="none"/></svg></a>'
-      : '<a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="YouTube">yt</a>';
+        
+      : '<a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="LinkedIn">in</a>';
     var footerLangs = highfi ? '' : '<span class="footer-langs"><a href="#" class="lang-pill active">PT</a> <a href="#" class="lang-pill">EN</a> <a href="#" class="lang-pill">ES</a></span>';
     return ''+
       '<footer class="footer" data-comment-id="global.footer" data-comment-label="Footer global">'+
@@ -73,7 +72,7 @@
       '        <h5>Produto</h5>'+
       '        <ul class="footer-links">'+
       '          <li><a href="'+prefix+'salas.html">Salas</a></li>'+
-      '          <li><a href="'+prefix+'airport-rooms.html">Airport Rooms</a></li>'+
+      '          <li><a href="'+prefix+'airport-rooms.html">W Airport Rooms</a></li>'+
       '          <li><a href="'+prefix+'servicos.html">Serviços</a></li>'+
       '          <li><a href="'+prefix+'como-acessar.html">Como Acessar</a></li>'+
       '          <li><a href="'+prefix+'formas-de-acesso.html">Formas de Acesso</a></li>'+
@@ -132,7 +131,7 @@
       '  <div class="modal" role="dialog" aria-label="Verificador de Acesso" aria-modal="true" data-comment-id="modal.verificador" data-comment-label="Modal · Verificador de Acesso">'+
       '    <button class="modal-close" data-modal-close aria-label="Fechar">×</button>'+
       '    <div class="modal-body">'+
-      '      <div class="eyebrow">W Premium Verify · Modal</div>'+
+      '      <div class="eyebrow">W Premium Group · Modal</div>'+
       '      <h2 class="h2 mt-1">Você é Elegível?</h2>'+
       '      <p class="muted mt-1" style="font-size:13px;">Insira o BIN do seu cartão e descubra, em tempo real, quais salas você tem direito hoje — sem precisar sair desta página.</p>'+
       '      <form id="verif-form" class="mt-3">'+
@@ -461,15 +460,23 @@
     if(!input || !box) return;
     var prefix = document.body.getAttribute('data-prefix') || '';
     var data = [
-      {iata:'GRU', city:'Guarulhos · São Paulo', salas:3, slug:'aeroporto-gru.html'},
+      {iata:'FOR', city:'Fortaleza', salas:4, slug:'aeroporto-for.html'},
+      {iata:'GRU', city:'Guarulhos · São Paulo', salas:4, slug:'aeroporto-gru.html'},
+      {iata:'BEL', city:'Belém', salas:2, slug:'aeroporto-bel.html'},
+      {iata:'POA', city:'Porto Alegre', salas:2, slug:'aeroporto-poa.html'},
       {iata:'REC', city:'Recife', salas:2, slug:'aeroporto-rec.html'},
-      {iata:'FOR', city:'Fortaleza', salas:2, slug:'aeroporto-for.html'},
-      {iata:'GIG', city:'Galeão · Rio de Janeiro', salas:2, slug:'aeroporto-gig.html'},
-      {iata:'POA', city:'Porto Alegre', salas:1, slug:'aeroporto-gru.html'},
-      {iata:'CGH', city:'Congonhas · São Paulo', salas:1, slug:'aeroporto-gru.html'},
-      {iata:'BSB', city:'Brasília', salas:1, slug:'aeroporto-gru.html'},
-      {iata:'FTE', city:'El Calafate · Argentina', salas:1, slug:'aeroporto-gru.html'},
-      {iata:'USH', city:'Ushuaia · Argentina', salas:1, slug:'aeroporto-gru.html'}
+      {iata:'CGB', city:'Cuiabá', salas:1, slug:'aeroporto-cgb.html'},
+      {iata:'CGH', city:'Congonhas · São Paulo', salas:1, slug:'aeroporto-cgh.html'},
+      {iata:'CWB', city:'Curitiba', salas:1, slug:'aeroporto-cwb.html'},
+      {iata:'GYN', city:'Goiânia', salas:1, slug:'aeroporto-gyn.html'},
+      {iata:'LDB', city:'Londrina', salas:1, slug:'aeroporto-ldb.html'},
+      {iata:'MGF', city:'Maringá', salas:1, slug:'aeroporto-mgf.html'},
+      {iata:'NVT', city:'Navegantes', salas:1, slug:'aeroporto-nvt.html'},
+      {iata:'PMW', city:'Palmas', salas:1, slug:'aeroporto-pmw.html'},
+      {iata:'RAO', city:'Ribeirão Preto', salas:1, slug:'aeroporto-rao.html'},
+      {iata:'FTE', city:'El Calafate · Argentina', salas:1, slug:'aeroporto-fte.html'},
+      {iata:'REL', city:'Trelew · Argentina', salas:1, slug:'aeroporto-rel.html'},
+      {iata:'USH', city:'Ushuaia · Argentina', salas:1, slug:'aeroporto-ush.html'}
     ];
     function render(q){
       var qq = (q||'').toLowerCase();

@@ -4,51 +4,56 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Frevo · REC · W Premium</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/wireframe.css?v=7">
-<link rel="stylesheet" href="css/tokens.css?v=7">
-<link rel="stylesheet" href="css/highfi.css?v=7">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/wireframe.css?v=9">
+<link rel="stylesheet" href="css/tokens.css?v=9">
+<link rel="stylesheet" href="css/highfi.css?v=9">
 </head>
 <body data-prefix="" data-highfi>
 
 <div data-nav></div>
+<style>
+  /* PAGINA SEM IMAGENS: todo placeholder mostra o aviso (icone de atencao + texto) */
+  .ph:not(.ph-missing){flex-direction:column;text-align:center;padding:16px;}
+  .ph:not(.ph-missing)::before{width:24px;height:24px;margin-bottom:10px;opacity:1;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B6A66' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z'/%3E%3Cpath d='M12 9v4'/%3E%3Cpath d='M12 17h.01'/%3E%3C/svg%3E") no-repeat center/contain;}
+  .ph:not(.ph-missing)::after{content:"Imagem não encontrada no Drive.";font-family:var(--font-label);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--c-muted);line-height:1.5;}
+  .ph.gallery-thumb:not(.ph-missing)::after{display:none;}
+</style>
 
 <div class="container">
-  <div class="crumb">
+    <div class="crumb">
     <a href="index.html">Início</a> <span class="sep">/</span>
     <a href="salas.html">Salas</a> <span class="sep">/</span>
-    <a href="aeroporto-rec.html">Recife · REC</a> <span class="sep">/</span>
+    <a href="aeroporto-rec.html">Recife</a> <span class="sep">/</span>
     <span style="color:var(--g900);">Frevo</span>
     <span class="crumb-url">/pt/salas/rec/frevo</span>
   </div>
 </div>
 
 <!-- BLOCO 01 · HERO CINEMATOGRÁFICO -->
-<section class="section" data-comment-id="sala.frevo.01-hero" data-comment-label="Frevo · 01 Hero" style="padding-bottom:64px;">
+<section class="section" data-comment-id="sala-frevo.01-hero" data-comment-label="Frevo · 01 Hero" style="padding-bottom:64px;">
   <div class="container">
-    <img src="assets/img/salas/frevo/hero.jpg?v=1" alt="Sala Frevo · Recife · sombrinhas de frevo" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--r-lg);">
+    <img src="assets/img/salas/frevo/foto-1.jpg?v=1" alt="Sala Frevo" style="display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--r-lg);">
     <div style="margin-top:20px;">
-      <div class="eyebrow">Recife · REC</div>
-      <h1 class="h1">O mês não é uma data. É um estado.</h1>
+      <div class="eyebrow">Recife</div>
+      <h1 class="h1">Aberta 24 horas em Recife.</h1>
     </div>
   </div>
 </section>
 
 <!-- BLOCO 02 · MANCHETE + LEDE -->
-<section data-comment-id="sala.frevo.02-manchete" data-comment-label="Frevo · 02 Manchete + Lede" class="section" style="padding-top:32px;">
+<section data-comment-id="sala-frevo.02-manchete" data-comment-label="Frevo · 02 Manchete + Lede" class="section" style="padding-top:32px;">
   <div class="container">
     <div style="max-width:840px;margin:0 auto;text-align:center;">
-      <div class="eyebrow rule-label" style="margin-bottom:20px;">Internacional · REC</div>
+      <div class="eyebrow rule-label" style="margin-bottom:20px;">REC · Internacional</div>
       <h2 class="h-display">Frevo</h2>
-      <p class="lead-lg mt-3" style="font-size:18px;line-height:1.65;">
-        Refúgio entre a euforia do centro e o silêncio exigido pelo voo. Vista privilegiada das aeronaves em manobra e uma carta que reverencia a cultura gastronômica pernambucana.
-      </p>
+      <p class="lead-lg mt-3" style="font-size:18px;line-height:1.65;">Próximo ao portão de embarque internacional B17. Área híbrida. São 660 m² e 159 assentos. Funcionamento: 24h.</p>
     </div>
   </div>
 </section>
 
 <!-- BLOCO 03 · GALERIA IMERSIVA -->
-<section data-comment-id="sala.frevo.03-galeria" data-comment-label="Frevo · 03 Galeria" class="section section-alt">
+<section data-comment-id="sala-frevo.03-galeria" data-comment-label="Frevo · 03 Galeria" class="section section-alt">
   <div class="container">
     <div class="eyebrow mb-3">Galeria</div>
     <style>
@@ -63,12 +68,12 @@
     </style>
     <div class="b2b-carousel gallery-carousel" data-b2b-carousel>
       <div class="gallery-split">
-        <figure class="gallery-fixed"><img src="assets/img/salas/frevo/galeria-fixa.jpg?v=1" alt="Frevo — ambiente principal"></figure>
+        <figure class="gallery-fixed"><img src="assets/img/salas/frevo/foto-2.jpg?v=1" alt="Frevo — ambiente"></figure>
         <div class="b2b-viewport">
           <div class="b2b-track" data-b2b-track>
-            <figure class="b2b-slide is-active"><img src="assets/img/salas/frevo/galeria-01.jpg?v=1" alt="Frevo — detalhe 1"></figure>
-            <figure class="b2b-slide"><img src="assets/img/salas/frevo/galeria-02.jpg?v=1" alt="Frevo — detalhe 2"></figure>
-            <figure class="b2b-slide"><img src="assets/img/salas/frevo/galeria-03.jpg?v=1" alt="Frevo — detalhe 3"></figure>
+            <figure class="b2b-slide is-active"><img src="assets/img/salas/frevo/foto-1.jpg?v=1" alt="Frevo — detalhe 1"></figure>
+            <figure class="b2b-slide"><img src="assets/img/salas/frevo/foto-2.jpg?v=1" alt="Frevo — detalhe 2"></figure>
+            <figure class="b2b-slide"><img src="assets/img/salas/frevo/foto-3.jpg?v=1" alt="Frevo — detalhe 3"></figure>
           </div>
         </div>
         <div class="b2b-dots" data-b2b-dots>
@@ -82,194 +87,161 @@
 </section>
 
 <!-- BLOCO 04 · AMENIDADES -->
-<section data-comment-id="sala.frevo.04-amenidades" data-comment-label="Frevo · 04 Amenidades" class="section">
+<section data-comment-id="sala-frevo.04-amenidades" data-comment-label="Frevo · 04 Amenidades" class="section">
   <div class="container">
     <div class="eyebrow mb-1">Amenidades</div>
     <h2 class="h2 mb-3" style="max-width:560px;">Ambientes, não checklist.</h2>
     <div class="grid grid-3">
-      <div><div class="ph ph-missing mb-2" style="aspect-ratio:4/5;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div><h4 class="h4">Sala panorâmica</h4><p class="small muted">Janelão para o pátio de manobras. 14 lugares com vista direta para o gate.</p></div>
-      <div><div class="ph ph-missing mb-2" style="aspect-ratio:4/5;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div><h4 class="h4">Estações de Trabalho</h4><p class="small muted">Mesas privativas com Wi-Fi 200 Mbps, tomadas universais, kit de papelaria autoral.</p></div>
-      <div><div class="ph ph-missing mb-2" style="aspect-ratio:4/5;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div><h4 class="h4">Chuveiros premium</h4><p class="small muted">3 cabines com towel service, amenities Granado, kit de barbear sob requisição.</p></div>
+      <div><div class="ph mb-2" style="aspect-ratio:4/5;"></div><h4 class="h4">Conforto</h4><p class="small muted">Duchas privativas.</p></div>
+      <div><div class="ph mb-2" style="aspect-ratio:4/5;"></div><h4 class="h4">Requinte</h4><p class="small muted">Design exclusivo e regional.</p></div>
+      <div><div class="ph mb-2" style="aspect-ratio:4/5;"></div><h4 class="h4">Bem-estar</h4><p class="small muted">Snacks de qualidade à vontade.</p></div>
     </div>
   </div>
 </section>
 
-<!-- BLOCO 05 · GASTRONOMIA ASSINADA -->
-<section data-comment-id="sala.frevo.05-gastronomia" data-comment-label="Frevo · 05 Gastronomia" class="section section-alt">
+<!-- BLOCO 05 · GASTRONOMIA -->
+<section data-comment-id="sala-frevo.05-gastronomia" data-comment-label="Frevo · 05 Gastronomia" class="section section-alt">
   <div class="container">
     <div class="eyebrow mb-1">Gastronomia</div>
-    <h2 class="h2 mb-3" style="max-width:560px;">A cozinha de Pernambuco.</h2>
+    <h2 class="h2 mb-3" style="max-width:560px;">Carta em parceria com a cidade.</h2>
     <div class="grid" style="grid-template-columns:1fr 1fr;align-items:center;gap:48px;">
-      <img src="assets/img/salas/frevo/gastronomia.jpg?v=1" alt="Gastronomia · Frevo" style="display:block;width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:var(--r-lg);">
+      <div class="ph ph-missing" style="aspect-ratio:5/4;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Conteúdo a confirmar com o cliente.</span></div>
       <div>
-        <p class="small muted">Designed by Chef Tonia Rocha · Restaurante Casa de Tetê</p>
-        <h3 class="h3 mt-1">Manhã de Recife</h3>
-        <p class="body mt-2" style="font-size:15px;">Tapioca recheada na hora, cuscuz com manteiga de garrafa, café coado na torre, bolo de rolo da Casa dos Frios. A carta inteira é local. O que vem do Sul é exceção, não regra.</p>
-        <ul style="list-style:none;padding:0;margin:24px 0;border-top:1px solid var(--border);">
-          <li class="flex justify-between" style="padding:16px 0;border-bottom:1px solid var(--border);"><span>05:00 – 11:00</span><span class="muted">Café da Manhã Pernambucano</span></li>
-          <li class="flex justify-between" style="padding:16px 0;border-bottom:1px solid var(--border);"><span>11:30 – 16:00</span><span class="muted">Almoço Regional</span></li>
-          <li class="flex justify-between" style="padding:16px 0;"><span>17:00 – 22:00</span><span class="muted">Bar &amp; Cachaçaria</span></li>
-        </ul>
-        <a href="#" class="btn-link">Ver Cardápio Completo →</a>
+        <p class="small muted">Curadoria gastronômica</p>
+        <h3 class="h3 mt-1">Cardápio de Estação</h3>
+        <p class="body mt-2" style="font-size:15px;">Cardápio autoral servido na sala. Composição e chef responsável a confirmar com o cliente.</p>
+        <a href="#" class="btn-link mt-3">Ver cardápio completo →</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- BLOCO 06 · BEM-ESTAR -->
-<section data-comment-id="sala.frevo.06-bem-estar" data-comment-label="Frevo · 06 Bem-estar" class="section">
+<section data-comment-id="sala-frevo.06-bem-estar" data-comment-label="Frevo · 06 Bem-estar" class="section">
   <div class="container">
     <div class="eyebrow mb-1">Bem-estar</div>
     <h2 class="h2 mb-3">Tempo entre voos como tratamento.</h2>
     <div class="grid grid-3">
-      <div class="card card-body" style="padding:24px;"><div class="ph ph-missing mb-3" style="aspect-ratio:16/10;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div><h4 class="h4">Nap Pods</h4><p class="small muted mt-1">4 cabines individuais com blackout, ruído branco, despertador suave.</p></div>
-      <div class="card card-body" style="padding:24px;"><div class="ph ph-missing mb-3" style="aspect-ratio:16/10;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div><h4 class="h4">Chuveiros Premium</h4><p class="small muted mt-1">Toalha em algodão pernambucano, sabonete Granado, kit dental autoral.</p></div>
-      <div class="card card-body" style="padding:24px;"><div class="ph ph-missing mb-3" style="aspect-ratio:16/10;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div><h4 class="h4">Espaço de Yoga</h4><p class="small muted mt-1">Pequena sala para alongamento. Tapetes disponíveis. Auto-serviço silencioso.</p></div>
+      <div class="card card-body" style="padding:24px;"><div class="ph mb-3" style="aspect-ratio:16/10;"></div><h4 class="h4">Acessibilidade</h4><p class="small muted mt-1">Wi-Fi em alta velocidade e ilimitado.</p></div>
+      <div class="card card-body" style="padding:24px;"><div class="ph mb-3" style="aspect-ratio:16/10;"></div><h4 class="h4">Espaço Exclusivo</h4><p class="small muted mt-1">Exclusividade no mais alto nível.</p></div>
+      <div class="card card-body" style="padding:24px;"><div class="ph mb-3" style="aspect-ratio:16/10;"></div><h4 class="h4">Tomada</h4><p class="small muted mt-1">Tranquilidade para usar seus aparelhos eletrônicos.</p></div>
     </div>
   </div>
 </section>
 
 <!-- BLOCO 07 · LOCALIZAÇÃO -->
-<section data-comment-id="sala.frevo.07-localizacao" data-comment-label="Frevo · 07 Localização" class="section section-alt">
+<section data-comment-id="sala-frevo.07-localizacao" data-comment-label="Frevo · 07 Localização" class="section section-alt">
   <div class="container">
     <div class="eyebrow mb-1">Localização</div>
     <h2 class="h2 mb-3">Como chegar.</h2>
     <div class="grid" style="grid-template-columns:1.4fr 1fr;gap:32px;align-items:flex-start;">
       <div class="terminal-map">
-        <div class="small muted mb-2">Mapa esquemático · Terminal Internacional · Mezanino</div>
+        <div class="small muted mb-2">Mapa esquemático · Aeroporto Internacional do Recife · Gilberto Freyre</div>
         <div class="terminal-map-row">
-          <div class="gate-strip">Identidade local</div>
-          <div class="gate-strip">12</div>
+          <div class="gate-strip">Check-in</div>
+          <div class="gate-strip">Raio-x</div>
           <div class="you-are-here">Frevo<br>↓</div>
-          <div class="gate-strip">14 · 15</div>
-          <div class="gate-strip">16</div>
-        </div>
-        <div class="terminal-map-row">
-          <div class="gate-strip" style="font-size:9px;min-height:40px;">Corredor de embarque · F&amp;B térreo</div>
+          <div class="gate-strip">Embarque</div>
+          <div class="gate-strip">Pier</div>
         </div>
         <div class="terminal-map-legend">
-          <span><i></i> Gates</span>
-          <span><i class="is-room"></i> Você está aqui</span>
-          <span>Escada rolante · Mezanino</span>
+          <span><i class="is-room"></i> Frevo</span>
+          <span><i></i> Áreas comuns</span>
         </div>
       </div>
       <div>
-        <p style="font-size:15px;line-height:1.7;color:var(--g800);">A sala ocupa o <strong>mezanino do Terminal Internacional</strong>, entre os portões 12 e 15.</p>
-        <p style="font-size:15px;line-height:1.7;color:var(--g800);">Caminhada até o gate mais distante: <strong>3 minutos</strong>. Aviso automático no Concierge digital.</p>
-        <a href="#" class="btn-link mt-2">Abrir no Google Maps →</a>
+        <p style="font-size:15px;line-height:1.7;color:var(--g800);">Próximo ao portão de embarque internacional B17. Área híbrida.</p>
+        <p style="font-size:15px;line-height:1.7;color:var(--g800);">Aeroporto Internacional do Recife · Gilberto Freyre · Recife</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- BLOCO 08 · INFO PRÁTICAS -->
-<section data-comment-id="sala.frevo.08-info" data-comment-label="Frevo · 08 Informações práticas" class="section">
+<section data-comment-id="sala-frevo.08-info" data-comment-label="Frevo · 08 Informações práticas" class="section">
   <div class="container">
     <div class="eyebrow mb-1">Informações</div>
     <h2 class="h2 mb-3">Dados essenciais.</h2>
     <div class="ficha">
-      <div class="ficha-cell"><div class="label">Horário</div><div class="value">05:00 – 24:00<br>Check-in: 3h antes</div></div>
-      <div class="ficha-cell"><div class="label">Capacidade</div><div class="value">90 hóspedes<br>Permanência 3h</div></div>
-      <div class="ficha-cell"><div class="label">Portões próximos</div><div class="value">Outras salas<br>Caminhada: 1–3 min</div></div>
-      <div class="ficha-cell"><div class="label">Idiomas</div><div class="value">Português · Inglês<br>Espanhol parcial</div></div>
+      <div class="ficha-cell"><div class="label">Horário</div><div class="value">24h</div></div>
+      <div class="ficha-cell"><div class="label">Capacidade</div><div class="value">159 assentos</div></div>
+      <div class="ficha-cell"><div class="label">Tamanho da sala</div><div class="value">660 m²</div></div>
+      <div class="ficha-cell"><div class="label">Localização</div><div class="value">Próximo ao portão de embarque internacional B17. Área híbrida</div></div>
     </div>
   </div>
 </section>
 
-<!-- BLOCO 09 · ACESSO & TARIFAS -->
-<section data-comment-id="sala.frevo.09-acesso" data-comment-label="Frevo · 09 Acesso & tarifas" class="section section-alt">
+<!-- BLOCO 09 · ACESSO -->
+<section data-comment-id="sala-frevo.09-acesso" data-comment-label="Frevo · 09 Acesso &amp; tarifas" class="section section-alt">
   <div class="container">
     <div class="eyebrow mb-1">Acesso &amp; tarifas</div>
-    <h2 class="h2 mb-2">Quatro caminhos para entrar.</h2>
+    <h2 class="h2 mb-2">Como entrar.</h2>
     <p class="lead muted mb-4" style="max-width:680px;">Consulte o <button class="btn-link" data-open-verifier style="border:none;background:none;padding:0;cursor:pointer;text-decoration:underline;">Verificador de Acesso</button> em segundos.</p>
-
     <div class="grid grid-2">
       <div class="card card-body" style="padding:24px;">
-        <div class="badge mb-2">Cartões aceitos</div>
-        <ul style="list-style:none;padding:0;margin:8px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px;color:var(--g800);">
-          <li>· Amex Platinum+</li><li>· Visa Infinite</li>
-          <li>· Mastercard Black</li><li>· Bradesco Infinite</li>
-          <li>· LoungeKey</li><li>· Itaú Personnalité</li>
-        </ul>
+        <div class="badge mb-2">Programas parceiros</div>
+        <p class="small mt-2" style="font-size:13px;line-height:1.7;color:var(--g800);">Mastercard Black (Lounge Key), Visa Infinit (Visa Airport Companion), Elo Nanquim (Priority Pass), Dragonpass e Mileon Air.</p>
       </div>
       <div class="card card-body" style="padding:24px;">
-        <div class="badge mb-2">Programas</div>
-        <div class="flex gap-1 mt-2" style="flex-wrap:wrap;">
-          <span class="chip">DragonPass</span><span class="chip">Dreamfolks</span><span class="chip">HERO</span><span class="chip">Mileon Air</span><span class="chip">Esfera</span>
-        </div>
+        <div class="badge mb-2">Parcerias diretas</div>
+        <p class="small mt-2" style="font-size:13px;line-height:1.7;color:var(--g800);">C6 Carbon Black, Sisprime Black, Amex, Sicredi.</p>
       </div>
       <div class="card card-body" style="padding:24px;">
-        <div class="badge mb-2">Companhia aérea</div>
-        <ul style="list-style:none;padding:0;margin:8px 0 0;font-size:13px;line-height:1.9;">
-          <li><strong>TAP</strong> — Business</li>
-          <li><strong>Azul</strong> — Premium Sky</li>
-          <li><strong>Gol</strong> — Premium</li>
-        </ul>
+        <div class="badge mb-2">Outros acessos</div>
+        <p class="small mt-2" style="font-size:13px;line-height:1.9;color:var(--g800);"><strong>Seguradoras:</strong> HERO, Coris, MTA, ITA, GTA, Esfera, Harmônica, Assist Card.<br><strong>Companhias:</strong> TAP.<br><strong>Outros:</strong> Blue Fly, Kaspersky, CVC.</p>
       </div>
       <div class="card card-body" style="padding:24px;background:var(--g900);color:#fff;border-color:var(--g900);">
-        <div class="badge mb-2" style="background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.2);">W Day Pass</div>
-        <h3 class="h3" style="color:#fff;">R$ 240<small style="display:block;font-size:11px;font-weight:400;color:rgba(255,255,255,.6);margin-top:4px;">24 horas · Premium</small></h3>
-        <a href="formas-de-acesso.html" class="btn btn-primary mt-3" style="background:#fff;color:var(--g900);">Adquirir Day Pass</a>
+        <div class="badge mb-2" style="background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.2);">W Pass</div>
+        <h3 class="h3" style="color:#fff;">R$320,00</h3>
+        <a href="formas-de-acesso.html" class="btn btn-primary mt-3" style="background:#fff;color:var(--g900);">Adquirir W Pass</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- BLOCO 10 · IDENTIDADE LOCAL -->
-<section data-comment-id="sala.frevo.10-identidade" data-comment-label="Frevo · 10 Identidade local" class="section">
+<section data-comment-id="sala-frevo.10-identidade" data-comment-label="Frevo · 10 Identidade local" class="section">
   <div class="container">
     <div class="eyebrow mb-1">Identidade local</div>
-    <h2 class="h2 mb-3" style="max-width:560px;">Recife guarda a memória de junho.</h2>
+    <h2 class="h2 mb-3" style="max-width:560px;">Recife entra na sala.</h2>
     <div class="grid" style="grid-template-columns:1fr 1.4fr;gap:48px;align-items:center;">
-      <img src="assets/img/salas/frevo/identidade.jpg?v=2" alt="Identidade local · Recife · bolo de rolo" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-lg);">
+      <div class="ph ph-missing" style="aspect-ratio:4/5;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Conteúdo a confirmar com o cliente.</span></div>
       <div>
-        <p style="font-size:17px;line-height:1.7;color:var(--g800);">A curadoria do Frevo é exclusivamente pernambucana. Painéis de Cícero Dias nas paredes, biblioteca com edições da Cepe e da Companhia Editora de Pernambuco, e trilha sonora alternando frevo, manguebeat e MPB de raiz nordestina.</p>
-        <p style="font-size:17px;line-height:1.7;color:var(--g800);margin-top:16px;">No mês do São João, programação especial: cavaquinho ao vivo na recepção, decoração temática e cardápio expandido para canjica, milho assado e quentão.</p>
-        <a href="editorial.html" class="btn-link mt-3">Leia: "Junho em Recife não é mês, é estado" →</a>
+        <p style="font-size:17px;line-height:1.7;color:var(--g800);">Design exclusivo e regional: a sala reflete a identidade de Recife.</p>
+        <p style="font-size:17px;line-height:1.7;color:var(--g800);margin-top:16px;">Texto editorial da curadoria a confirmar com o cliente.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- BLOCO 11 · PRESS -->
-<section data-comment-id="sala.frevo.11-press" data-comment-label="Frevo · 11 Press" class="section section-alt">
+<section data-comment-id="sala-frevo.11-press" data-comment-label="Frevo · 11 Press" class="section section-alt">
   <div class="container">
     <div class="eyebrow mb-1">Press</div>
     <h2 class="h2 mb-4">O que dizem.</h2>
-    <div class="press-row">
-      <div class="press-item">"A sala mais brasileira do Brasil." <strong>Folha de S.Paulo</strong></div>
-      <div class="press-item">"Curadoria de Recife sem caricatura." <strong>Continente</strong></div>
-      <div class="press-item">"Vale o voo de conexão." <strong>Bon Vivant</strong></div>
-      <div class="press-item">"Manguebeat em volume baixo." <strong>Piauí</strong></div>
-      <div class="press-item">"Identidade onde se esperava genérico." <strong>Casa Vogue</strong></div>
-    </div>
-    <div class="grid grid-4 mt-4">
-      <div class="card card-body text-center"><div class="eyebrow">2024</div><h4 class="h4 mt-1">Identidade Local</h4><p class="small muted">Prêmio Caio</p></div>
-      <div class="card card-body text-center"><div class="eyebrow">2024</div><h4 class="h4 mt-1">Best Regional Lounge</h4><p class="small muted">Skytrax LATAM</p></div>
-      <div class="card card-body text-center"><div class="eyebrow">2025</div><h4 class="h4 mt-1">Gastronomia Regional</h4><p class="small muted">Veja Comer &amp; Beber</p></div>
-      <div class="card card-body text-center"><div class="eyebrow">2025</div><h4 class="h4 mt-1">Cultura &amp; Hospitalidade</h4><p class="small muted">FCC Pernambuco</p></div>
-    </div>
+    <div class="ph ph-missing" style="min-height:180px;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Conteúdo a confirmar com o cliente.</span></div>
+    <p class="small muted mt-2">Clipping a ser fornecido pela assessoria de imprensa.</p>
   </div>
 </section>
 
 <!-- BLOCO 12 · OUTRAS SALAS -->
-<section data-comment-id="sala.frevo.12-outras-salas" data-comment-label="Frevo · 12 Outras salas" class="section">
+<section data-comment-id="sala-frevo.12-outras-salas" data-comment-label="Frevo · 12 Outras salas" class="section">
   <div class="container">
     <div class="eyebrow mb-1">Outras salas</div>
-    <h2 class="h2 mb-3">Outras salas em Recife.</h2>
+    <h2 class="h2 mb-3">Outras salas em REC.</h2>
     <div class="grid grid-3">
-      <style>.ph-missing::before{display:none;}.img-missing{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);text-align:center;font-family:var(--font-label);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--c-muted);padding:0 20px;line-height:1.5;}.img-missing-ico{display:block;margin:0 auto 10px;width:24px;height:24px;}</style><article class="card sala-card"><div class="ph ph-missing" style="aspect-ratio:16/10;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div><div class="card-body"><h3 class="sala-title">Ocean View</h3><p class="sala-meta">Desembarque · REC</p><a href="sala-frevo.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph ph-missing" style="aspect-ratio:16/10;position:relative;"><span class="img-missing"><svg class="img-missing-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Imagem não encontrada no Drive.</span></div><div class="card-body"><h3 class="sala-title">Capibaribe</h3><p class="sala-meta">Doméstico · REC</p><a href="sala-frevo.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div style="position:relative;"><img src="assets/img/salas/5th-avenue/hero.jpg?v=1" alt="Sala 5th Avenue" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;"><span class="ph-tag">Premium</span></div><div class="card-body"><h3 class="sala-title">5th Avenue</h3><p class="sala-meta">GRU · T3</p><a href="sala-5th-avenue.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/recife-sao-joao.jpg?v=9" alt="Sala São João" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;"><div class="card-body"><h3 class="sala-title">São João</h3><p class="sala-meta">REC</p><a href="sala-recife-sao-joao.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/belem-domestica.jpg?v=9" alt="Sala Belém · Doméstica" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;"><div class="card-body"><h3 class="sala-title">Belém · Doméstica</h3><p class="sala-meta">BEL</p><a href="sala-belem-domestica.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><div class="ph" style="aspect-ratio:16/10;"></div><div class="card-body"><h3 class="sala-title">Veja todas</h3><p class="sala-meta">Rede completa</p><a href="salas.html" class="btn-link">Ver salas →</a></div></article>
     </div>
     <div class="text-center mt-5">
-      <a href="aeroporto-rec.html" class="btn btn-secondary">Ver Hub do Aeroporto REC</a>
+      <a href="aeroporto-rec.html" class="btn btn-secondary">Ver hub de REC</a>
     </div>
   </div>
 </section>
 
 <div data-footer></div>
 <div data-modal-mount></div>
-<script src="js/app.js?v=7"></script>
+<script src="js/app.js?v=9"></script>
 </body>
 </html>

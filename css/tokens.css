@@ -23,6 +23,15 @@
   --font-body:'EB Garamond', Georgia, 'Times New Roman', serif;    /* corpo · títulos pequenos */
   --font-label:'Lemon Milk', system-ui, -apple-system, 'Segoe UI', sans-serif; /* rótulos · wordmark · botões (caixa-alta) */
   --font-accent:'Fashion Fetish', Georgia, serif;                  /* statement raro */
+  --font-ui:'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;   /* UI · cards de sala (Brandbook) */
+
+  /* escala tipografica dos cards de sala (spec do cliente, 17/08/2026) */
+  --sala-nome:clamp(24px, 2vw, 28px);   /* nome da sala · bold */
+  --sala-tagline:15px;                  /* tagline · 14 a 16px */
+  --sala-texto:14px;                    /* descricao */
+  --sala-meta:12px;                     /* metadados: horario, capacidade */
+  --c-texto-card:#555555;               /* spec do cliente */
+  --c-meta-card:#777777;                /* spec do cliente */
 
   /* ---------- COR · paleta oficial (wp cores paleta.pdf) ---------- */
   --c-bg:#FAFAF8;          /* fundo off-white               */
