@@ -17,6 +17,63 @@
     {href:'contato.html',       label:'Contato'}
   ];
 
+  var W_BUSCA = [
+      {t:'aeroporto', nome:'Belém', meta:'BEL · 2 salas', termos:'bel belém aeroporto internacional de belém · val-de-cans', url:'aeroporto-bel.html'},
+      {t:'aeroporto', nome:'Cuiabá', meta:'CGB · 1 sala', termos:'cgb cuiabá aeroporto internacional marechal rondon', url:'aeroporto-cgb.html'},
+      {t:'aeroporto', nome:'Congonhas · São Paulo', meta:'CGH · 1 sala', termos:'cgh congonhas · são paulo aeroporto de são paulo/congonhas', url:'aeroporto-cgh.html'},
+      {t:'aeroporto', nome:'Curitiba', meta:'CWB · 1 sala', termos:'cwb curitiba aeroporto internacional afonso pena', url:'aeroporto-cwb.html'},
+      {t:'aeroporto', nome:'Fortaleza', meta:'FOR · 4 salas', termos:'for fortaleza aeroporto internacional pinto martins', url:'aeroporto-for.html'},
+      {t:'aeroporto', nome:'El Calafate · Argentina', meta:'FTE · 1 sala', termos:'fte el calafate · argentina aeroporto internacional comandante armando tola', url:'aeroporto-fte.html'},
+      {t:'aeroporto', nome:'Guarulhos · São Paulo', meta:'GRU · 4 salas', termos:'gru guarulhos · são paulo aeroporto internacional de são paulo/guarulhos', url:'aeroporto-gru.html'},
+      {t:'aeroporto', nome:'Goiânia', meta:'GYN · 1 sala', termos:'gyn goiânia aeroporto internacional santa genoveva', url:'aeroporto-gyn.html'},
+      {t:'aeroporto', nome:'Londrina', meta:'LDB · 1 sala', termos:'ldb londrina aeroporto de londrina · governador josé richa', url:'aeroporto-ldb.html'},
+      {t:'aeroporto', nome:'Maringá', meta:'MGF · 1 sala', termos:'mgf maringá aeroporto regional sílvio name júnior', url:'aeroporto-mgf.html'},
+      {t:'aeroporto', nome:'Navegantes', meta:'NVT · 1 sala', termos:'nvt navegantes aeroporto internacional ministro victor konder', url:'aeroporto-nvt.html'},
+      {t:'aeroporto', nome:'Palmas', meta:'PMW · 1 sala', termos:'pmw palmas aeroporto brigadeiro lysias rodrigues', url:'aeroporto-pmw.html'},
+      {t:'aeroporto', nome:'Porto Alegre', meta:'POA · 2 salas', termos:'poa porto alegre aeroporto internacional salgado filho', url:'aeroporto-poa.html'},
+      {t:'aeroporto', nome:'Ribeirão Preto', meta:'RAO · 1 sala', termos:'rao ribeirão preto aeroporto estadual doutor leite lopes', url:'aeroporto-rao.html'},
+      {t:'aeroporto', nome:'Recife', meta:'REC · 2 salas', termos:'rec recife aeroporto internacional do recife · gilberto freyre', url:'aeroporto-rec.html'},
+      {t:'aeroporto', nome:'Trelew · Argentina', meta:'REL · 1 sala', termos:'rel trelew · argentina aeroporto almirante marco andrés zar', url:'aeroporto-rel.html'},
+      {t:'aeroporto', nome:'Ushuaia · Argentina', meta:'USH · 1 sala', termos:'ush ushuaia · argentina aeroporto internacional ushuaia · malvinas argentinas', url:'aeroporto-ush.html'},
+      {t:'sala', nome:'Belém · Doméstica', meta:'BEL · Doméstica', termos:'belém · doméstica bel belém', url:'sala-belem-domestica.html'},
+      {t:'sala', nome:'Belém · Internacional', meta:'BEL · Internacional', termos:'belém · internacional bel belém', url:'sala-belem-internacional.html'},
+      {t:'sala', nome:'Cuiabá', meta:'CGB · Doméstica', termos:'cuiabá cgb cuiabá', url:'sala-cuiaba.html'},
+      {t:'sala', nome:'Congonhas', meta:'CGH · Doméstica', termos:'congonhas cgh congonhas · são paulo', url:'sala-congonhas.html'},
+      {t:'sala', nome:'Curitiba', meta:'CWB · Doméstica', termos:'curitiba cwb curitiba', url:'sala-curitiba.html'},
+      {t:'sala', nome:'Fortaleza Premium', meta:'FOR · Doméstica', termos:'fortaleza premium for fortaleza', url:'sala-fortaleza-premium.html'},
+      {t:'sala', nome:'Fortaleza Arrival', meta:'FOR · Internacional', termos:'fortaleza arrival for fortaleza', url:'sala-fortaleza-arrival.html'},
+      {t:'sala', nome:'Iracema', meta:'FOR · Internacional', termos:'iracema for fortaleza', url:'sala-iracema.html'},
+      {t:'sala', nome:'Beira-Mar', meta:'FOR · Internacional', termos:'beira-mar for fortaleza', url:'sala-fortaleza-beira-mar.html'},
+      {t:'sala', nome:'Goiânia', meta:'GYN · Doméstica', termos:'goiânia gyn goiânia', url:'sala-goiania.html'},
+      {t:'sala', nome:'Guarulhos T1', meta:'GRU · Doméstica', termos:'guarulhos t1 gru guarulhos · são paulo', url:'sala-gru-t1.html'},
+      {t:'sala', nome:'The West', meta:'GRU · Doméstica', termos:'the west gru guarulhos · são paulo', url:'sala-the-west.html'},
+      {t:'sala', nome:'5th Avenue', meta:'GRU · Internacional', termos:'5th avenue gru guarulhos · são paulo', url:'sala-5th-avenue.html'},
+      {t:'sala', nome:'The Pier', meta:'GRU · Internacional', termos:'the pier gru guarulhos · são paulo', url:'sala-the-pier.html'},
+      {t:'sala', nome:'Londrina', meta:'LDB · Doméstica', termos:'londrina ldb londrina', url:'sala-londrina.html'},
+      {t:'sala', nome:'Maringá', meta:'MGF · Doméstica', termos:'maringá mgf maringá', url:'sala-maringa.html'},
+      {t:'sala', nome:'Navegantes', meta:'NVT · Doméstica', termos:'navegantes nvt navegantes', url:'sala-navegantes.html'},
+      {t:'sala', nome:'Palmas', meta:'PMW · Doméstica', termos:'palmas pmw palmas', url:'sala-palmas.html'},
+      {t:'sala', nome:'Porto Alegre', meta:'POA · Doméstica', termos:'porto alegre poa porto alegre', url:'sala-porto-alegre.html'},
+      {t:'sala', nome:'Porto Alegre · Internacional', meta:'POA · Internacional', termos:'porto alegre · internacional poa porto alegre', url:'sala-porto-alegre-internacional.html'},
+      {t:'sala', nome:'Frevo', meta:'REC · Internacional', termos:'frevo rec recife', url:'sala-frevo.html'},
+      {t:'sala', nome:'São João', meta:'REC · Doméstica', termos:'são joão rec recife', url:'sala-recife-sao-joao.html'},
+      {t:'sala', nome:'Ribeirão Preto', meta:'RAO · Doméstica', termos:'ribeirão preto rao ribeirão preto', url:'sala-ribeirao-preto.html'},
+      {t:'sala', nome:'El Calafate', meta:'FTE · Doméstica', termos:'el calafate fte el calafate · argentina', url:'sala-el-calafate.html'},
+      {t:'sala', nome:'Trelew', meta:'REL · Doméstica', termos:'trelew rel trelew · argentina', url:'sala-trelew.html'},
+      {t:'sala', nome:'Ushuaia', meta:'USH · Doméstica', termos:'ushuaia ush ushuaia · argentina', url:'sala-ushuaia.html'},
+      {t:'pagina', nome:'W Airport Rooms', meta:'Página', termos:'w airport rooms', url:'airport-rooms.html'},
+      {t:'pagina', nome:'W Fast Pass', meta:'Página', termos:'w fast pass', url:'w-fast-pass.html'},
+      {t:'pagina', nome:'W Premium Services', meta:'Página', termos:'w premium services', url:'arrival-services.html'},
+      {t:'pagina', nome:'Formas de acesso', meta:'Página', termos:'formas de acesso', url:'formas-de-acesso.html'},
+      {t:'pagina', nome:'Como acessar', meta:'Página', termos:'como acessar', url:'como-acessar.html'},
+      {t:'pagina', nome:'Soluções B2B', meta:'Página', termos:'soluções b2b', url:'b2b.html'},
+      {t:'pagina', nome:'Reservas de grupo', meta:'Página', termos:'reservas de grupo', url:'reservas-grupo.html'},
+      {t:'pagina', nome:'Contato', meta:'Página', termos:'contato', url:'contato.html'},
+      {t:'pagina', nome:'Sobre', meta:'Página', termos:'sobre', url:'sobre.html'},
+      {t:'pagina', nome:'Editorial', meta:'Página', termos:'editorial', url:'editorial.html'}
+  ];
+
+
   function navHTML(prefix, highfi){
     prefix = prefix || '';
     var links = NAV_LINKS.map(function(l){
@@ -34,6 +91,9 @@
       '    '+logoHTML+
       '    <nav class="nav-links" aria-label="Principal">'+drawerHead+links+'</nav>'+
       '    <div class="nav-actions">'+
+      '      <button class="nav-search-btn" data-open-busca aria-label="Buscar">'+
+      '        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>'+
+      '      </button>'+
       '      <button class="lang-switch" data-lang-switch aria-label="Idioma">'+
       '        <span class="lang-current">PT</span><span class="lang-sep">·</span><span class="lang-other">EN</span><span class="lang-sep">·</span><span class="lang-other">ES</span>'+
       '      </button>'+
@@ -162,6 +222,77 @@
   // INJECTION
   // =====================================================
 
+
+  function buscaOverlayHTML(){
+    return ''+
+      '<div class="busca-overlay" data-busca-overlay hidden>'+
+      '  <button class="busca-fechar" data-busca-fechar aria-label="Fechar busca">'+
+      '    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6 6 18 18M18 6 6 18"/></svg>'+
+      '  </button>'+
+      '  <div class="busca-caixa">'+
+      '    <label class="busca-label" for="busca-input">Buscar</label>'+
+      '    <input id="busca-input" class="busca-input" type="text" autocomplete="off" placeholder="Cidade, sala ou código IATA">'+
+      '    <div class="busca-resultados" data-busca-resultados></div>'+
+      '  </div>'+
+      '</div>';
+  }
+
+  function bindBusca(){
+    var overlay = document.querySelector('[data-busca-overlay]');
+    if(!overlay) return;
+    var input = overlay.querySelector('#busca-input');
+    var caixa = overlay.querySelector('[data-busca-resultados]');
+    var prefix = document.body.getAttribute('data-prefix') || '';
+
+    function abrir(){
+      overlay.hidden = false;
+      document.body.classList.add('busca-aberta');
+      setTimeout(function(){ input.focus(); }, 60);
+    }
+    function fechar(){
+      overlay.hidden = true;
+      document.body.classList.remove('busca-aberta');
+      input.value = '';
+      render('');
+    }
+    function render(q){
+      q = (q || '').trim().toLowerCase();
+      if(!q){ caixa.innerHTML = ''; return; }
+      // casa por inicio de palavra (evita 'rec' casar com 'Marechal');
+      // consulta com espaco cai para busca livre no texto completo
+      var multi = q.indexOf(' ') > -1;
+      var hits = W_BUSCA.map(function(i){
+        var nome = i.nome.toLowerCase(), score = 0;
+        if(nome.indexOf(q) === 0) score = 4;
+        else if(multi && i.termos.indexOf(q) > -1) score = 3;
+        else if(i.termos.split(' ').some(function(w){ return w.indexOf(q) === 0; })) score = 2;
+        else if(nome.indexOf(q) > -1) score = 1;
+        return {i:i, s:score};
+      }).filter(function(x){ return x.s > 0; })
+        .sort(function(a,b){ return b.s - a.s; })
+        .slice(0, 8).map(function(x){ return x.i; });
+      if(!hits.length){
+        caixa.innerHTML = '<p class="busca-vazio">Nada encontrado para "' + q + '".</p>';
+        return;
+      }
+      caixa.innerHTML = hits.map(function(i){
+        return '<a class="busca-item" href="' + prefix + i.url + '">'+
+               '<span class="busca-item-nome">' + i.nome + '</span>'+
+               '<span class="busca-item-meta">' + i.meta + '</span></a>';
+      }).join('');
+    }
+
+    document.addEventListener('click', function(e){
+      if(e.target.closest('[data-open-busca]')){ e.preventDefault(); abrir(); }
+      else if(e.target.closest('[data-busca-fechar]')){ fechar(); }
+      else if(e.target === overlay){ fechar(); }
+    });
+    input.addEventListener('input', function(){ render(input.value); });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && !overlay.hidden) fechar();
+    });
+  }
+
   function inject(){
     var prefix = document.body.getAttribute('data-prefix') || '';
     var highfi = document.body.hasAttribute('data-highfi');
@@ -172,6 +303,7 @@
     if(navMount && navMount.innerHTML.trim() === '') navMount.innerHTML = navHTML(prefix, highfi);
     if(footerMount && footerMount.innerHTML.trim() === '') footerMount.innerHTML = footerHTML(prefix, highfi);
     if(modalMount && modalMount.innerHTML.trim() === '') modalMount.innerHTML = verifierModalHTML(prefix);
+    if(!document.querySelector('[data-busca-overlay]')) document.body.insertAdjacentHTML('beforeend', buscaOverlayHTML());
   }
 
   function markActiveNav(){
@@ -533,6 +665,7 @@
     bindB2BCarousel();
     bindNavScroll();
     bindHamburger();
+    bindBusca();
     bindAccordions();
     bindChips();
     bindVerifier();

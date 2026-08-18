@@ -20,7 +20,7 @@
 :root{
   /* ---------- TIPO ---------- */
   --font-head:'Forum', Georgia, 'Times New Roman', serif;          /* display · títulos grandes (peso único 400) */
-  --font-body:'EB Garamond', Georgia, 'Times New Roman', serif;    /* corpo · títulos pequenos */
+  --font-body:Georgia, 'Times New Roman', Times, serif;          /* corpo · títulos pequenos (fonte de sistema) */
   --font-label:'Montserrat', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;  /* rótulos · botões · caixa-alta (Brandbook) */
   --font-accent:'Fashion Fetish', Georgia, serif;                  /* statement raro */
   --font-ui:'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;   /* UI · cards de sala (Brandbook) */
