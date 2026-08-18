@@ -1,6 +1,6 @@
 /* ============================================
    W PREMIUM — HIGH-FI (camada de elevação)
-   Direção Aman · Forum (display) + EB Garamond (corpo) + Lemon Milk (rótulos) + ouro whisper.
+   Direção Aman · Forum (display) + EB Garamond (corpo) + Montserrat (rótulos) + ouro whisper.
    Carregar DEPOIS de wireframe.css e tokens.css.
    Escopo: SÓ a Home (index.html) por enquanto.
    ============================================ */
@@ -70,7 +70,7 @@
 /* heading da faixa newsletter: line-height cravado (era 1.6, frouxo) */
 .newsletter h3{line-height:1.18;}
 
-/* rótulos · nav · botões · wordmark → Lemon Milk (caixa-alta) */
+/* rótulos · nav · botões · wordmark → Montserrat (caixa-alta) */
 .eyebrow,.nav-links a,.nav-logo,
 .btn,.btn-link,.badge,.chip,
 .sala-meta,.article-meta,.stat-label,.price-name,

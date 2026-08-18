@@ -1,6 +1,6 @@
 /* ============================================
    W PREMIUM — DESIGN TOKENS (alta-fi)
-   Direção: Aman · serif editorial + Lemon Milk + ouro whisper.
+   Direção: Aman · serif editorial + Montserrat + ouro whisper.
    Carregar ENTRE wireframe.css e highfi.css.
 
    Display = Forum (cliente). Corpo = EB Garamond.
@@ -21,7 +21,7 @@
   /* ---------- TIPO ---------- */
   --font-head:'Forum', Georgia, 'Times New Roman', serif;          /* display · títulos grandes (peso único 400) */
   --font-body:'EB Garamond', Georgia, 'Times New Roman', serif;    /* corpo · títulos pequenos */
-  --font-label:'Lemon Milk', system-ui, -apple-system, 'Segoe UI', sans-serif; /* rótulos · wordmark · botões (caixa-alta) */
+  --font-label:'Montserrat', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;  /* rótulos · botões · caixa-alta (Brandbook) */
   --font-accent:'Fashion Fetish', Georgia, serif;                  /* statement raro */
   --font-ui:'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;   /* UI · cards de sala (Brandbook) */
 
