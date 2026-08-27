@@ -146,7 +146,10 @@ def h1_visiveis(h):
 
 
 multi_h1 = [n for n, h in TUDO.items() if h1_visiveis(h) > 1]
-sem_h1 = [n for n, h in TUDO.items() if '<h1' not in h]
+# paginas de redirect intencional nao tem h1 por design (meta refresh)
+def eh_redirect(h):
+    return 'http-equiv="refresh"' in h.replace("'", '"')
+sem_h1 = [n for n, h in TUDO.items() if '<h1' not in h and not eh_redirect(h)]
 checa('um unico h1 por pagina', not multi_h1, 'mais de um h1: %s' % ', '.join(multi_h1[:5]))
 checa('toda pagina tem h1', not sem_h1, 'sem h1: %s' % ', '.join(sem_h1[:6]), 'aviso')
 

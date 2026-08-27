@@ -11,7 +11,7 @@
     {href:'airport-rooms.html', label:'W Airport Rooms'},
     {href:'servicos.html',      label:'Serviços'},
     {href:'como-acessar.html',  label:'Como Acessar'},
-    {href:'editorial.html',     label:'Editorial'},
+    {href:'diario.html',        label:'Diário'},
     {href:'sobre.html',         label:'Sobre'},
     {href:'b2b.html',           label:'B2B'},
     {href:'contato.html',       label:'Contato'}
@@ -70,7 +70,7 @@
       {t:'pagina', nome:'Reservas de grupo', meta:'Página', termos:'reservas de grupo', url:'reservas-grupo.html'},
       {t:'pagina', nome:'Contato', meta:'Página', termos:'contato', url:'contato.html'},
       {t:'pagina', nome:'Sobre', meta:'Página', termos:'sobre', url:'sobre.html'},
-      {t:'pagina', nome:'Editorial', meta:'Página', termos:'editorial', url:'editorial.html'}
+      {t:'pagina', nome:'Diário', meta:'Página', termos:'diario diário editorial', url:'diario.html'}
   ];
 
 
@@ -141,7 +141,7 @@
       '      <div>'+
       '        <h5>Conteúdo &amp; Marca</h5>'+
       '        <ul class="footer-links">'+
-      '          <li><a href="'+prefix+'editorial.html">Editorial</a></li>'+
+      '          <li><a href="'+prefix+'diario.html">Diário</a></li>'+
       '          <li><a href="'+prefix+'sobre.html">Sobre</a></li>'+
       '          <li><a href="'+prefix+'historia.html">História</a></li>'+
       '          <li><a href="'+prefix+'premios.html">Prêmios</a></li>'+
@@ -192,7 +192,7 @@
       '    <button class="modal-close" data-modal-close aria-label="Fechar">×</button>'+
       '    <div class="modal-body">'+
       '      <div class="eyebrow">W Premium Group · Modal</div>'+
-      '      <h2 class="h2 mt-1">Você é Elegível?</h2>'+
+      '      <h2 class="h2 mt-1">Você tem acesso?</h2>'+
       '      <p class="muted mt-1" style="font-size:13px;">Insira o BIN do seu cartão e descubra, em tempo real, quais salas você tem direito hoje — sem precisar sair desta página.</p>'+
       '      <form id="verif-form" class="mt-3">'+
       '        <div class="field mb-2">'+
@@ -203,13 +203,13 @@
       '        <p class="tiny muted mt-2 text-center">Consultivo · não armazenamos seus dados.</p>'+
       '      </form>'+
       '      <div id="state-success" class="state-success mt-3" style="display:none;">'+
-      '        <strong>✓ Você é Elegível!</strong>'+
+      '        <strong>✓ Você tem acesso!</strong>'+
       '        <p class="mt-1" style="font-size:13px;color:#2E6B4A;">Seu cartão dá acesso a <strong>15 salas</strong> W Premium agora mesmo.</p>'+
       '        <div class="mt-2 flex gap-1"><a href="'+prefix+'verificador.html" class="btn btn-primary btn-sm">Ver salas elegíveis</a><button class="btn btn-ghost btn-sm" data-verif-reset>Verificar outro</button></div>'+
       '      </div>'+
       '      <div id="state-fail" class="state-error mt-3" style="display:none;">'+
       '        <strong>Cartão sem acesso direto</strong>'+
-      '        <p class="mt-1" style="font-size:13px;color:#8A3326;">Você ainda pode entrar com o W Day Pass.</p>'+
+      '        <p class="mt-1" style="font-size:13px;color:#8A3326;">Você ainda pode entrar com o W Pass.</p>'+
       '        <div class="mt-2 flex gap-1"><a href="'+prefix+'formas-de-acesso.html" class="btn btn-primary btn-sm">Ver Formas de Acesso</a><button class="btn btn-ghost btn-sm" data-verif-reset>Tentar outro</button></div>'+
       '      </div>'+
       '      <div class="modal-divider"></div>'+
