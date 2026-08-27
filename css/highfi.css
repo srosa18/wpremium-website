@@ -543,3 +543,9 @@ input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}
   .busca-painel{padding:var(--space-8) var(--gutter) var(--space-6);}
   .busca-resultados{max-height:52vh;}
 }
+
+/* Bloco E - facilidades como icone, no lugar da foto grande */
+.fac-ico{display:flex;align-items:center;justify-content:center;
+  aspect-ratio:auto;height:72px;margin-bottom:16px;}
+.fac-ico img{display:block;width:56px;height:56px;object-fit:contain;opacity:.85;}
+@media(max-width:640px){ .fac-ico{height:60px;} .fac-ico img{width:46px;height:46px;} }
