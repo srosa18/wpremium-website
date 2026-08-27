@@ -163,7 +163,7 @@
       '          <li><a href="'+prefix+'contato.html">Contato</a></li>'+
       '          <li><a href="'+prefix+'faq.html">FAQ</a></li>'+
       '          <li><a href="'+prefix+'busca-global.html">Busca</a></li>'+
-      '          <li><a href="#" data-open-verifier>Verificador</a></li>'+
+      '          <li><a href="'+prefix+'verificador.html" data-open-verifier>Verificador</a></li>'+
       '        </ul>'+
       '      </div>'+
       '    </div>'+
