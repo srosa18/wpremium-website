@@ -94,7 +94,9 @@ print(' DEMAIS PAGINAS')
 checa('"L3" de wireframe removido', not re.search(r'L3\s*[·&]', ''.join(TUDO.values())))
 checa('Sobre com 25 salas', em('sobre.html', 'data-to="25"'))
 checa('Sobre com 14 aeroportos', em('sobre.html', 'data-to="14"'))
-checa('"Trabalhe na W Premium Group"', em('trabalhe-conosco.html', 'Trabalhe na W Premium Group'))
+# a cliente pediu a troca da preposicao no slide 13 do PPT de 18/08
+checa('"Trabalhe no W Premium Group"', em('trabalhe-conosco.html', 'Trabalhe no W Premium Group'))
+checa('portal de vagas Solides', em('trabalhe-conosco.html', 'vagaswpremium.vagas.solides.com.br'))
 checa('campo de curriculo em PDF', em('formulario.html', 'accept="application/pdf"'))
 checa('"algo mais rapido" antes do formulario',
       TUDO['formulario.html'].find('algo mais rápido') < TUDO['formulario.html'].find('Enviar mensagem'))
