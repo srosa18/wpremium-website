@@ -71,7 +71,9 @@ checa('salas ficticias fora da home',
       not any(x in TUDO['index.html'] for x in ('Green Park', 'Ocean View', 'Gold Standard')))
 
 print(' SALAS')
-checa('texto do topo em salas.html', em('salas.html', '25 operações VIP em 14 aeroportos'))
+# o lede era ficha tecnica; o cliente pediu texto aspiracional (doc 18/08)
+checa('lede aspiracional em salas.html', em('salas.html', 'experiências em hospitalidade'))
+checa('cidade nao repete na listagem', not em('salas.html', 'Belém · Doméstica · Belém'))
 checa('chip "Domestica" (era Domestico)', em('salas.html', '>Doméstica<'))
 checa('chip "Premium Lounge"', em('salas.html', '>Premium Lounge<'))
 checa('chips novos (Cafe/Arrival/ducha/brinquedoteca/Wonder)',
@@ -79,8 +81,7 @@ checa('chips novos (Cafe/Arrival/ducha/brinquedoteca/Wonder)',
                                         'Com brinquedoteca', 'Wonder Club')))
 checa('26 salas reais listadas', TUDO['salas.html'].count('class="card sala-card"') >= 26,
       'achou %d' % TUDO['salas.html'].count('class="card sala-card"'))
-checa('texto aspiracional das salas', em('salas.html', 'experiências em hospitalidade'),
-      'cliente ofereceu 5 opcoes; falta escolher', 'aviso')
+
 
 print(' SERVICOS')
 checa('"W Airport Rooms" em todo o site', not re.search(r'(?<!W )Airport Rooms', ''.join(TUDO.values())))
