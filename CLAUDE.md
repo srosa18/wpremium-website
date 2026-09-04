@@ -56,7 +56,7 @@ Todos os links de CSS/JS levam `?v=N` (hoje **`?v=7`**). **Ao editar qualquer ar
 
 ### "Templates" reaproveitáveis (não são arquivos isolados — são páginas-referência)
 Não existe um arquivo `template.html`. Os "templates" são **padrões de página consolidados**; para criar uma página nova, **copie a página-referência mais próxima** e troque o conteúdo:
-- **Sala (padrão canônico): [`sala-5th-avenue.html`](sala-5th-avenue.html)** — dobras: Hero (16:9, texto fora, eyebrow dourado) → Galeria (carrossel: imagem fixa à esquerda + carrossel à direita + dots) → Amenidades (3 cards) → Gastronomia → Bem-estar (3 cards) → Identidade local → Outras salas (3 cards de cross-sell).
+- **Sala (padrão canônico): [`sala-5th-avenue.html`](sala-5th-avenue.html)** — dobras: Hero (16:9, texto fora, eyebrow dourado) → Galeria (imagem fixa à esquerda = `foto-2` + carrossel à direita = `foto-3/4/5` + dots; hero = `foto-1`; **nenhuma foto se repete na página** — regra do cliente em 04/09/2026; arquivos só de carrossel vão em 4:5 (1000×1250), fixa/hero em 3:2 (1600 px); onde a `foto-2` original repetia o hero, a fixa virou `foto-4` nova e o carrossel tem 4 slides + 4º dot: Beira-mar, Maringá, The West) → Amenidades (3 cards) → Gastronomia → Bem-estar (3 cards) → Identidade local → Outras salas (3 cards de cross-sell).
 - **Hub de aeroporto (padrão): [`aeroporto-gru.html`](aeroporto-gru.html) / [`aeroporto-poa.html`](aeroporto-poa.html)** — Header (IATA + hero) → faixa de **big numbers** (padrão "híbrido": Forum + count-up nos numéricos, `.stat-text` menor nos valores de texto) → Sala em destaque → Mapa esquemático → Outros serviços → Ficha "em números".
 - Cada dobra é marcada com `data-comment-id` / `data-comment-label` — útil para localizar blocos.
 

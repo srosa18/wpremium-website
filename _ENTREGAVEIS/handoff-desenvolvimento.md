@@ -300,3 +300,45 @@ depois das remoções.
 `verifica-estrutura` 43/43 conformes · `verifica-links` 581 links, 0 quebrados,
 104 cards, 0 divergentes · `auditoria-geral` 42 ok, 0 falhas, 1 aviso
 (`busca.html`, já registrado na rodada anterior).
+
+## 9. Galerias das salas — 04/09/2026 · nenhuma foto repetida
+
+Pedido do cliente (Sandro, 04/09): em nenhuma página de sala uma foto pode
+aparecer duas vezes. Até aqui cada sala tinha 3 arquivos (`foto-1/2/3.jpg`) e a
+galeria reaproveitava o hero como slide 1 e a imagem fixa como slide 2, ou seja,
+só uma foto da galeria era inédita.
+
+### O que mudou
+
+- Cada sala ganhou 2 fotos novas (`foto-4.jpg` e `foto-5.jpg`), escolhidas no
+  Drive "Fotos site" da W Premium (pasta da própria sala, subpastas Ambiente,
+  Fotos oficiais, Sala, Inauguração). Convenção nova: hero = `foto-1`, fixa =
+  `foto-2`, carrossel = `foto-3`, `foto-4`, `foto-5`. Cinco imagens distintas.
+- Arquivos só de carrossel são gravados em 4:5 (1000×1250), a proporção em que
+  o slide aparece (`.b2b-slide img{aspect-ratio:4/5;object-fit:cover}`), para
+  o corte ser decidido na foto e não pelo CSS. Hero e fixa seguem em 3:2.
+- Em três salas a `foto-2` original era a mesma cena do hero ou do slide
+  (Fortaleza Beira-mar, Maringá e The West). Como a orientação foi não descartar
+  nenhuma foto, a fixa virou uma foto nova (`foto-4`) e a `foto-2` foi para o
+  fim do carrossel, que passou a ter 4 slides (`foto-3`, `foto-5`, `foto-6`,
+  `foto-2`) e um 4º dot (`data-b2b-dot="3"`). O `bindB2BCarousel` já lê o
+  número de slides e dots do HTML, não precisou mudar.
+- Curitiba: os dois túneis (`foto-2` e `foto-3`) ficaram no carrossel separados
+  por uma foto nova, e a fixa virou `foto-4` (poltronas sobre o tapete).
+
+### Limites do material
+
+- Ribeirão Preto tem 5 fotos no Drive; as duas novas (letreiro e fachada) vêm de
+  WhatsApp com 585 px de largura e ficam macias em tela retina. Pedir originais.
+- GRU T1 (8 fotos, WhatsApp 1280 px) e Palmas (5 fotos do mesmo café) também
+  ficaram no limite do que existe.
+- Maringá e The West mantêm, por decisão de não descartar, uma foto muito
+  parecida com o hero como último slide. Se o cliente preferir, é só remover o
+  4º slide e o 4º dot.
+
+### Verificação
+
+Auditoria própria: 27 páginas com carrossel, 0 com src repetido, 0 com imagens
+visualmente iguais (dhash ≤ 8), dots = slides em todas. `verifica-estrutura`
+conforme, `verifica-links` OK, `auditoria-geral` 42 ok · 0 falhas · 1 aviso
+(`busca.html`, antigo).
