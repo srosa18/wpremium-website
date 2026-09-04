@@ -297,7 +297,7 @@ input,textarea,select{font-family:inherit;font-size:13px;color:var(--g900);}
 .sala-card .sala-stars{font-size:11px;color:var(--g700);}
 
 /* ---------- FICHA CURADA ---------- */
-.ficha{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.ficha{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
 .ficha-cell{
   background:var(--g100);
   border:1px solid var(--border);

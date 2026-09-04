@@ -73,6 +73,8 @@ def main():
             rotulo = texto(rotulo)
             if rotulo.lower().startswith('veja todas'):
                 continue
+            if not destino.startswith('sala-'):
+                continue  # card de produto (ex.: W Airport Rooms) aponta para fora das salas
             checados += 1
             real = titulos.get(destino)
             if real is None:

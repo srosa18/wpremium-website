@@ -229,3 +229,72 @@ a Montserrat dá a função.
       sem quebrar nada visível no código-fonte
 - [ ] `alt` em toda imagem
 - [ ] proteção de deploy da Vercel desativada, antes de mandar o link ao cliente
+
+
+---
+
+## 8. Rodada de 04/09/2026 — ajustes da reunião de 31/08
+
+Fonte: transcrição da reunião de status de 31/08 (26 min) e 14 capturas de tela
+anotadas pela W Premium. O critério foi um só: fazer o que o cliente pediu, do
+jeito que pediu.
+
+### O que mudou
+
+| Pedido | Onde | O que mudou |
+|---|---|---|
+| Remover contagem de assentos | cards de sala (home + 17 hubs) | linha "N assentos" removida |
+| | big numbers dos 17 hubs | métrica "Assentos" removida; nos hubs com Rooms virou "W Airport Rooms" (nota 1) |
+| | ficha "em números" dos 17 hubs | célula "Assentos · N no total" removida |
+| | ficha "Dados essenciais" das 26 salas | células "Capacidade" e "Tamanho da sala" removidas; ficam Horário e Localização |
+| | lede do hero das 26 salas | trecho "São N m², com N assentos," removido |
+| "Espaço Exclusivo" → "The Wonder Club Collection" | facilidades de 6 salas (Belém ×2, Curitiba, Frevo, Goiânia, POA Internacional) | renomeado; em Goiânia também a menção inline em "Outros acessos", que trazia "R$ 50,00" (valor removido) |
+| Remover valor do W Pass | card W Pass em 22 salas + template | preço (R$ 160 a R$ 320) removido; CTA vira "Adquira seu acesso avulso"; o card deixa o fundo escuro e passa ao mesmo padrão dos três vizinhos (badge + uma linha descritiva + CTA): "Acesso avulso à sala, sem cartão ou programa parceiro." Template de sala alinhado. |
+| Cidade no nome da sala | Frevo → Recife Frevo · Iracema → Fortaleza Iracema | cards (home, listagem, hubs, busca, verificador, cross-sell) e a própria página (nome de exibição, título, breadcrumb) |
+| Cards de W Airport Rooms clicáveis | `airport-rooms.html` | link "Ver aeroporto →" para o hub (nota 2) |
+| Services só em Guarulhos | `arrival-services.html` | 7 hubs → só GRU; título "Hub ativo." |
+| Ícones das facilidades à esquerda | `highfi.css` · `.fac-ico` | `justify-content: flex-start` |
+
+Cache: `?v=` 36 → 37 em todas as páginas (`highfi.css` e `wireframe.css` foram
+editados). O `_ferramentas/template-sala.html` estava em `?v=9`; alinhado a 37.
+`.ficha` e `.airport-meta` passaram a `auto-fit` para não deixar coluna vazia
+depois das remoções.
+
+### Duas notas para o time de desenvolvimento
+
+1. **W Airport Rooms nos big numbers.** A W Premium pediu para trocar
+   "assentos" pela quantidade de Rooms. Ficou: Fortaleza **1** (número dado
+   pela cliente na captura), Recife **"Disponível"** e Curitiba **"Em breve"**.
+   Ninguém informou o número de Recife; mantivemos o rótulo sem número. Se a
+   W Premium preferir, a métrica sai. Salvador não tem hub no site.
+2. **Os cards de Rooms levam ao hub do aeroporto**, não a uma página própria de
+   Rooms. Página própria (quantidade de quartos, banheiro na suíte ou
+   compartilhado, localização) depende do material listado em 5.1 e 5.2, que a
+   W Premium ainda não enviou. Quando chegar, trocar o destino do link. O card
+   de Salvador ficou sem link: não existe `aeroporto-ssa.html`.
+
+### Segundo lote — feito nesta mesma rodada
+
+- **W Airport Rooms dentro das salas** (pedido de 00:03:58): card com a foto real
+  dos Rooms no bloco "Outras salas" das 6 salas de Fortaleza e Recife, antes do
+  card "Veja todas". Aponta para `airport-rooms.html`.
+- **W Fast Pass nas facilidades** (00:06:25): card no bloco "Bem-estar" de
+  Guarulhos T1 e Cuiabá, onde o serviço já opera (Recife entra quando inaugurar).
+  **O kit de ícones da marca não tem ícone de Fast Pass** — o slot está sinalizado
+  com o marcador de imagem faltante do repo. Depende da W Premium.
+- `_ferramentas/verifica-links.py`: a checagem "nome do card = página de sala"
+  passa a ignorar cards cujo destino não é uma sala (o card de Rooms aponta para
+  a página do produto). Uma linha, comentada no script.
+
+### Deixado de propósito
+
+- Preço do W Fast Pass (R$ 25 a R$ 40): valor real do produto, registrado na
+  seção 2. O pedido de remover preços era sobre acesso avulso.
+- Rótulos do mapa esquemático ("Frevo", "Iracema") seguem curtos: são legendas
+  de diagrama, não nome de card.
+
+### Verificação
+
+`verifica-estrutura` 43/43 conformes · `verifica-links` 581 links, 0 quebrados,
+104 cards, 0 divergentes · `auditoria-geral` 42 ok, 0 falhas, 1 aviso
+(`busca.html`, já registrado na rodada anterior).

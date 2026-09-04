@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>USH · Ushuaia · Argentina · W Premium</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/wireframe.css?v=36">
-<link rel="stylesheet" href="css/tokens.css?v=36">
-<link rel="stylesheet" href="css/highfi.css?v=36">
+<link rel="stylesheet" href="css/wireframe.css?v=37">
+<link rel="stylesheet" href="css/tokens.css?v=37">
+<link rel="stylesheet" href="css/highfi.css?v=37">
 </head>
 <body data-prefix="" data-highfi>
 
@@ -30,7 +30,7 @@
   </div>
   <style>
     /* big numbers (Forum) + count-up nos numericos; valores de texto menores (hibrido) */
-    .airport-meta{display:grid;grid-template-columns:repeat(4,1fr);align-items:stretch;gap:24px;margin-top:56px;}
+    .airport-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));align-items:stretch;gap:24px;margin-top:56px;}
     .airport-meta > div{display:flex;flex-direction:column;justify-content:flex-end;text-align:center;font-family:var(--font-label);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--c-muted);line-height:1.4;}
     .airport-meta strong{font-family:var(--font-head);font-weight:400;line-height:1;letter-spacing:0;color:var(--c-ink);margin-bottom:12px;font-size:clamp(44px,6vw,64px);}
     .airport-meta strong.stat-text{font-size:clamp(22px,2.2vw,28px);}
@@ -39,7 +39,6 @@
   </style>
   <div class="airport-meta">
     <div><strong><span class="stat-count" data-to="1">1</span></strong>Sala</div>
-    <div><strong><span class="stat-count" data-to="22">22</span></strong>Assentos</div>
     <div><strong class="stat-text">Conforme malha</strong>Operação</div>
     <div><strong class="stat-text">Doméstica</strong>Operações</div>
   </div>
@@ -139,7 +138,6 @@
       <div class="ficha-cell"><div class="label">Aeroporto</div><div class="value">Aeroporto Internacional Ushuaia · Malvinas Argentinas</div></div>
       <div class="ficha-cell"><div class="label">Cidade</div><div class="value">Ushuaia · Argentina</div></div>
       <div class="ficha-cell"><div class="label">Salas W Premium</div><div class="value">1 sala</div></div>
-      <div class="ficha-cell"><div class="label">Assentos</div><div class="value">22 no total</div></div>
     </div>
   </div>
 </section>
@@ -147,6 +145,6 @@
 </main>
 <div data-footer></div>
 <div data-modal-mount></div>
-<script src="js/app.js?v=36"></script>
+<script src="js/app.js?v=37"></script>
 </body>
 </html>

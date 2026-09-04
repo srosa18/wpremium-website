@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GRU · Guarulhos · São Paulo · W Premium</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/wireframe.css?v=36">
-<link rel="stylesheet" href="css/tokens.css?v=36">
-<link rel="stylesheet" href="css/highfi.css?v=36">
+<link rel="stylesheet" href="css/wireframe.css?v=37">
+<link rel="stylesheet" href="css/tokens.css?v=37">
+<link rel="stylesheet" href="css/highfi.css?v=37">
 </head>
 <body data-prefix="" data-highfi>
 
@@ -30,7 +30,7 @@
   </div>
   <style>
     /* big numbers (Forum) + count-up nos numericos; valores de texto menores (hibrido) */
-    .airport-meta{display:grid;grid-template-columns:repeat(4,1fr);align-items:stretch;gap:24px;margin-top:56px;}
+    .airport-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));align-items:stretch;gap:24px;margin-top:56px;}
     .airport-meta > div{display:flex;flex-direction:column;justify-content:flex-end;text-align:center;font-family:var(--font-label);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--c-muted);line-height:1.4;}
     .airport-meta strong{font-family:var(--font-head);font-weight:400;line-height:1;letter-spacing:0;color:var(--c-ink);margin-bottom:12px;font-size:clamp(44px,6vw,64px);}
     .airport-meta strong.stat-text{font-size:clamp(22px,2.2vw,28px);}
@@ -39,7 +39,6 @@
   </style>
   <div class="airport-meta">
     <div><strong><span class="stat-count" data-to="4">4</span></strong>Salas</div>
-    <div><strong><span class="stat-count" data-to="328">328</span></strong>Assentos</div>
     <div><strong><span class="stat-count" data-to="24">24</span><span class="stat-unit">h</span></strong>Operação</div>
     <div><strong class="stat-text">Doméstica e Internacional</strong>Operações</div>
   </div>
@@ -75,10 +74,10 @@
     <div class="eyebrow mb-1">Salas em GRU</div>
     <h2 class="h2 mb-3">4 salas neste aeroporto.</h2>
     <div class="grid grid-3">
-      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/gru-t1.jpg?v=3" alt="Sala Guarulhos T1" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;"><div class="card-body"><h3 class="sala-title">Guarulhos T1</h3><p class="sala-meta">GRU · Doméstica</p><p class="sala-line">51 assentos</p><a href="sala-gru-t1.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/the-west.jpg?v=3" alt="Sala The West" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;"><div class="card-body"><h3 class="sala-title">The West</h3><p class="sala-meta">GRU · Doméstica</p><p class="sala-line">85 assentos</p><a href="sala-the-west.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/5th-avenue.jpg?v=3" alt="Sala 5th Avenue" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;"><div class="card-body"><h3 class="sala-title">5th Avenue</h3><p class="sala-meta">GRU · Internacional</p><p class="sala-line">88 assentos</p><a href="sala-5th-avenue.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/the-pier.jpg?v=3" alt="Sala The Pier" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;"><div class="card-body"><h3 class="sala-title">The Pier</h3><p class="sala-meta">GRU · Internacional</p><p class="sala-line">104 assentos</p><a href="sala-the-pier.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/gru-t1.jpg?v=3" alt="Sala Guarulhos T1" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;"><div class="card-body"><h3 class="sala-title">Guarulhos T1</h3><p class="sala-meta">GRU · Doméstica</p><a href="sala-gru-t1.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/the-west.jpg?v=3" alt="Sala The West" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;"><div class="card-body"><h3 class="sala-title">The West</h3><p class="sala-meta">GRU · Doméstica</p><a href="sala-the-west.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/5th-avenue.jpg?v=3" alt="Sala 5th Avenue" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;"><div class="card-body"><h3 class="sala-title">5th Avenue</h3><p class="sala-meta">GRU · Internacional</p><a href="sala-5th-avenue.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/the-pier.jpg?v=3" alt="Sala The Pier" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;"><div class="card-body"><h3 class="sala-title">The Pier</h3><p class="sala-meta">GRU · Internacional</p><a href="sala-the-pier.html" class="btn-link">Explorar →</a></div></article>
     </div>
   </div>
 </section>
@@ -138,7 +137,6 @@
       <div class="ficha-cell"><div class="label">Aeroporto</div><div class="value">Aeroporto Internacional de São Paulo/Guarulhos</div></div>
       <div class="ficha-cell"><div class="label">Cidade</div><div class="value">Guarulhos · São Paulo</div></div>
       <div class="ficha-cell"><div class="label">Salas W Premium</div><div class="value">4 salas</div></div>
-      <div class="ficha-cell"><div class="label">Assentos</div><div class="value">328 no total</div></div>
     </div>
   </div>
 </section>
@@ -146,6 +144,6 @@
 </main>
 <div data-footer></div>
 <div data-modal-mount></div>
-<script src="js/app.js?v=36"></script>
+<script src="js/app.js?v=37"></script>
 </body>
 </html>
