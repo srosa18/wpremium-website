@@ -10,7 +10,7 @@
     {href:'salas.html',         label:'Salas'},
     {href:'airport-rooms.html', label:'W Airport Rooms'},
     {href:'servicos.html',      label:'Serviços'},
-    {href:'como-acessar.html',  label:'Como Acessar'},
+    {href:'como-acessar.html',  label:'Como acessar'},
     {href:'diario.html',        label:'Diário'},
     {href:'sobre.html',         label:'Sobre'},
     {href:'b2b.html',           label:'B2B'},
@@ -134,7 +134,7 @@
       '          <li><a href="'+prefix+'salas.html">Salas</a></li>'+
       '          <li><a href="'+prefix+'airport-rooms.html">W Airport Rooms</a></li>'+
       '          <li><a href="'+prefix+'servicos.html">Serviços</a></li>'+
-      '          <li><a href="'+prefix+'como-acessar.html">Como Acessar</a></li>'+
+      '          <li><a href="'+prefix+'como-acessar.html">Como acessar</a></li>'+
       '          <li><a href="'+prefix+'formas-de-acesso.html">Formas de Acesso</a></li>'+
       '        </ul>'+
       '      </div>'+
@@ -213,7 +213,7 @@
       '        <div class="mt-2 flex gap-1"><a href="'+prefix+'formas-de-acesso.html" class="btn btn-primary btn-sm">Ver Formas de Acesso</a><button class="btn btn-ghost btn-sm" data-verif-reset>Tentar outro</button></div>'+
       '      </div>'+
       '      <div class="modal-divider"></div>'+
-      '      <a href="'+prefix+'como-acessar.html" class="btn-link">Ver página completa de Como Acessar →</a>'+
+      '      <a href="'+prefix+'como-acessar.html" class="btn-link">Ver página completa de Como acessar →</a>'+
       '    </div>'+
       '  </div>'+
       '  </div>'+
