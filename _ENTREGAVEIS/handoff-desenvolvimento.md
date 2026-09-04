@@ -336,6 +336,71 @@ só uma foto da galeria era inédita.
   parecida com o hero como último slide. Se o cliente preferir, é só remover o
   4º slide e o 4º dot.
 
+### Origem de cada foto nova
+
+Todas saíram da pasta da própria sala em "Fotos site" (Drive da W Premium). A
+coluna de câmera e data vem do EXIF do original; as fotos de WhatsApp não têm EXIF.
+Em cada sala as novas pertencem à mesma série (mesmo fotógrafo, mesmo dia) de onde
+o cliente já tinha tirado as fotos "Web" usadas no hero e na fixa.
+
+| Sala | Arquivo novo | Origem no Drive (subpasta / arquivo) | Câmera · data |
+|---|---|---|---|
+| 5th-avenue | foto-4 | . / IMG_1287 copiar.jpg | iPhone 15 Pro Max · 2025-05-09 |
+| 5th-avenue | foto-5 | . / IMG_1473 copiar.jpg | iPhone 15 Pro Max · 2025-05-09 |
+| belem-domestica | foto-4 | Inauguração/W PREMIUM LOUNGE / IMG_4448.jpg | Canon EOS 70D · 2025-12-16 |
+| belem-domestica | foto-5 | Inauguração/W PREMIUM LOUNGE / IMG_4458.jpg | Canon EOS 70D · 2025-12-16 |
+| belem-internacional | foto-4 | Sala nova / IMG_6449-Aprimorado-NR.jpg | Canon EOS RP · 2025-06-11 |
+| belem-internacional | foto-5 | Sala nova / IMG_6475-Aprimorado-NR.jpg | Canon EOS RP · 2025-06-11 |
+| congonhas | foto-4 | Inauguração/Ambiente / IMG_1616 copiar.jpg | Canon EOS R · 2026-06-17 |
+| congonhas | foto-5 | Inauguração/Ambiente / IMG_2646 copiar.jpg | Canon EOS R · 2026-06-17 |
+| cuiaba | foto-4 | Sala Nova / IMG_3441-Aprimorado-NR.jpg | - · - |
+| cuiaba | foto-5 | Sala Nova / IMG_3561-Aprimorado-NR.jpg | - · - |
+| curitiba | foto-4 | Ambiente/Fotos / IMG_5983.jpg | - · - |
+| curitiba | foto-5 | Ambiente/Fotos / IMG_5956.jpg | - · - |
+| el-calafate | foto-4 | Ambiente / RAP_4893.jpg | NIKON D750 · 2024-11-19 |
+| el-calafate | foto-5 | Ambiente / RAP_4959.jpg | NIKON D750 · 2024-11-19 |
+| fortaleza-arrival | foto-4 | Fotos oficiais / DSC_1784.jpg | NIKON Z 8 · 2024-06-17 |
+| fortaleza-arrival | foto-5 | Fotos oficiais / DSC_1940.jpg | NIKON Z 8 · 2024-06-17 |
+| fortaleza-beira-mar | foto-4 | Ambiente / TIG_2874.jpg | NIKON Z 8 · 2026-03-04 |
+| fortaleza-beira-mar | foto-5 | Ambiente / TIG_2969_1.jpg | NIKON Z 8 · 2026-03-04 |
+| fortaleza-beira-mar | foto-6 | Ambiente / TIG_2619.jpg | NIKON Z 8 · 2026-03-04 |
+| fortaleza-premium | foto-4 | Fotos oficiais / DSC_2716.jpg | NIKON Z 8 · 2024-06-19 |
+| fortaleza-premium | foto-5 | Fotos oficiais / DSC_2918.jpg | NIKON Z 8 · 2024-06-19 |
+| frevo | foto-4 | Sala / _BRE8697.jpg | ILCE-7M3 · 2024-05-29 |
+| frevo | foto-5 | Sala / _BRE7770-HDR.jpg | ILCE-7M3 · 2024-05-28 |
+| goiania | foto-4 | . / DSC_1967.jpg | NIKON D610 · 2019-11-16 |
+| goiania | foto-5 | . / DSC_1630.jpg | NIKON D610 · 2019-11-16 |
+| gru-t1 | foto-4 | . / WhatsApp Image 2022-01-28 at 12.27.06 (1).jpeg | - · - |
+| gru-t1 | foto-5 | . / oficial.jpeg | - · - |
+| iracema | foto-4 | Fotos da sala / DSC_7150.jpg | NIKON Z 8 · 2025-04-23 |
+| iracema | foto-5 | Fotos da sala / DSC_7264.jpg | NIKON Z 8 · 2025-04-23 |
+| londrina | foto-4 | Novas fotos / DSC_4963.jpg | NIKON Z6_3 · 2024-09-18 |
+| londrina | foto-5 | Novas fotos / DSC_4993.jpg | NIKON Z6_3 · 2024-09-18 |
+| maringa | foto-4 | WPremium Lounge Maringa-20250919T140537Z-1-001/WPremium Lounge Maringa / WPremim Lounge0157.jpg | ILCE-7M4 · 2025-08-06 |
+| maringa | foto-5 | WPremium Lounge Maringa-20250919T140537Z-1-001/WPremium Lounge Maringa / WPremim Lounge0074.jpg | ILCE-7M4 · 2025-08-06 |
+| maringa | foto-6 | WPremium Lounge Maringa-20250919T140537Z-1-002/WPremium Lounge Maringa/Fachada / WPremim Lounge0660 1.jpg | ILCE-7M4 · 2025-08-12 |
+| navegantes | foto-4 | fotos NVT NOVO LOUNGE / FOT_1260.jpg | NIKON D750 · 2014-01-11 |
+| navegantes | foto-5 | fotos NVT NOVO LOUNGE / FOT_1397.jpg | NIKON D750 · 2014-01-11 |
+| palmas | foto-4 | Fotos Oficiais / 064A1357.jpg | Canon EOS R5 · 2024-02-07 |
+| palmas | foto-5 | Fotos Oficiais / 064A1378.jpg | Canon EOS R5 · 2024-02-07 |
+| porto-alegre | foto-4 | Ambientes / IMG_0326.jpg | Canon EOS Rebel SL2 · 2017-05-10 |
+| porto-alegre | foto-5 | Ambientes / IMG_6734.jpg | Canon EOS Rebel SL2 · 2017-05-04 |
+| porto-alegre-internacional | foto-4 | Inauguração/POA AMBIENTE ALTA-20260622T203025Z-3-001/POA AMBIENTE ALTA / IMG_9075-Edit.jpg | Canon EOS 6D Mark II · 2026-06-15 |
+| porto-alegre-internacional | foto-5 | Inauguração/POA AMBIENTE ALTA-20260622T203025Z-3-001/POA AMBIENTE ALTA / IMG_9231-HDR-Edit-2.jpg | Canon EOS 6D Mark II · 2026-06-16 |
+| recife-sao-joao | foto-4 | . / ED2S1785.jpg | Canon EOS 5D Mark III · 2023-07-24 |
+| recife-sao-joao | foto-5 | . / ED2S1813.jpg | Canon EOS 5D Mark III · 2023-07-24 |
+| ribeirao-preto | foto-4 | . / Imagem do WhatsApp de 2023-10-19 à(s) 15.48.14_6e44134c.jpg | - · - |
+| ribeirao-preto | foto-5 | . / Imagem do WhatsApp de 2023-10-19 à(s) 15.49.01_2e71b5a7.jpg | - · - |
+| the-pier | foto-4 | . / ED2M1222 copiar.jpg | Canon EOS 5D Mark III · 2023-02-27 |
+| the-pier | foto-5 | . / ED2M1289 copiar.jpg | Canon EOS 5D Mark III · 2023-02-27 |
+| the-west | foto-4 | Web / Ambiente 06.jpg | NIKON D610 · 2022-08-19 |
+| the-west | foto-5 | Web / Ambiente 08.jpg | NIKON D610 · 2022-08-19 |
+| the-west | foto-6 | Web / Ambiente 18.jpg | NIKON D610 · 2022-10-06 |
+| trelew | foto-4 | . / IMG-20250127-WA0012.jpg | - · - |
+| trelew | foto-5 | . / IMG-20250127-WA0010.jpg | - · - |
+| ushuaia | foto-4 | . / Ushuaia 1_Midia Social.jpeg | - · - |
+| ushuaia | foto-5 | . / Imagem do WhatsApp de 2024-08-29 à(s) 13.41.47_701f64ef.jpg | - · - |
+
 ### Verificação
 
 Auditoria própria: 27 páginas com carrossel, 0 com src repetido, 0 com imagens
