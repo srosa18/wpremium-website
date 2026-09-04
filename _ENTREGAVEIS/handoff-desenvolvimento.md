@@ -165,12 +165,13 @@ o caminho natural é o cliente subir pelo CMS quando o site final estiver no ar.
 
 ### 5.2 Imagens específicas
 
-- **Salvador Rooms** — a W Premium avisou no PowerPoint que subiria o material
-  "segunda". Hoje a página usa um render da recepção.
+- **Salvador Rooms** — renders oficiais recebidos em 04/09 (pasta do Drive); a
+  página usa o render da fachada. Foto real quando a unidade abrir.
 - **Congonhas** — as três fotos da página são **renders**, não fotos da sala
   pronta. O site não sinaliza isso. Vale substituir por foto real quando houver,
   ou deixar explícito que é projeto.
-- **Curitiba Rooms** — render, coerente com o status "em breve".
+- **Curitiba Rooms** — render oficial da fachada (pasta do Drive, 04/09), coerente
+  com o status "em breve".
 
 ### 5.3 Três pontos que precisam de definição
 
@@ -252,6 +253,7 @@ jeito que pediu.
 | Remover valor do W Pass | card W Pass em 22 salas + template | preço (R$ 160 a R$ 320) removido; CTA vira "Adquira seu acesso avulso"; o card deixa o fundo escuro e passa ao mesmo padrão dos três vizinhos (badge + uma linha descritiva + CTA): "Acesso avulso à sala, sem cartão ou programa parceiro." Template de sala alinhado. |
 | Cidade no nome da sala | Frevo → Recife Frevo · Iracema → Fortaleza Iracema | cards (home, listagem, hubs, busca, verificador, cross-sell) e a própria página (nome de exibição, título, breadcrumb) |
 | Cards de W Airport Rooms clicáveis | `airport-rooms.html` | link "Ver aeroporto →" para o hub (nota 2) |
+| Fotos dos W Airport Rooms | `airport-rooms.html` | hero e "conceito" com fotos reais dos quartos de Fortaleza; Curitiba e Salvador com os renders oficiais da fachada (pastas do Drive, 04/09); Fortaleza e Recife mantidas |
 | Services só em Guarulhos | `arrival-services.html` | 7 hubs → só GRU; título "Hub ativo." |
 | Ícones das facilidades à esquerda | `highfi.css` · `.fac-ico` | `justify-content: flex-start` |
 

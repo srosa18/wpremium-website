@@ -10,7 +10,7 @@ Rodada de ajustes de 01/09/2026, executada em 04/09/2026.
 
 A W Premium revisou o site em 31/08 e apontou 18 ajustes, por transcrição da
 reunião e por 14 capturas de tela anotadas à mão. **Todos os 18 estão tratados**:
-13 foram executados nesta rodada, 4 já estavam resolvidos desde a rodada de
+14 foram executados nesta rodada, 3 já estavam resolvidos desde a rodada de
 27/08 e 1 não existia no site. O que continua em aberto é material que só a
 operação da W Premium tem, listado na seção 6.
 
@@ -92,7 +92,7 @@ Origem: captura 15h20 (tabela); transcrição 00:13:46.
 |---|---|---|---|
 | Página W Airport Rooms, cards das quatro cidades | Curitiba, Fortaleza, Recife e Salvador apareciam como cards **sem link**: clicar não levava a lugar nenhum. | Curitiba, Fortaleza e Recife ganharam o link "**Ver aeroporto**", que abre a página do respectivo hub. Salvador ficou sem link porque o site não tem hub de Salvador. | Captura 15h37 ("Não está clicável") |
 | Páginas das 6 salas de Fortaleza e Recife, bloco "Outras salas" | O bloco listava apenas outras salas. Nada na página da sala indicava que o aeroporto tem W Airport Rooms; a W Premium disse que "está muito separado". | Entrou um card "**W Airport Rooms · FOR/REC · Quartos privativos**", com a foto real dos Rooms daquele aeroporto e o link "Conhecer", antes do card "Veja todas". O bloco passou de 3 para 4 cards. | Transcrição 00:03:58 e 00:16:20 (Camila) |
-| Fotos dos Rooms | Fortaleza e Recife já com foto real desde 27/08. | Sem alteração. Curitiba e Salvador seguem em render, à espera de foto (seção 6). | Captura 15h35 ("Alterar fotos para o PPT enviado") |
+| Fotos dos Rooms | Hero da página em render genérico; "conceito" com foto de hotel sem marca; Curitiba e Salvador com renders antigos. | Hero e "conceito" com **fotos reais** dos quartos de Fortaleza. Curitiba e Salvador com os **renders oficiais da fachada** enviados pela W Premium em 04/09 (seguem marcados "(render)" e "em breve"). Fortaleza e Recife mantidas: já eram fotos reais da entrada. | Captura 15h35 ("Alterar fotos para o PPT enviado"); pastas do Drive enviadas em 04/09 |
 
 Sobre a página própria de cada Rooms (quantidade de quartos, banheiro na suíte
 ou compartilhado, localização): a W Premium pediu em reunião, e o conteúdo ainda
@@ -130,7 +130,7 @@ apenas conferidos:
 
 | Pedido | Situação |
 |---|---|
-| Trocar as fotos dos Rooms pelas do PPT | Feito em 27/08 para Fortaleza e Recife. Curitiba e Salvador dependem de foto (seção 6). |
+| Trocar as fotos dos Rooms | Fortaleza e Recife desde 27/08; hero, "conceito", Curitiba e Salvador nesta rodada (ver 3.5). |
 | Facilidades com ícone, não com foto | Feito em 27/08: 149 cards de facilidade em 26 salas usam o kit de ícones da marca. |
 | Unidades de Belém, Fortaleza e Curitiba | Belém tem 2 salas (Doméstica e Internacional), Fortaleza tem 4 salas e 1 Rooms, Curitiba tem sala e Rooms "em breve". |
 | Imagens pixeladas | Feito em 27/08: 78 fotos refeitas a partir dos originais, em 1600 px. |
@@ -163,7 +163,7 @@ Nada aqui trava o site. É material que só a operação tem.
 | Rooms de Recife | O número de quartos | Aparece "Disponível" |
 | Página própria de cada Rooms | Quantidade de quartos, se o banheiro é na suíte ou compartilhado, localização no terminal, fotos | O card abre o hub do aeroporto |
 | Ícone do W Fast Pass | Um ícone no mesmo traço do kit da marca | Espaço sinalizado como imagem faltante |
-| Rooms de Curitiba e Salvador | Foto real (hoje são renders) | Render com a marcação "(render)" |
+| Rooms de Curitiba e Salvador | Foto real quando as unidades abrirem (hoje, os renders oficiais recebidos em 04/09) | Render com a marcação "(render)" e o selo "em breve" |
 | Logo do The Wonder Club Collection | O arquivo aprovado pelo Ítalo | O nome já está no site; o logo entra onde a W Premium indicar |
 
 As pendências da rodada de agosto que não foram tocadas nesta (fotos de
@@ -229,7 +229,7 @@ feitos:
 | Sala Recife Frevo (`sala-frevo.html`) | Nome com cidade; abertura sem metragem; ícones à esquerda; card "The Wonder Club Collection"; ficha com Horário e Localização; card W Pass claro com o novo botão; card W Airport Rooms em "Outras salas" |
 | Sala Goiânia (`sala-goiania.html`) | Bloco "Outros acessos" com "The Wonder Club Collection: acesso avulso ou Visa Infinit." |
 | Sala Cuiabá (`sala-cuiaba.html`) | Card "W Fast Pass" no bloco "Bem-estar", com o espaço do ícone sinalizado |
-| W Airport Rooms (`airport-rooms.html`) | "Ver aeroporto" em Curitiba, Fortaleza e Recife; Salvador sem link |
+| W Airport Rooms (`airport-rooms.html`) | Hero e "conceito" com fotos reais; Curitiba e Salvador com os renders novos da fachada; "Ver aeroporto" em Curitiba, Fortaleza e Recife; Salvador sem link |
 | W Premium Services (`arrival-services.html`) | Só Guarulhos em "Hub ativo." |
 
 ---
