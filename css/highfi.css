@@ -438,13 +438,8 @@ body.busca-aberta{overflow:hidden;}
   border:1px solid var(--c-border);
   border-radius:var(--r-lg);
 }
-.ph::before{opacity:.5;}
 .ph-tag{backdrop-filter:blur(2px);}
 
-/* aviso de imagem pendente: respiro na escala e leitura calma */
-.img-missing{padding:0 var(--space-5);line-height:1.6;}
-.img-missing-ico{margin-bottom:var(--space-3);opacity:.75;}
-.ph:not(.ph-missing)::after{max-width:26ch;margin:0 auto;}
 
 
 /* ---- FAQ · caixa de perguntas centralizada (pedido do cliente 17/08) ----
@@ -549,3 +544,18 @@ input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}
   aspect-ratio:auto;height:72px;margin-bottom:16px;}
 .fac-ico img{display:block;width:56px;height:56px;object-fit:contain;opacity:.85;}
 @media(max-width:640px){ .fac-ico{height:60px;} .fac-ico img{width:46px;height:46px;} }
+
+
+/* ============================================================
+   PLACEHOLDER · so a superficie
+   O slot de imagem pendente nao exibe mais icone nem texto de
+   aviso: fica apenas o retangulo. A classe .ph-missing continua
+   no HTML como marcacao para o time e para o CMS.
+   ============================================================ */
+.ph::before,
+.ph::after,
+.ph:not(.ph-missing)::before,
+.ph:not(.ph-missing)::after{content:none !important;}
+.ph:not(.ph-missing){padding:0;}
+.img-missing{display:none !important;}
+[hidden]{display:none !important;}

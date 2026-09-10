@@ -98,7 +98,9 @@
       '      <button class="lang-switch" data-lang-switch aria-label="Idioma">'+
       '        <span class="lang-current">PT</span><span class="lang-sep">·</span><span class="lang-other">EN</span><span class="lang-sep">·</span><span class="lang-other">ES</span>'+
       '      </button>'+
-      '      <button class="btn btn-secondary btn-sm" data-open-verifier>Verificar Acesso</button>'+
+      /* OCULTO TEMPORARIAMENTE a pedido do cliente (10/09). Para voltar,
+         basta remover as barras de comentario da linha abaixo. */
+      /* '      <button class="btn btn-secondary btn-sm" data-open-verifier>Verificar Acesso</button>'+ */
       '      <a href="'+prefix+'login.html" class="btn btn-ghost btn-sm">Entrar</a>'+
       '      <button class="nav-hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-principal" data-hamburger>'+
       '        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="2" y1="4" x2="14" y2="4"/><line x1="2" y1="8" x2="14" y2="8"/><line x1="2" y1="12" x2="14" y2="12"/></svg>'+
