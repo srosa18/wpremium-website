@@ -29,6 +29,7 @@ th { text-align: left; font-family: Helvetica, sans-serif; font-size: 8pt; font-
 td { padding: 5pt 8pt 5pt 0; border-bottom: 1px solid #e8e5db; vertical-align: top; }
 .codigo { font-family: Courier, monospace; font-size: 9pt; background: #f4f1e8;
           padding: 7pt 9pt; margin: 5pt 0 9pt 0; color: #333; }
+.nota { background:#f6f3ea; border-left:2pt solid #c3ab55; padding:8pt 11pt; margin:6pt 0 11pt 0; }
 .lede { font-size: 11.5pt; color: #55554f; margin-bottom: 14pt; }
 """
 
@@ -100,6 +101,19 @@ while i < len(linhas):
             html.append('</%s>' % lista)
             lista = None
         html.append('<hr>')
+        i += 1
+        continue
+    m = re.match(r'^\s*> ?(.*)', l)
+    if m:
+        if lista:
+            html.append('</%s>' % lista)
+            lista = None
+        # junta linhas seguidas de citacao num bloco so
+        partes = [inline(m.group(1))]
+        while i + 1 < len(linhas) and re.match(r'^\s*> ?', linhas[i + 1]):
+            i += 1
+            partes.append(inline(re.sub(r'^\s*> ?', '', linhas[i].rstrip())))
+        html.append('<div class="nota">%s</div>' % ' '.join(p for p in partes if p.strip()))
         i += 1
         continue
     m = re.match(r'^\s*[-*] \[[ x]\] (.*)', l)
