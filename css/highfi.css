@@ -559,3 +559,40 @@ input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}
 .ph:not(.ph-missing){padding:0;}
 .img-missing{display:none !important;}
 [hidden]{display:none !important;}
+
+
+/* ============================================================
+   CARD ATALHO · "Veja todas"
+   Nao e uma sala, e a porta para a listagem. Sem foto e sem
+   moldura, alinhado ao topo das fotos. A coluna dele e mais estreita,
+   entao as duas fotos ganham largura sem quebrar a grade.
+   ============================================================ */
+.sala-card.card-atalho{
+  background:transparent;
+  border:none;
+  box-shadow:none;
+  align-self:start;
+}
+.sala-card.card-atalho .card-body{padding-top:0;padding-left:0;}
+
+/* a coluna do atalho e mais estreita: as duas fotos crescem no lugar.
+   O respiro antes dela e maior que o gap normal, para o atalho ler como
+   remate do bloco e nao como um terceiro card. */
+.grid.grid-cross-sell{grid-template-columns:1fr 1fr minmax(150px,.42fr);}
+.sala-card.card-atalho{padding-left:var(--space-6);}
+/* alinhado a direita: a borda do texto bate com a borda do container,
+   a mesma linha do botao de menu no topo */
+.sala-card.card-atalho .card-body{text-align:right;}
+.sala-card.card-atalho .btn-link{display:inline-block;}
+@media(max-width:900px){
+  .grid.grid-cross-sell{grid-template-columns:1fr 1fr;}
+  .sala-card.card-atalho{grid-column:1 / -1;padding-left:0;}
+  .sala-card.card-atalho .card-body{text-align:left;}
+}
+@media(max-width:640px){
+  .grid.grid-cross-sell{grid-template-columns:1fr;}
+}
+
+@media(max-width:768px){
+  .sala-card.card-atalho .card-body{padding-left:var(--space-4);}
+}

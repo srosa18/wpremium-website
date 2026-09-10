@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Cerrado · BSB · W Premium</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="css/wireframe.css?v=41">
-<link rel="stylesheet" href="css/tokens.css?v=41">
-<link rel="stylesheet" href="css/highfi.css?v=41">
+<link rel="stylesheet" href="css/wireframe.css?v=49">
+<link rel="stylesheet" href="css/tokens.css?v=49">
+<link rel="stylesheet" href="css/highfi.css?v=49">
 </head>
 <body data-prefix="" data-highfi>
 
@@ -25,7 +25,6 @@
 <!-- BLOCO 01 · HERO CINEMATOGRÁFICO -->
 <section class="section" data-comment-id="sala-cerrado.01-hero" data-comment-label="Cerrado · 01 Hero" style="padding-bottom:64px;">
   <div class="container">
-    <div class="ph" style="aspect-ratio:16/9;border-radius:var(--r-lg);"></div>
     <div style="margin-top:20px;">
       <div class="eyebrow">Brasília</div>
       <h1 class="h1">O cerrado, a capital, o silêncio.</h1>
@@ -59,12 +58,8 @@
     </style>
     <div class="b2b-carousel gallery-carousel" data-b2b-carousel>
       <div class="gallery-split">
-        <figure class="gallery-fixed"><div class="ph"></div></figure>
         <div class="b2b-viewport">
           <div class="b2b-track" data-b2b-track>
-            <figure class="b2b-slide is-active"><div class="ph" style="aspect-ratio:4/5;border-radius:var(--r-lg);"></div></figure>
-            <figure class="b2b-slide"><div class="ph" style="aspect-ratio:4/5;border-radius:var(--r-lg);"></div></figure>
-            <figure class="b2b-slide"><div class="ph" style="aspect-ratio:4/5;border-radius:var(--r-lg);"></div></figure>
           </div>
         </div>
         <div class="b2b-dots" data-b2b-dots>
@@ -91,12 +86,11 @@
 </section>
 
 <!-- BLOCO 05 · GASTRONOMIA -->
-<section data-comment-id="sala-cerrado.05-gastronomia" data-comment-label="Cerrado · 05 Gastronomia" class="section section-alt">
+<section hidden data-comment-id="sala-cerrado.05-gastronomia" data-comment-label="Cerrado · 05 Gastronomia" class="section section-alt">
   <div class="container">
     <div class="eyebrow mb-1">Gastronomia</div>
     <h2 class="h2 mb-3" style="max-width:560px;">Carta em parceria com a cidade.</h2>
     <div class="grid" style="grid-template-columns:1fr 1fr;align-items:center;gap:48px;">
-      <div class="ph" style="aspect-ratio:5/4;"></div>
       <div>
         <p class="small muted">Designed by Chef Mara Salles · Tordesilhas</p>
         <h3 class="h3 mt-1">Cardápio de Estação</h3>
@@ -200,12 +194,11 @@
 </section>
 
 <!-- BLOCO 10 · IDENTIDADE LOCAL -->
-<section data-comment-id="sala-cerrado.10-identidade" data-comment-label="Cerrado · 10 Identidade local" class="section">
+<section hidden data-comment-id="sala-cerrado.10-identidade" data-comment-label="Cerrado · 10 Identidade local" class="section">
   <div class="container">
     <div class="eyebrow mb-1">Identidade local</div>
     <h2 class="h2 mb-3" style="max-width:560px;">Brasília entra na sala.</h2>
     <div class="grid" style="grid-template-columns:1fr 1.4fr;gap:48px;align-items:center;">
-      <div class="ph" style="aspect-ratio:4/5;"></div>
       <div>
         <p style="font-size:17px;line-height:1.7;color:var(--g800);">Brasília não é capital de transição · é cidade de destino. A arquitetura Niemeyer recontada.</p>
         <p style="font-size:17px;line-height:1.7;color:var(--g800);margin-top:16px;">A trilha sonora, a curadoria fotográfica, o cardápio — tudo conversa com a cidade. Não há cenografia: há contexto.</p>
@@ -235,10 +228,10 @@
   <div class="container">
     <div class="eyebrow mb-1">Outras salas</div>
     <h2 class="h2 mb-3">Outras salas em BSB.</h2>
-    <div class="grid grid-3">
-      <article class="card sala-card"><div class="ph" style="aspect-ratio:16/10;"></div><div class="card-body"><h3 class="sala-title">5th Avenue</h3><p class="sala-meta">GRU · T3</p><a href="sala-5th-avenue.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph" style="aspect-ratio:16/10;"></div><div class="card-body"><h3 class="sala-title">Minas</h3><p class="sala-meta">CNF</p><a href="sala-minas.html" class="btn-link">Explorar →</a></div></article>
-      <article class="card sala-card"><div class="ph" style="aspect-ratio:16/10;"></div><div class="card-body"><h3 class="sala-title">Veja todas</h3><p class="sala-meta">25 salas da rede</p><a href="salas.html" class="btn-link">Ver salas →</a></div></article>
+    <div class="grid grid-3 grid-cross-sell">
+      <article class="card sala-card"><img class="sala-img" src="assets/img/salas/5th-avenue/foto-1.jpg?v=3" alt="Sala 5th Avenue" style="display:block;width:100%;aspect-ratio:16/10;object-fit:cover;"><div class="card-body"><h3 class="sala-title">5th Avenue</h3><p class="sala-meta">GRU · T3</p><a href="sala-5th-avenue.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card card-atalho"><div class="card-body"><h3 class="sala-title">Minas</h3><p class="sala-meta">CNF</p><a href="sala-minas.html" class="btn-link">Explorar →</a></div></article>
+      <article class="card sala-card card-atalho"><div class="card-body"><h3 class="sala-title">Veja todas</h3><p class="sala-meta">25 salas da rede</p><a href="salas.html" class="btn-link">Ver salas →</a></div></article>
     </div>
     <div class="text-center mt-5">
       <a href="aeroporto-bsb.html" class="btn btn-secondary">Ver hub de BSB</a>
@@ -248,6 +241,6 @@
 
 <div data-footer></div>
 <div data-modal-mount></div>
-<script src="js/app.js?v=41"></script>
+<script src="js/app.js?v=49"></script>
 </body>
 </html>
