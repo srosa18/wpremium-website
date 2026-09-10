@@ -687,12 +687,39 @@
     });
   }
 
+
+  // =====================================================
+  // RITMO DE FUNDOS
+  // As dobras alternam fundo claro e alternativo. Quando uma delas
+  // esta oculta, a alternancia escrita no HTML deixa duas iguais
+  // coladas. Aqui ela e recalculada so entre as dobras visiveis,
+  // entao ocultar ou revelar uma dobra nao exige mexer nas classes.
+  // =====================================================
+  function rebalanceSections(){
+    var main = document.querySelector('main');
+    if(!main) return;
+    var todas = main.children, vis = [], i;
+    for(i=0;i<todas.length;i++){
+      var el = todas[i];
+      if(el.tagName === 'SECTION' && el.hasAttribute('data-comment-id') && !el.hasAttribute('hidden')){
+        vis.push(el);
+      }
+    }
+    // as duas primeiras dobras seguem sem fundo alternativo; a partir da
+    // terceira, alterna
+    for(i=0;i<vis.length;i++){
+      if(i >= 2 && i % 2 === 0){ vis[i].classList.add('section-alt'); }
+      else { vis[i].classList.remove('section-alt'); }
+    }
+  }
+
   // =====================================================
   // INIT
   // =====================================================
 
   document.addEventListener('DOMContentLoaded', function(){
     inject();
+    rebalanceSections();
     markActiveNav();
     bindHeroSlideshow();
     bindB2BCarousel();
